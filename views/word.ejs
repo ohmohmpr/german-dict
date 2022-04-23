@@ -6,7 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script>
+
+    function myFunction() {
+        var elms = document.getElementsByClassName("demo");
+
+        Array.from(elms).forEach((x) => {
+            if (x.style.display === "none") {
+              x.style.display = "block";
+            } else {
+              x.style.display = "none";
+            }
+        })
+
+      }
+
+
+</script>
+<!-- https://stackoverflow.com/questions/69479092/cannot-read-properties-of-undefined-reading-display     -->
+<!-- https://www.youtube.com/watch?v=SccSCuHhOw0
+https://www.youtube.com/watch?v=Oe421EPjeBE
+https://stackoverflow.com/questions/18903357/express-doesnt-pass-object-to-the-view
+https://stackoverflow.com/questions/47747376/how-can-i-render-an-html-page-with-express-and-at-the-same-time-pass-json-data-t
+https://stackoverflow.com/questions/22952044/loop-through-json-in-ejs -->
 <body>
-    test
+
+    <table>
+        <% for(var i=0; i < result.length; i++) { %>
+            <tr>
+                <td onclick="myFunction()"> SHOW </td>
+                <td class="demo" hidden> <button> <%= result[i].artikel %> </button></td>
+                <td> <%= result[i].wort %> </td>
+                <td> <%= result[i].english_sentence %> </td>
+                <td class="demo" hidden> <button ><%= result[i].german_sentence %></button></td>
+            </tr>
+        <% } %>
+    </table>
+
+    <p>DEBUG: <%= result.length %></p>
+
+
 </body>
 </html>

@@ -1,9 +1,4 @@
-const express = require('express');
-const router = express.Router();
-const db = require('./../db-mock.js');
-
-/* GET users listing. */
-const dictionary = [
+[
     { 
         artikel: "die", 
         wort: "wand",                 
@@ -17,11 +12,3 @@ const dictionary = [
         german_sentence: "Wir suchen eine Aushilfe."                 
     }
 ]
-
-
-
-router.get('/', function(req, res, next) {
-  res.render('word.ejs', { result: dictionary })
-});
-
-module.exports = router;
