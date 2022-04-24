@@ -1,4 +1,4 @@
-[
+const words = [
     { 
         artikel: "die", 
         wort: "wand",                 
@@ -12,3 +12,5 @@
         german_sentence: "Wir suchen eine Aushilfe."                 
     }
 ]
+
+module.exports = words;

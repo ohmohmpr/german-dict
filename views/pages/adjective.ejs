@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>German Dictionary</h1>
+    <p>Welcome to templating using EJS</p>
+
+
+    <h2>Adjektive nach dem unbestimmten Artikel</h2>
+    <h4>maskulin neutrum feminin Plural</h4>
+
+    <ul>
+      <% words.forEach(function(word) { %>
+        <li>
+          <strong><%= word.title %></strong>
+          | <%= word.maskulin %>
+          | <%= word.neutrum %>
+          | <%= word.feminin %>
+          | <%= word.plural %>
+        </li>
+      <% }); %>
+    </ul>
+
+    <h2>Adjektive nach dem bestimmten Artikel</h2>
+
+
+  </div>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
