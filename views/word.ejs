@@ -8,8 +8,8 @@
 </head>
 <script>
 
-    function myFunction() {
-        var elms = document.getElementsByClassName("demo");
+    function myFunction(id) {
+        var elms = document.getElementsByClassName("demo" + id);
 
         Array.from(elms).forEach((x) => {
             if (x.style.display === "none") {
@@ -18,8 +18,7 @@
               x.style.display = "none";
             }
         })
-
-      }
+    }
 
 
 </script>
@@ -34,11 +33,11 @@ https://stackoverflow.com/questions/22952044/loop-through-json-in-ejs -->
     <table>
         <% for(var i=0; i < result.length; i++) { %>
             <tr>
-                <td onclick="myFunction()"> SHOW </td>
-                <td class="demo" hidden> <button> <%= result[i].artikel %> </button></td>
+                <td id="<%= i %>" onclick="myFunction(id)"> SHOW </td>
+                <td class="demo<%= i %>" style="display: none;"> <button> <%= result[i].artikel %> </button></td>
                 <td> <%= result[i].wort %> </td>
                 <td> <%= result[i].english_sentence %> </td>
-                <td class="demo" hidden> <button ><%= result[i].german_sentence %></button></td>
+                <td class="demo<%= i %>" style="display: none;"> <button ><%= result[i].german_sentence %></button></td>
             </tr>
         <% } %>
     </table>
