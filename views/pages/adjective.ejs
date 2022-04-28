@@ -12,56 +12,93 @@
 <main>
   <div class="jumbotron">
     <h1>German Dictionary</h1>
-    <p>Welcome to templating using EJS</p>
-  </div>
-  <div class="container">
-    <h2>Adjektive nach dem unbestimmten Artikel</h2>
-    <div class="row">
-      <div class="col">
-        -
-      </div>
-      <div class="col">
-        <strong>Maskulin</strong>
-      </div>
-      <div class="col">
-        <strong>Neutrum</strong>
-      </div>
-      <div class="col">
-        <strong>Feminin</strong>
-      </div>
-      <div class="col">
-        <strong>Plural</strong>
-      </div>
-    </div>
-
-    <% words.forEach(function(word) { %>
-      <div class="row">
-        <div class="col">
-          <strong><%= word.title %></strong>
-        </div>
-        <div class="col">
-          <input id="<%= word.maskulin %>" oninput="checkAnswer(id)">
-          <%= word.maskulin %>
-          
-        </div>
-        <div class="col">
-          <input>
-          <%= word.neutrum %>
-        </div>
-        <div class="col">
-          <input>
-          <%= word.feminin %>
-        </div>
-        <div class="col">
-          <input>
-          <%= word.plural %>
-        </div>
-      </div>
-    <% }); %>
-    
   </div>
 
-  <h2>Adjektive nach dem bestimmten Artikel</h2>
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Adjektive nach dem unbestimmten Artikel</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Maskulin</th>
+        <th scope="col">Neutrum</th>
+        <th scope="col">Feminin</th>
+        <th scope="col">Plural</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.words.forEach(function(word) { %>
+        <tr>
+          <th scope="row"><%= word.title %></th>
+          <td>
+            <input id="<%=word.title %>-<%= word.maskulin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.maskulin %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.neutrum %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.neutrum %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.feminin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.feminin %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.plural %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.plural %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <hr>
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Adjektive nach dem bestimmten Artikel</h2>
+      mein die das
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Maskulin</th>
+        <th scope="col">Neutrum</th>
+        <th scope="col">Feminin</th>
+        <th scope="col">Plural</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.words2.forEach(function(word) { %>
+        <tr>
+          <th scope="row"><%= word.title %></th>
+          <td>
+            <input id="<%=word.title %>-<%= word.maskulin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.maskulin %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.neutrum %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.neutrum %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.feminin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.feminin %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.plural %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.plural %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
 </main>
 
 <footer>
@@ -71,12 +108,15 @@
 </body>
 </html>
 <script>
-  function checkAnswer(id) {
-    var x = document.getElementById(id).value;
-    if (x == id) {
-      console.log("Correct");
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('-') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
     } else {
-      console.log("Fault");
+      elm.style.color = "black";
     }
+    
   }
 </script>

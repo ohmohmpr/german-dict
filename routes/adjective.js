@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../mock-db/adjective.js');
+const db = require('../mock-db/adjective');
 
 /* GET users listing. */
 
@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   res.render('pages/adjective.ejs', { 
       words: db
   })
-  console.log(db)
+  console.log(db.words)
 });
 
 module.exports = router;
