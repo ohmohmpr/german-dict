@@ -4,6 +4,7 @@ NEXT FEATURE
 3. Buttom for back to home
 4. ob wann
 5. input translate for adjective part
+6. clock
 
 
 <!-- https://blog.logrocket.com/how-to-use-ejs-template-node-js-application/ -->

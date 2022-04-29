@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>German Dictionary</h1>
+  </div>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Lokale Präpositionen</h2>
+      mit Dativ    : an ... vorbei, bis zu, gegenüber
+      <br>
+      mit Akkusativ: durch, ... entlang, um ... herum
+      
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.words.forEach(function(word) { %>
+        <tr>
+          <th scope="row">
+            <%= word.sentence_eng %>
+          </th>
+          <td>
+            <input id="<%= word.sentence %>" oninput="checkAnswer(id)" size="70"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Ohne /Mit</h2>
+      ohne + Akkusativ
+      <br>
+      mit + Dativ
+      
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.words2.forEach(function(word) { %>
+        <tr>
+          <th scope="row">
+            <%= word.sentence_eng %>
+          </th>
+          <td>
+            <input id="<%= word.sentence %>" oninput="checkAnswer(id)" size="70"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('-') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+    
+  }
+</script>
