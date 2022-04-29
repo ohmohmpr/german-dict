@@ -1,73 +1,49 @@
 const words = [
     { 
-        title: "Nominativ",
-        maskulin: "ein bekannter Klassiker",
-        maskulin_eng: "a well-known classic",
-        neutrum: "ein modernes Studio",
-        neutrum_eng: "a modern studio",
-        feminin: "eine vielseitige Stadt",
-        feminin_eng: "a diverse city",
-        plural: "professionelle Trainer",
-        plural_eng: "professional trainers"
+        direct_question: "Warum steht der Zug?",
+        direct_question_eng: "Why is the train standing still?",
+        indirect_question1: "Der Mann fragt,",
+        indirect_question_eng: "The man asks why the train is standing still.",
+        indirect_question2: "warum der Zug steht.",
     },
     { 
-        title: "Akkusativ",
-        maskulin: "einen schönen Abend",
-        maskulin_eng: "a lovely evening",
-        neutrum: "ein elegantes Restaurant",
-        neutrum_eng: "an elegant restaurant",
-        feminin: "eine entspannte Atmosphäre",
-        feminin_eng: "a relaxed atmosphere",
-        plural: "interessante Informationen",
-        plural_eng: "interesting information"
+        direct_question: "Wann bin ich am Flughafen?",
+        direct_question_eng: "When will I be at the airport?",
+        indirect_question1: "Die Frau will wissen,",
+        indirect_question_eng: "The woman wants to know when she is at the airport.",
+        indirect_question2: "wann sie am Flughafen ist.",
     },
-    { 
-        title: "Dativ",
-        maskulin: "einem wunderbaren Sänger",
-        maskulin_eng: "a wonderful singer",
-        neutrum: "einem aktuellen Thema",
-        neutrum_eng: "a current topic",
-        feminin: "einer tollen Show",
-        feminin_eng: "a great show",
-        plural: "günstigen Preisen",
-        plural_eng: "cheap prices"
-    }
 ]
 
 const words2 = [
     { 
-        title: "Nominativ", 
-        maskulin: "der schöne Hafen", 
-        maskulin_eng: "the beautiful port", 
-        neutrum: "das große Feuerwerk", 
-        neutrum_eng: "the big fireworks", 
-        feminin: "die bekannte Kieler Woche", 
-        feminin_eng: "the well-known Kiel Week", 
-        plural: "die verschiedenen Musikstile",
-        plural_eng: "the different styles of music"
+        direct_question: "Ist das Navi wirklich so einfach?",
+        direct_question_eng: "Is the navigation really that simple?",
+        indirect_question1: "Marius möchte wissen,",
+        indirect_question_eng: "Marius wants to know if the navigation system is really that simple.",
+        indirect_question2: "ob das Navi wirklich so einfach ist.",
     },
     { 
-        title: "Akkusativ",
-        maskulin: "den alten Hafen",
-        maskulin_eng: "the old port",
-        neutrum: "das tolle Konzert",
-        neutrum_eng: "the great concert",
-        feminin: "die bekannte Kieler Woche",
-        feminin_eng: "the well-known Kiel Week",
-        plural: "die norddeutschen Musikfans",
-        plural_eng: "the North German music fans",
+        direct_question: "Kommst du zum Essen?",
+        direct_question_eng: "Do you want to come and eat?",
+        indirect_question1: "Marius fragt Tom,",
+        indirect_question_eng: "Marius asks Tom if he's coming to dinner.",
+        indirect_question2: "ob er zum Essen kommt.",
     },
     { 
-        title: "Dativ",
-        maskulin: "auf dem bunten Markt",
-        maskulin_eng: "in the colorful market",
-        neutrum: "auf dem tollen Konzert",
-        neutrum_eng: "at the great concert",
-        feminin: "aus der ganzen Welt",
-        feminin_eng: "from all over the world",
-        plural: "auf den kleinen Schiffen",
-        plural_eng: "on the small ships"
-    }
+        direct_question: "Gibt es hier in der Nähe eine Tankstelle?",
+        direct_question_eng: "Is there a gas station nearby?",
+        indirect_question1: "Weißt du,",
+        indirect_question_eng: "Do you know if there’s a gas station nearby?",
+        indirect_question2: "ob es hier in der Nähe eine Tankstelle gibt?",
+    },
+    { 
+        direct_question: "Ist das der richtige Weg?",
+        direct_question_eng: "Is this the right way?",
+        indirect_question1: "Weißt du,",
+        indirect_question_eng: "Do you know if this is the right way?",
+        indirect_question2: "ob das der richtige Weg ist?",
+    },
 ]
 
 module.exports = {

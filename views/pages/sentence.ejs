@@ -16,41 +16,28 @@
 
   <table class="table caption-top table-bordered border-dark">
     <caption>
-      <h2>Adjektive nach dem unbestimmten Artikel</h2>
-      ein dein 
+      <h2>Indirekte Fragesätze: W-Fragen</h2>
+      
     </caption>
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Maskulin</th>
-        <th scope="col">Neutrum</th>
-        <th scope="col">Feminin</th>
-        <th scope="col">Plural</th>
+        <th scope="col">Direkte Frage</th>
+        <th scope="col">Indirekte Frage</th>
       </tr>
     </thead>
     <tbody>
       <% words.words.forEach(function(word) { %>
         <tr>
-          <th scope="row"><%= word.title %></th>
-          <td>
-            <input id="<%=word.title %>-<%= word.maskulin %>" oninput="checkAnswer(id)"> 
+          <th scope="row">
+            <%= word.direct_question %>
             <br>
-            <%= word.maskulin_eng %>
-          </td>
+            <%= word.direct_question_eng %>
+          </th>
           <td>
-            <input id="<%=word.title %>-<%= word.neutrum %>" oninput="checkAnswer(id)"> 
+            <%= word.indirect_question1 %>
+            <input id="<%=word.indirect_question2 %>" oninput="checkAnswer(id)" size="50"> 
             <br>
-            <%= word.neutrum_eng %>
-          </td>
-          <td>
-            <input id="<%=word.title %>-<%= word.feminin %>" oninput="checkAnswer(id)"> 
-            <br>
-            <%= word.feminin_eng %>
-          </td>
-          <td>
-            <input id="<%=word.title %>-<%= word.plural %>" oninput="checkAnswer(id)"> 
-            <br>
-            <%= word.plural_eng %>
+            <%= word.indirect_question_eng %>
           </td>
         </tr>
       <% }); %>
@@ -59,47 +46,33 @@
   <hr>
   <table class="table caption-top table-bordered border-dark">
     <caption>
-      <h2>Adjektive nach dem bestimmten Artikel</h2>
-      die das dieses
+      <h2>Indirekte Fragesätze: Ja-/Nein-Fragen mit ob</h2>
+      
     </caption>
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Maskulin</th>
-        <th scope="col">Neutrum</th>
-        <th scope="col">Feminin</th>
-        <th scope="col">Plural</th>
+        <th scope="col">Direkte Frage</th>
+        <th scope="col">Indirekte Frage</th>
       </tr>
     </thead>
     <tbody>
       <% words.words2.forEach(function(word) { %>
         <tr>
-          <th scope="row"><%= word.title %></th>
-          <td>
-            <input id="<%=word.title %>-<%= word.maskulin %>" oninput="checkAnswer(id)"> 
+          <th scope="row">
+            <%= word.direct_question %>
             <br>
-            <%= word.maskulin_eng %>
-          </td>
+            <%= word.direct_question_eng %>
+          </th>
           <td>
-            <input id="<%=word.title %>-<%= word.neutrum %>" oninput="checkAnswer(id)"> 
+            <%= word.indirect_question1 %>
+            <input id="<%=word.indirect_question2 %>" oninput="checkAnswer(id)" size="50"> 
             <br>
-            <%= word.neutrum_eng %>
-          </td>
-          <td>
-            <input id="<%=word.title %>-<%= word.feminin %>" oninput="checkAnswer(id)"> 
-            <br>
-            <%= word.feminin_eng %>
-          </td>
-          <td>
-            <input id="<%=word.title %>-<%= word.plural %>" oninput="checkAnswer(id)"> 
-            <br>
-            <%= word.plural_eng %>
+            <%= word.indirect_question_eng %>
           </td>
         </tr>
       <% }); %>
     </tbody>
   </table>
-
 </main>
 
 <footer>
