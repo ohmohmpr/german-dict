@@ -10,6 +10,7 @@ const wordRouter = require('./routes/word');
 const adjectiveRouter = require('./routes/adjective');
 const sentenceRouter = require('./routes/sentence');
 const prepositionRouter = require('./routes/preposition');
+const wFrageRouter = require('./routes/w-Frage');
 
 const app = express()
 const port = 3000
@@ -30,6 +31,7 @@ app.use('/word', wordRouter);
 app.use('/adjective', adjectiveRouter);
 app.use('/sentence', sentenceRouter);
 app.use('/preposition', prepositionRouter);
+app.use('/w-frage', wFrageRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
