@@ -5,12 +5,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
 const wordRouter = require('./routes/word');
 const adjectiveRouter = require('./routes/adjective');
 const sentenceRouter = require('./routes/sentence');
 const prepositionRouter = require('./routes/preposition');
 const wFrageRouter = require('./routes/w-Frage');
+const connectorsRouter = require('./routes/connectors');
 
 const app = express()
 const port = 3000
@@ -26,12 +26,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/word', wordRouter);
 app.use('/adjective', adjectiveRouter);
 app.use('/sentence', sentenceRouter);
 app.use('/preposition', prepositionRouter);
 app.use('/w-frage', wFrageRouter);
+app.use('/connectors', connectorsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

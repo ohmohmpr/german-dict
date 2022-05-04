@@ -16,11 +16,12 @@
 
   <table class="table caption-top table-bordered border-dark">
     <caption>
-      <h2>Lokale Präpositionen</h2>
-      mit Dativ    : an ... vorbei, bis zu, gegenüber
+      <h2>denn und weil</h2>
+      Meaning: because, warum
       <br>
-      mit Akkusativ: durch, ... entlang, um ... herum
-      
+      denn = Hauptsatz
+      <br>
+      weil = Nebensatz
     </caption>
     <thead>
       <tr>
@@ -35,7 +36,8 @@
             <%= word.sentence_eng %>
           </th>
           <td>
-            <input id="<%= word.sentence %>" oninput="checkAnswer(id)" size="70"> 
+            <%= word.sentence %>
+            <input id="<%= word.sentence_2 %>" oninput="checkAnswer(id)" size="70"> 
           </td>
         </tr>
       <% }); %>
@@ -44,33 +46,6 @@
 
   <hr>
 
-  <table class="table caption-top table-bordered border-dark">
-    <caption>
-      <h2>Ohne/ Mit</h2>
-      ohne + Akkusativ
-      <br>
-      mit + Dativ
-      
-    </caption>
-    <thead>
-      <tr>
-        <th scope="col">English</th>
-        <th scope="col">German</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% words.words2.forEach(function(word) { %>
-        <tr>
-          <th scope="row">
-            <%= word.sentence_eng %>
-          </th>
-          <td>
-            <input id="<%= word.sentence %>" oninput="checkAnswer(id)" size="70"> 
-          </td>
-        </tr>
-      <% }); %>
-    </tbody>
-  </table>
 </main>
 
 <footer>
