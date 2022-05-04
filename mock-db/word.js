@@ -40,6 +40,14 @@ const words = [
         german_sentence: "Ich bin meinen Führerschein los."                 
     },
     { 
+        artikel: "die", 
+        wort: "Führerscheinprüfung",
+        plural: "-en",          
+        meaning: "driving test",
+        english_sentence: "Have you passed your driving test?",                 
+        german_sentence: "Hast du deine Führerscheinprüfung bestanden?"                 
+    },
+    { 
         artikel: "der", 
         wort: "Schulabschluss",
         plural: "-ü e",          
@@ -276,7 +284,119 @@ const words = [
         german_sentence: "Wir haben die Lösung",
         chapter: "a2-6",           
     },
-    
+    { 
+        artikel: "der",
+        wort: "Wohnungsschlüssel",
+        plural: "-",
+        meaning: "Apartment key",    
+        english_sentence: "I forgot my apartment key!",                 
+        german_sentence: "Ich habe meinen Wohnungsschlüssel vergessen!",
+        chapter: "a2-6",           
+        create_date: "04/05/2022"
+    },
+    { 
+        artikel: "das",
+        wort: "Verkehrsmittel",
+        plural: "-",
+        meaning: "Means of transport",    
+        english_sentence: "Which means of transport is the fastest?",                 
+        german_sentence: "Welches Verkehrsmittel ist am schnellsten?",
+        chapter: "a2-6",           
+        create_date: "04/05/2022"
+    },
+    { 
+        artikel: "die",
+        wort: "Bushaltestelle",
+        plural: "-n",
+        meaning: "bus stop",    
+        english_sentence: "I’ve been waiting at the bus stop for half an hour.",                 
+        german_sentence: "Ich warte schon eine halbe Stunde an der Bushaltestelle.",
+        chapter: "a2-6",           
+        create_date: "04/05/2022"
+    },
+    { 
+        artikel: "der",
+        wort: "Kinderspielplatz",
+        plural: "-ä e",
+        meaning: "children's playground",    
+        english_sentence: "Lilly and Felix must be at the children's playground.",                 
+        german_sentence: "Lilly und Felix sind bestimmt auf dem Kinderspielplatz.",
+        chapter: "a2-6",           
+        create_date: "04/05/2022"
+    },
+    { 
+        artikel: "der",
+        wort: "Vertrag",
+        plural: "-ä e",
+        meaning: "contract, agreement",    
+        english_sentence: "none",                 
+        german_sentence: "none",
+        chapter: "a2-6",           
+        create_date: "04/05/2022"
+    },
+    { 
+        artikel: "verb",
+        wort: "unterschreiben",
+        plural: "",
+        meaning: "sign",    
+        english_sentence: "none",                 
+        german_sentence: "none",
+        chapter: "a2-6",           
+        create_date: "04/05/2022"
+    },
+    { 
+        artikel: "das",
+        wort: "Ersatzteil",
+        plural: "e",
+        meaning: "spare part",    
+        english_sentence: "none",                 
+        german_sentence: "none",
+        chapter: "a2-6",           
+        create_date: "04/05/2022"
+    },
+    { 
+        artikel: "verb",
+        wort: "pendeln",
+        plural: "",
+        meaning: "commute",    
+        english_sentence: "none",                 
+        german_sentence: "none",
+        remark: "Subj als Person",
+        chapter: "a2-6",           
+        create_date: "04/05/2022"
+    },
+    { 
+        artikel: "verb",
+        wort: "verpassen",
+        plural: "",
+        meaning: "miss",    
+        english_sentence: "We'll miss the train",                 
+        german_sentence: "Wir verpassen den Zug",
+        chapter: "a2-6",           
+        create_date: "04/05/2022"
+    },
+    { 
+        artikel: "verb",
+        wort: "erreichen",
+        plural: "",
+        meaning: "reach",    
+        english_sentence: "We reach the train",                 
+        german_sentence: "Wir erreichen den Zug",
+        remark: "",
+        chapter: "a2-6",           
+        create_date: "04/05/2022"
+    },
+    { 
+        artikel: "verb",
+        wort: "funktionieren",
+        plural: "",
+        meaning: "funtion, work",    
+        english_sentence: "The navi works",                 
+        german_sentence: "Der Navi funktioniert",
+        remark: "",
+        chapter: "a2-6",           
+        create_date: "04/05/2022",
+    },
 ]
 
 

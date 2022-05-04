@@ -40,7 +40,7 @@
             <%= word.answer_eng %>
           </th>
           <td>
-            <input id="<%= word.question %>" oninput="checkAnswer(id)" size="70"> 
+            <input id="<%= word.question %>" oninput="checkAnswer(id)" onkeydown="showAnswer(id)" size="70"> 
             <br>
             <input id="<%= word.answer %>" oninput="checkAnswer(id)" size="70"> 
           </td>
@@ -71,4 +71,14 @@
     }
     
   }
+  function showAnswer(id) {
+    let element = document.getElementById(id);
+    element.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        console.log("test")
+      }
+    });
+  }
 </script>
+<!-- https://stackoverflow.com/questions/70287691/js-function-addeventlistener-on-keypress-adding-text-with-innerhtml-is-running-e?noredirect=1&lq=1 -->
+<!-- https://stackoverflow.com/questions/24876428/when-does-using-addeventlistener-accumulate-in-javascript -->

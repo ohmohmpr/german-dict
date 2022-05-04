@@ -21,7 +21,42 @@ const words = [
     },
     { 
         sentence: "Sie geht noch um die Kirche herum.",
-        sentence_eng: "She walks around the church.",
+        sentence_eng: "She still walks around the church.",
+    },
+    { 
+        sentence: "Gehen Sie hier über die Brücke und dann rechts den Fluss entlang.",
+        sentence_eng: "Walk over the bridge here and then turn right along the river.",
+        create_date: "04/05/2022",
+    },
+    { 
+        sentence: "Gehen Sie bis zur Straße und dann links.",
+        sentence_eng: "Go to the street and then turn left.",
+        create_date: "04/05/2022",
+    },
+    { 
+        sentence: "Gehen Sie an der Tankstelle vorbei.",
+        sentence_eng: "Walk past the gas station.",
+        create_date: "04/05/2022",
+    },
+    { 
+        sentence: "Gegenüber der Tankstelle ist ein Park.",
+        sentence_eng: "Opposite the gas station is a park.",
+        create_date: "04/05/2022",
+    },
+    { 
+        sentence: "Gehen Sie durch den Park bis zur nächsten Straße.",
+        sentence_eng: "Walk through the park to the next street.",
+        create_date: "04/05/2022",
+    },
+    { 
+        sentence: "Gehen Sie über die Straße und dann um die Baustelle herum.",
+        sentence_eng: "Walk across the street and then around the construction site.",
+        create_date: "04/05/2022",
+    },
+    { 
+        sentence: "Dort sehen Sie schon die U-Bahn.",
+        sentence_eng: "There you can already see the subway.",
+        create_date: "04/05/2022",
     },
 ]
 
