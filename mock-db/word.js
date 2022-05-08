@@ -366,36 +366,24 @@ const words = [
         create_date: "04/05/2022"
     },
     { 
-        artikel: "verb",
-        wort: "verpassen",
-        plural: "",
-        meaning: "miss",    
-        english_sentence: "We'll miss the train",                 
-        german_sentence: "Wir verpassen den Zug",
+        artikel: "Der",
+        wort: "Hochseilgarten",
+        plural: "ä",
+        meaning: "high ropes course",    
+        english_sentence: "The professionals from the high ropes course explain the rules to the people very well.",                 
+        german_sentence: "Die Profis vom Hochseilgarten erklären den Leuten die Regeln sehr gut.",
         chapter: "a2-6",           
         create_date: "04/05/2022"
     },
     { 
-        artikel: "verb",
-        wort: "erreichen",
-        plural: "",
-        meaning: "reach",    
-        english_sentence: "We reach the train",                 
-        german_sentence: "Wir erreichen den Zug",
-        remark: "",
-        chapter: "a2-6",           
-        create_date: "04/05/2022"
-    },
-    { 
-        artikel: "verb",
-        wort: "funktionieren",
-        plural: "",
-        meaning: "funtion, work",    
-        english_sentence: "The navi works",                 
-        german_sentence: "Der Navi funktioniert",
-        remark: "",
-        chapter: "a2-6",           
-        create_date: "04/05/2022",
+        artikel: "Der",
+        wort: "Besucher",
+        plural: "Besucher",
+        meaning: "visitor",
+        english_sentence: "They give the visitors helmets.",
+        german_sentence: "Sie geben den Besuchern Helme.",
+        chapter: "a2-8",           
+        create_date: "08/05/2022"
     },
 ]
 

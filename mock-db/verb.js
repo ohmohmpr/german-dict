@@ -218,10 +218,22 @@ akku_dativ_verb = [
         dativ: "den Leuten",
         akkusativ: "die Regeln",
         english_sentence: "The pros explain the rules to people.",
+        german_sentence: "Die Profis erklären den Leuten die Regeln.",
         remark: "",
         chapter: "a2-8",           
         create_date: "07/05/2022",
-    }
+    },
+    {
+        nominativ: "Sie",
+        verb: "geben",
+        dativ: "den Besuchern",
+        akkusativ: "Helme",
+        english_sentence: "They give the visitors helmets.",
+        german_sentence: "Sie geben den Besuchern Helme.",
+        remark: "",
+        chapter: "a2-8",           
+        create_date: "08/05/2022",
+    },
 ]
 
 module.exports = {
