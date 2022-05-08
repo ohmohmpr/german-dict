@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>German Dictionary</h1>
+  </div>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Verben mit Dativ und Akkusativ</h2>
+      Weitere Verben: einer Person etwas schenken, erklären, geben, bringen, 
+      <br>
+      schicken, zeigen, anbieten
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">Nominativ</th>
+        <th scope="col">Verb</th>
+        <th scope="col">Dativ</th>
+        <th scope="col">Akkusativ</th>
+        <th scope="col">English</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.akku_dativ_verb.forEach(function(akku_dativ_verb) { %>
+        <tr>
+          <td scope="row">
+            <%= akku_dativ_verb.nominativ %>
+          </td>
+          <td>
+            <input id="<%= akku_dativ_verb.verb %>" oninput="checkAnswer(id)"> 
+          </td>
+          <td>
+            <input id="<%= akku_dativ_verb.dativ %>" oninput="checkAnswer(id)"> 
+          </td>
+          <td>
+            <input id="<%= akku_dativ_verb.akkusativ %>" oninput="checkAnswer(id)"> 
+          </td>
+          <td>
+            <%= akku_dativ_verb.english_sentence %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('-') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+    
+  }
+</script>

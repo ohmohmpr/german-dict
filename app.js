@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const wordRouter = require('./routes/word');
+const verbRouter = require('./routes/verb');
 const adjectiveRouter = require('./routes/adjective');
 const sentenceRouter = require('./routes/sentence');
 const prepositionRouter = require('./routes/preposition');
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/word', wordRouter);
+app.use('/verb', verbRouter);
 app.use('/adjective', adjectiveRouter);
 app.use('/sentence', sentenceRouter);
 app.use('/preposition', prepositionRouter);
