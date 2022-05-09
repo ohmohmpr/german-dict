@@ -366,7 +366,7 @@ const words = [
         create_date: "04/05/2022"
     },
     { 
-        artikel: "Der",
+        artikel: "der",
         wort: "Hochseilgarten",
         plural: "ä",
         meaning: "high ropes course",    
@@ -376,13 +376,73 @@ const words = [
         create_date: "04/05/2022"
     },
     { 
-        artikel: "Der",
+        artikel: "der",
         wort: "Besucher",
         plural: "Besucher",
-        meaning: "visitor",
+        meaning: "Visitor",
         english_sentence: "They give the visitors helmets.",
         german_sentence: "Sie geben den Besuchern Helme.",
         chapter: "a2-8",           
+        create_date: "08/05/2022"
+    },
+    { 
+        artikel: "der",
+        wort: "Helm",
+        plural: "Helme",
+        meaning: "Helmet",
+        english_sentence: "They give the visitors helmets.",
+        german_sentence: "Sie geben den Besuchern Helme.",
+        chapter: "a2-8",           
+        create_date: "08/05/2022"
+    },
+    { 
+        artikel: "der",
+        wort: "Brief",
+        plural: "Briefe",
+        meaning: "letter",
+        english_sentence: "Mrs.Korkmaz sends a letter to a man.",
+        german_sentence: "Frau Korkmaz schickt einem Mann einen Brief.",
+        chapter: "a2-8",           
+        create_date: "08/05/2022"
+    },
+    { 
+        artikel: "das",
+        wort: "Spielzeug",
+        plural: "-",
+        meaning: "toys",
+        english_sentence: "Does Tom give his child a toy?",
+        german_sentence: "Schenkt Tom seinem Kind ein Spielzeug?",
+        chapter: "a2-8",           
+        create_date: "08/05/2022"
+    },
+    { 
+        artikel: "der",
+        wort: "Schal",
+        plural: "Schals/Schale",
+        meaning: "Scarf",
+        english_sentence: "Does Tom give his mother a scarf?",
+        german_sentence: "Schenkt Tom seiner Mutter einen Schal?",
+        chapter: "a2-8",
+        create_date: "08/05/2022"
+    },
+    { 
+        artikel: "der",
+        wort: "Schminkspiegel",
+        plural: "Schminkspiegel",
+        meaning: "Makeup mirror",
+        english_sentence: "Does Tom give his mother a scarf?",
+        german_sentence: "Schenkt Tom seiner Mutter einen Schal?",
+        chapter: "a2-8",
+        create_date: "08/05/2022"
+    },
+    { 
+        artikel: "die",
+        wort: "Marketasche",
+        plural: "Marketaschen",
+        meaning: "branded bag",
+        english_sentence: "Does Tom give his wife a branded bag?",
+        german_sentence: "Schenkt Tom seiner Frau eine Marketasche?",
+        chapter: "a2-8",
         create_date: "08/05/2022"
     },
 ]

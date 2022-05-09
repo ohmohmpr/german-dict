@@ -17,9 +17,51 @@
   <table class="table caption-top table-bordered border-dark">
     <caption>
       <h2>Verben mit Dativ und Akkusativ</h2>
-      Weitere Verben: einer Person etwas schenken, erklären, geben, bringen, 
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">Question</th>
+        <th scope="col">Answer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.akku_dativ_example_verb.forEach(function(akku_dativ_example_verb) { %>
+        <tr>
+          <td>
+            <%= akku_dativ_example_verb.question %>
+            <br>
+            <%= akku_dativ_example_verb.question2 %>
+            <br>
+            <%= akku_dativ_example_verb.question3 %>
+            <br>
+            <%= akku_dativ_example_verb.question4 %>
+          </td>
+          <td>
+            <%= akku_dativ_example_verb.answer %>
+            <br>
+            <%= akku_dativ_example_verb.answer2 %>
+            <br>
+            <%= akku_dativ_example_verb.answer3 %>
+            <br>
+            <%= akku_dativ_example_verb.answer4 %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Verben mit Dativ und Akkusativ</h2>
+      Weitere Verben: einer Person etwas ...
       <br>
-      schicken, zeigen, anbieten
+      A - J : anbieten, bringen, erklären, empfehle, geben,
+      <br>
+      K - T: kaufen, leihen, schenken, schicken, 
+      <br>
+      U - ß: zeigen, 
     </caption>
     <thead>
       <tr>
@@ -52,8 +94,6 @@
       <% }); %>
     </tbody>
   </table>
-
-  <hr>
 
 </main>
 
