@@ -359,6 +359,30 @@ const words = [
         create_date: "08/05/2022",
         update_date: "10/05/2022",
     },
+    { 
+        artikel: "die",
+        wort: "Brücke",
+        plural: "Brücken",
+        meaning: "Bridge",
+        english_sentence: "Lara walks past the bridge.",
+        german_sentence: "Lara geht an der Brücke vorbei.",
+        remark: "",
+        chapter: "a2-6",
+        create_date: "10/05/2022",
+        update_date: "10/05/2022",
+    },
+    { 
+        artikel: "der",
+        wort: "Fluss",
+        plural: "Flüsse",
+        meaning: "River",
+        english_sentence: "Sie geht bis zum Fluss",
+        german_sentence: "She goes to the river",
+        remark: "",
+        chapter: "a2-6",
+        create_date: "10/05/2022",
+        update_date: "10/05/2022",
+    },
 ]
 
 

@@ -81,7 +81,7 @@
 </html>
 <script>
   function checkAnswer(id, test) {
-    let new_id = id.substring(id.indexOf('-') + 1);
+    let new_id = id.substring(id.indexOf('+') + 1);
     let elm = document.getElementById(id);
 
     if (elm.value == new_id) {
