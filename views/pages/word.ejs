@@ -23,7 +23,7 @@
       <tr>
         <th scope="col">Artikel</th>
         <th scope="col">Wort</th>
-        <th scope="col">plural</th>
+        <th scope="col">Plural</th>
         <th scope="col">English sentence</th>
         <th scope="col">German sentence</th>
       </tr>
@@ -37,7 +37,7 @@
             </p>
           </td>
 
-          <td id="<%= i %>" onclick="myFunction(id)">
+          <td id="<%= i %>" onclick="showAnswer(id)">
             <%= words.words[i].wort %>
             <br>
             <img src="/images/word/<%= words.words[i].wort %>.png" onerror="this.style.display='none'" width="100" height="100">
@@ -48,7 +48,7 @@
               <%= words.words[i].plural %>
             </p>
           </td>
-
+          
           <td>
             <%= words.words[i].english_sentence %>
           </td>
@@ -75,7 +75,7 @@
 </body>
 </html>
 <script>
-  function myFunction(id) {
+  function showAnswer(id) {
     var elms = document.getElementsByClassName("demo" + id);
 
     Array.from(elms).forEach((x) => {
