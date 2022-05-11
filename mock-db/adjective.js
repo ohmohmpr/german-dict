@@ -70,17 +70,8 @@ const words2 = [
     }
 ]
 
-const komparativ3 = [
-    {
-        adjektive: "schnell",
-        komparativ: "schneller",
-        superlativ: "am schnellsten",
-        superlativ_sentence: "Welches Verkehrsmittel ist am schnellsten?",
-    }
-]
 module.exports = {
     words: words,
     words2: words2,
-    komparativ3: komparativ3,
 }
 

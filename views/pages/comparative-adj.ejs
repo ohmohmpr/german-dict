@@ -16,39 +16,46 @@
 
   <table class="table caption-top table-bordered border-dark">
     <caption>
-      <h2>Wörter</h2>
-      
+      <h2>Komparativ/ Superlativ Adjective</h2>
     </caption>
     <thead>
       <tr>
-        <th scope="col">Wort</th>
-        <th scope="col">English sentence</th>
-        <th scope="col">German sentence</th>
+        <th scope="col">adjektive</th>
+        <th scope="col">Komparativ</th>
+        <th scope="col">Superlativ</th>
+        <th scope="col">Meaning</th>
+        <th scope="col">Sentence</th>
       </tr>
     </thead>
+    
     <tbody>
-      <% for(var i=0; i < words.words.length; i++) { %>
+      <% words.comparative_adj.forEach(function(comparative_adj) { %>
         <tr>
-
+          <th scope="row">
+            <%= comparative_adj.adjektive %>
+          </th>
           <td>
-            <%= words.words[i].wort %>
+            <input id="<%= comparative_adj.komparativ %>" oninput="checkAnswer(id)">
           </td>
-          
           <td>
-            <%= words.words[i].english_sentence %>
+            <input id="<%= comparative_adj.superlativ %>" oninput="checkAnswer(id)">
           </td>
-
           <td>
-            <input id="<%= words.words[i].german_sentence %>"  oninput="checkAnswer(id)" size="70"> 
+            <%= comparative_adj.meaning %>
           </td>
-
+          <td>
+            <input id="<%= comparative_adj.german_sentence %>" oninput="checkAnswer(id)">
+            <br>
+            <%= comparative_adj.english_sentence %>
+          </td>
         </tr>
-      <% } %>
-
+        <% }); %>
     </tbody>
   </table>
 
   <hr>
+
+
 </main>
 
 <footer>

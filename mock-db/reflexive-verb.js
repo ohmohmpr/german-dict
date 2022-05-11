@@ -40,7 +40,7 @@ const reflexive_verb = [
                         english_sentence: "I'm in a hurry",
                         german_sentence: "Ich muss mich beeilen.",
                     },
-
+                    
                 ],
                 perfect: [
                     {
@@ -48,6 +48,35 @@ const reflexive_verb = [
                         present: "beeilt",
                         english_sentence: "I was in a hurry.",
                         german_sentence: "Ich habe mich so beeilt.",
+                    },
+                ],
+            }
+        ],
+        remark: "",
+        chapter: "",
+        create_date: "10/05/2022",
+        update_date: "10/05/2022",
+    },
+    { 
+        wort: "sich ärgern",
+        meaning: "be mad, annoy, หงุดหงิด",
+        verb: [
+            {
+                present: [
+                    {
+                        pronomen: "Sie",
+                        present: "ärgern",
+                        english_sentence: "Who fret?",
+                        german_sentence: "Wer ärgern sich?",
+                    },
+
+                ],
+                perfect: [
+                    {
+                        pronomen: "Ich",
+                        present: "habe geärgert",
+                        english_sentence: "I was a little annoyed.",
+                        german_sentence: "Ich habe ein bisschen geärgert.",
                     },
                 ],
             }

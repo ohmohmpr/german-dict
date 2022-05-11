@@ -7,12 +7,14 @@ var logger = require('morgan');
 const indexRouter = require('./routes/index');
 const wordRouter = require('./routes/word');
 const verbRouter = require('./routes/verb');
+const verbGrammarRouter = require('./routes/verb-grammar');
 const adjectiveRouter = require('./routes/adjective');
 const sentenceRouter = require('./routes/sentence');
 const prepositionRouter = require('./routes/preposition');
 const wFrageRouter = require('./routes/w-Frage');
 const connectorsRouter = require('./routes/connectors');
 const reflexiveVerbRouter = require('./routes/reflexive-verb');
+const comparativeADJRouter = require('./routes/comparative-adj');
 
 const app = express()
 const port = 3000
@@ -30,12 +32,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/word', wordRouter);
 app.use('/verb', verbRouter);
+app.use('/verb-grammar', verbGrammarRouter);
 app.use('/adjective', adjectiveRouter);
 app.use('/sentence', sentenceRouter);
 app.use('/preposition', prepositionRouter);
 app.use('/w-frage', wFrageRouter);
 app.use('/connectors', connectorsRouter);
 app.use('/reflexive-verb', reflexiveVerbRouter);
+app.use('/comparative-adj', comparativeADJRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

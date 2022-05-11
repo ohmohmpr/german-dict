@@ -77,11 +77,21 @@ const words = [
         answer: "",
         answer_eng: "",
     },
-    { 
+    {
+        question: "Was wünschst du dir zum Geburtstag?",
+        question_eng: "What do you wish for your birthday?",
+        answer: "Ich wünsche mir Geld zum Geburtstag",
+        answer_eng: "I want money for my birthday",
+        create_date: "11/05/2022",
+        update_date: "11/05/2022",
+    },
+    {
         question: "",
         question_eng: "",
         answer: "",
         answer_eng: "",
+        create_date: "",
+        update_date: "",
     },
 ]
 
