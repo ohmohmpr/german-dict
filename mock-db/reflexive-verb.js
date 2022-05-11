@@ -58,6 +58,35 @@ const reflexive_verb = [
         update_date: "10/05/2022",
     },
     { 
+        wort: "sich aufgeregt",
+        meaning: "get upset",
+        verb: [
+            {
+                present: [
+                    {
+                        pronomen: "Du",
+                        present: "regst auf",
+                        english_sentence: "don't get upset.",
+                        german_sentence: "reg dich nicht auf",
+                    },
+
+                ],
+                perfect: [
+                    {
+                        pronomen: "-",
+                        present: "-",
+                        english_sentence: "-",
+                        german_sentence: "-",
+                    },
+                ],
+            }
+        ],
+        remark: "",
+        chapter: "",
+        create_date: "10/05/2022",
+        update_date: "10/05/2022",
+    },
+    { 
         wort: "sich ärgern",
         meaning: "be mad, annoy, หงุดหงิด",
         verb: [
@@ -85,6 +114,64 @@ const reflexive_verb = [
         chapter: "",
         create_date: "10/05/2022",
         update_date: "10/05/2022",
+    },
+    { 
+        wort: "sich verabschieden",
+        meaning: "saying goodbye",
+        verb: [
+            {
+                present: [
+                    {
+                        pronomen: "Ich",
+                        present: "verabschiede",
+                        english_sentence: "Now I think I'll take my leave.",
+                        german_sentence: "Ich denke, ich werde mich verabschieden.",
+                    },
+
+                ],
+                perfect: [
+                    {
+                        pronomen: "-",
+                        present: "-",
+                        english_sentence: "-",
+                        german_sentence: "-",
+                    },
+                ],
+            }
+        ],
+        remark: "",
+        chapter: "a2-9",
+        create_date: "12/05/2022",
+        update_date: "12/05/2022",
+    },
+    { 
+        wort: "sich verirren",
+        meaning: "get lost",
+        verb: [
+            {
+                present: [
+                    {
+                        pronomen: "-",
+                        present: "-",
+                        english_sentence: "-",
+                        german_sentence: "-",
+                    },
+
+                ],
+                perfect: [
+                    {
+                        pronomen: "Ich",
+                        present: "verirrt",
+                        english_sentence: "I got lost in the center.",
+                        german_sentence: "Ich habe mich im Zentrum verirrt.",
+                    },
+                ],
+            }
+        ],
+        remark: "",
+        chapter: "a2-9",
+        create_date: "12/05/2022",
+        update_date: "12/05/2022",
     },
 ]
 

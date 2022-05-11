@@ -46,6 +46,36 @@
 
   <hr>
 
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Als und Wenn</h2>
+      <br>
+      Als = Nebensatz, When  :happened only once
+      <br>
+      Wenn = Nebensatz, If & Whenever: happened repeatedly
+      <br>
+      https://www.thegermanadventure.com/the-difference-between-wenn-and-als/
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.alsUndWenn.forEach(function(alsUndWenn) { %>
+        <tr>
+          <th scope="row">
+            <%= alsUndWenn.sentence_eng %>
+          </th>
+          <td>
+            <input id="<%= alsUndWenn.sentence %>" oninput="checkAnswer(id)" size="70"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
 </main>
 
 <footer>
