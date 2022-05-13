@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>German Dictionary</h1>
+  </div>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Gut gesagt</h2>
+      
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Maskulin</th>
+        <th scope="col">Neutrum</th>
+        <th scope="col">Feminin</th>
+        <th scope="col">Plural</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.words.forEach(function(word) { %>
+        <tr>
+          <th scope="row"><%= word.title %></th>
+          <td>
+            <input id="<%=word.title %>-<%= word.maskulin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.maskulin_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.neutrum %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.neutrum_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.feminin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.feminin_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.plural %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.plural_eng %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <hr>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('-') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+    
+  }
+</script>
