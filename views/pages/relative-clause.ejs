@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>German Dictionary</h1>
+  </div>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Relativsätze im Nominativ</h2>
+    </caption>
+    Sönke Wortmann ist ein Regisseur. <b>Er</b> hat viele bekannte Filme gemacht.
+    <br>
+    Sönke Wortmann ist ein Regisseur, <b>der</b> viele bekannte Filme gedreht <b>hat</b>.
+
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.example.forEach(function(example) { %>
+        <tr>
+          <td>
+            <%= example.sentence %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('-') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+    
+  }
+</script>

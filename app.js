@@ -15,6 +15,7 @@ const wFrageRouter = require('./routes/w-Frage');
 const connectorsRouter = require('./routes/connectors');
 const reflexiveVerbRouter = require('./routes/reflexive-verb');
 const comparativeADJRouter = require('./routes/comparative-adj');
+const relativeClauseRouter = require('./routes/relative-clause');
 const gutGesagtRouter = require('./routes/gut-gesagt');
 
 const app = express()
@@ -41,6 +42,7 @@ app.use('/w-frage', wFrageRouter);
 app.use('/connectors', connectorsRouter);
 app.use('/reflexive-verb', reflexiveVerbRouter);
 app.use('/comparative-adj', comparativeADJRouter);
+app.use('/relative-clause', relativeClauseRouter);
 app.use('/gut-gesagt', gutGesagtRouter);
 
 // catch 404 and forward to error handler
