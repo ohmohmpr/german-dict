@@ -7,15 +7,19 @@ var logger = require('morgan');
 const indexRouter = require('./routes/index');
 const wordRouter = require('./routes/word');
 const verbRouter = require('./routes/verb');
-const verbGrammarRouter = require('./routes/verb-grammar');
 const adjectiveRouter = require('./routes/adjective');
 const sentenceRouter = require('./routes/sentence');
 const prepositionRouter = require('./routes/preposition');
-const wFrageRouter = require('./routes/w-Frage');
-const connectorsRouter = require('./routes/connectors');
 const reflexiveVerbRouter = require('./routes/reflexive-verb');
+
+const wFrageRouter = require('./routes/w-Frage');
+const interrogativePronounsRouter = require('./routes/interrogative-pronouns');
+
 const comparativeADJRouter = require('./routes/comparative-adj');
+const verbGrammarRouter = require('./routes/verb-grammar');
+
 const relativeClauseRouter = require('./routes/relative-clause');
+const connectorsRouter = require('./routes/connectors');
 const gutGesagtRouter = require('./routes/gut-gesagt');
 
 const app = express()
@@ -34,17 +38,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/word', wordRouter);
 app.use('/verb', verbRouter);
-app.use('/verb-grammar', verbGrammarRouter);
 app.use('/adjective', adjectiveRouter);
 app.use('/sentence', sentenceRouter);
 app.use('/preposition', prepositionRouter);
-app.use('/w-frage', wFrageRouter);
-app.use('/connectors', connectorsRouter);
 app.use('/reflexive-verb', reflexiveVerbRouter);
-app.use('/comparative-adj', comparativeADJRouter);
-app.use('/relative-clause', relativeClauseRouter);
-app.use('/gut-gesagt', gutGesagtRouter);
 
+app.use('/w-frage', wFrageRouter);
+app.use('/interrogative-pronouns', interrogativePronounsRouter);
+
+app.use('/verb-grammar', verbGrammarRouter);
+app.use('/comparative-adj', comparativeADJRouter);
+
+app.use('/connectors', connectorsRouter);
+app.use('/gut-gesagt', gutGesagtRouter);
+app.use('/relative-clause', relativeClauseRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>German Dictionary</h1>
+  </div>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Interrogativartikel Was für ein(e) ...? und Welche(r) ...?</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.words.forEach(function(word) { %>
+        <tr>
+          <th scope="row">
+            <%= word.question_eng %>
+            <br>
+            <%= word.answer_eng %>
+          </th>
+          <td>
+            <input id="<%= word.question %>" oninput="checkAnswer(id)" onkeydown="showAnswer(id)" size="70"> 
+            <br>
+            <input id="<%= word.answer %>" oninput="checkAnswer(id)" size="70"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('-') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+    
+  }
+  function showAnswer(id) {
+    let element = document.getElementById(id);
+    element.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        console.log("test")
+      }
+    });
+  }
+</script>
+<!-- https://stackoverflow.com/questions/70287691/js-function-addeventlistener-on-keypress-adding-text-with-innerhtml-is-running-e?noredirect=1&lq=1 -->
+<!-- https://stackoverflow.com/questions/24876428/when-does-using-addeventlistener-accumulate-in-javascript -->
