@@ -6,13 +6,14 @@ var logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const wordRouter = require('./routes/word');
+const quotesRouter = require('./routes/quotes');
 const verbRouter = require('./routes/verb');
 const adjectiveRouter = require('./routes/adjective');
 const sentenceRouter = require('./routes/sentence');
 const prepositionRouter = require('./routes/preposition');
 const reflexiveVerbRouter = require('./routes/reflexive-verb');
 
-const wFrageRouter = require('./routes/w-Frage');
+const wFrageRouter = require('./routes/w-frage');
 const interrogativePronounsRouter = require('./routes/interrogative-pronouns');
 
 const comparativeADJRouter = require('./routes/comparative-adj');
@@ -52,6 +53,8 @@ app.use('/comparative-adj', comparativeADJRouter);
 app.use('/connectors', connectorsRouter);
 app.use('/gut-gesagt', gutGesagtRouter);
 app.use('/relative-clause', relativeClauseRouter);
+
+app.use('/quotes', quotesRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
