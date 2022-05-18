@@ -18,6 +18,7 @@ const interrogativePronounsRouter = require('./routes/interrogative-pronouns');
 
 const comparativeADJRouter = require('./routes/comparative-adj');
 const verbGrammarRouter = require('./routes/verb-grammar');
+const verbPrepositionRouter = require('./routes/verb-preposition');
 
 const relativeClauseRouter = require('./routes/relative-clause');
 const connectorsRouter = require('./routes/connectors');
@@ -49,6 +50,7 @@ app.use('/interrogative-pronouns', interrogativePronounsRouter);
 
 app.use('/verb-grammar', verbGrammarRouter);
 app.use('/comparative-adj', comparativeADJRouter);
+app.use('/verb-preposition', verbPrepositionRouter);
 
 app.use('/connectors', connectorsRouter);
 app.use('/gut-gesagt', gutGesagtRouter);
