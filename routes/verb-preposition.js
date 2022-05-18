@@ -8,9 +8,9 @@ const db = require('../mock-db/verb-preposition');
 
 router.get('/', function(req, res, next) {
   res.render('pages/verb-preposition.ejs', { 
-    words: db
+    verb: db
   })
-  console.log(db.words)
+  console.log(db.verb)
 });
 
 module.exports = router;
