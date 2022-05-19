@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>Konjunktiv II: Verwendung</h1>
+    <h3>1. höfliche Bitte: Könntest du mir helfen?</h3>
+    <h3>2. Wunsch: Ich wäre gern zu Hause.</h3>
+    <h3>3. Ratschlag: Ich würde mit meinem Chef sprechen.</h3>
+  </div>
+  <hr>
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>3. Ratschlag</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.ratschlag.forEach(function(sentence) { %>
+        <tr>
+          <th scope="row">
+            <%= sentence.sentence_eng %>
+          </th>
+          <td>
+            <input id="<%=sentence.sentence %>" oninput="checkAnswer(id)" size="50"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('-') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+    
+  }
+</script>
