@@ -11,12 +11,17 @@
 
 <main>
   <div class="jumbotron">
-    <h1>German Dictionary</h1>
+    <h1>Nebensätze</h1>
+    <h3>1. denn und weil</h3>
+    <h3>2. Als und Wenn</h3>
+    <h3>3. Damit und Um ... zu</h3>
   </div>
+
+  <hr>
 
   <table class="table caption-top table-bordered border-dark">
     <caption>
-      <h2>denn und weil</h2>
+      <h2>1. denn und weil</h2>
       Meaning: because, warum
       <br>
       denn = Hauptsatz
@@ -48,7 +53,7 @@
 
   <table class="table caption-top table-bordered border-dark">
     <caption>
-      <h2>Als und Wenn</h2>
+      <h2>2. Als und Wenn</h2>
       <br>
       Als = Nebensatz, When  :happened only once
       <br>
@@ -70,6 +75,56 @@
           </th>
           <td>
             <input id="<%= alsUndWenn.sentence %>" oninput="checkAnswer(id)" size="70"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>3. Damit und Um ... zu</h2>
+      เพื่อ
+      <br>
+      Der Gastgeber bietet mehrmals Essen an, <b>damit</b> alle Gäste satt werden.
+      <br>
+      <br>
+      Man sagt zuerst ,,nein", <b>damit</b> man nicht unhöflich wirkt. (so that)
+      <br>
+      Ich schlafe viel, <b>damit</b> ich bald wieder gesund werde. (so that)
+      <br>
+      I sleep a lot <b>so that</b> I can recover soon.
+      <br>
+      <br>
+      Man sagt zuerst ,,nein", <b>um</b> nicht unhöflich <b>zu</b> wirken. (to)
+      <br>
+      Ich schlafe viel, <b>um</b> bald wieder gesund <b>zu</b> werden. (to)
+      <br>
+      I sleep a lot <b>to</b> recover soon.
+
+      <br>
+      <br>
+      <b>Subjekt</b> in Satz 1 <b>!=</b> <b>Subjekt</b>  in Satz 2: damit.
+      <br>
+      <b>Subjekt</b> in Satz 1 = <b></b> Subjekt in Satz 2: damit oder um ... zu.
+
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.damitUmZu.forEach(function(damitUmZu) { %>
+        <tr>
+          <th scope="row">
+            <%= damitUmZu.sentence_eng %>
+          </th>
+          <td>
+            <input id="<%= damitUmZu.sentence %>" oninput="checkAnswer(id)" size="70"> 
           </td>
         </tr>
       <% }); %>

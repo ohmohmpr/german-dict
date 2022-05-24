@@ -11,12 +11,16 @@
 
 <main>
   <div class="jumbotron">
-    <h1>German Dictionary</h1>
+    <h1>W-Frage</h1>
+    <h3>1. W-Frage</h3>
+    <h3>2. W-Fragen mit Präposition</h3>
   </div>
+
+  <hr>
 
   <table class="table caption-top table-bordered border-dark">
     <caption>
-      <h2>W-Frage</h2>
+      <h2>1. W-Frage</h2>
       Wo?          Wie?      Wann?      Warum? Um wie viel Uhr?
       <br>
       Was für ...? Wie viel? Wie lange? Wohin?
@@ -50,6 +54,43 @@
   </table>
 
   <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>2. W-Fragen mit Präposition</h2>
+      Präposition mit Fragewort(z.B. auf wen?):
+      <br>
+      Frage nach <b>Personen</b>
+      <br>
+      wo(r) + Präposition(z.B. womit?):
+      <br>
+      Frage nach <b>Dingen und Ereignissen</b>
+      <br>
+      Wenn die Präposition mit Vokal beginnt, braucht man ein ,,r'' (z.B. worauf?)
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.wFmitPrep.forEach(function(sentence) { %>
+        <tr>
+          <th scope="row">
+            <%= sentence.question_eng %>
+            <br>
+            <%= sentence.answer_eng %>
+          </th>
+          <td>
+            <input id="<%= sentence.question %>" oninput="checkAnswer(id)" onkeydown="showAnswer(id)" size="70"> 
+            <br>
+            <input id="<%= sentence.answer %>" oninput="checkAnswer(id)" size="70"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
 
 </main>
 

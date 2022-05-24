@@ -95,6 +95,21 @@ const words = [
     },
 ]
 
+const wFmitPrep = [
+    { 
+        question: "Worüber ärgert sich Markus?",
+        question_eng: "What is Mark annoyed about?",
+        answer: "Markus ärgert sich über die Prüfung.",
+        answer_eng: "Markus is annoyed about the exam.",
+    },
+]
+
+const doch = [
+    {
+        
+    }
+]
 module.exports = {
     words: words,
+    wFmitPrep: wFmitPrep,
 }

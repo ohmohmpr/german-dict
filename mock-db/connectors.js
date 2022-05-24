@@ -83,10 +83,36 @@ const alsUndWenn = [
     },
 ]
 
-
+damitUmZu = [
+    {
+        sentence: "Ich schlafe viel, damit ich bald wieder gesund werde.",
+        sentence_eng: "I sleep a lot so that I can recover soon.",
+        create_date: "20/05/2022",
+        update_date: "20/05/2022",
+    },
+    {
+        sentence: "Ich schlafe viel, um bald wieder gesund zu werden.",
+        sentence_eng: "I sleep a lot to recover soon.",
+        create_date: "20/05/2022",
+        update_date: "20/05/2022",
+    },
+    {
+        sentence: "Heute Abend bleiben wir zu Hause, damit wir uns mal wieder in Ruhe unterhalten.",
+        sentence_eng: "Tonight we stay at home, so we can talk again in peace.",
+        create_date: "20/05/2022",
+        update_date: "20/05/2022",
+    },
+    {
+        sentence: "Heute Abend bleiben wir zu Hause, um uns mal wieder in Ruhe zu unterhalten.",
+        sentence_eng: "Tonight we stay at home to talk again in peace.",
+        create_date: "20/05/2022",
+        update_date: "20/05/2022",
+    },
+]
 
 module.exports = {
     words: words,
     alsUndWenn: alsUndWenn,
+    damitUmZu: damitUmZu,
 }
 

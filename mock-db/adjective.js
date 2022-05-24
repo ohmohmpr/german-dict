@@ -6,7 +6,7 @@ const words = [
         neutrum: "ein modernes Studio",
         neutrum_eng: "a modern studio",
         feminin: "eine vielseitige Stadt",
-        feminin_eng: "a diverse city",
+        feminin_eng: "a versatile city",
         plural: "professionelle Trainer",
         plural_eng: "professional trainers"
     },

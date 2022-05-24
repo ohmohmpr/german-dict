@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>Adverb</h1>
+    <h3>1. Frequency Adverb</h3>
+  </div>
+
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>1. Frequency Adverb</h2>
+      Wie oft?
+      <br>
+      immer: 100%
+      <br>
+      meistens: 90% = usually, mostly
+      <br>
+      oft, häufig: 70 - 80% 
+      <br>
+      machmal, ab und zu: 50%
+      <br>
+      selten: 20 - 30%
+      <br>
+      nie: 0%
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% adverb.frequencyAdverb.forEach(function(frequencyAdverb) { %>
+        <tr>
+          <th scope="row">
+            <%= frequencyAdverb.question_eng %>
+            <br>
+            <%= frequencyAdverb.answer_eng %>
+          </th>
+          <td>
+            <input id="<%= frequencyAdverb.question %>" oninput="checkAnswer(id)" onkeydown="showAnswer(id)" size="70"> 
+            <br>
+            <input id="<%= frequencyAdverb.answer %>" oninput="checkAnswer(id)" size="70"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('-') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+    
+  }
+  function showAnswer(id) {
+    let element = document.getElementById(id);
+    element.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        console.log("test")
+      }
+    });
+  }
+</script>
+<!-- https://stackoverflow.com/questions/70287691/js-function-addeventlistener-on-keypress-adding-text-with-innerhtml-is-running-e?noredirect=1&lq=1 -->
+<!-- https://stackoverflow.com/questions/24876428/when-does-using-addeventlistener-accumulate-in-javascript -->
