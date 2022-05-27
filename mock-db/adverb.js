@@ -33,7 +33,48 @@ const frequencyAdverb = [
         answer_eng: "I usually eat in the canteen.",
     },
 ]
+
+const OthersAdverb = [
+    {
+        adjektive: "früher",
+        komparativ: "adverb",
+        superlativ: "adverb",
+        meaning: "early",
+        english_sentence: "Stefan Fischer used to be a translator for German and English.",
+        german_sentence: "Stefan Fischer war früher Übersetzer für Deutsch und Englisch.",
+        remark: "",
+        chapter: "",
+        create_date: "26/05/2022",
+        update_date: "26/05/2022",
+    },
+    {
+        adjektive: "Vor",
+        komparativ: "adverb",
+        superlativ: "adverb",
+        meaning: "ago",
+        english_sentence: "Twenty-five years ago, my first book was printed",
+        german_sentence: "Vor fünfundzwanzig Jahren wurde mein erstes Buch gedruckt",
+        remark: "",
+        chapter: "",
+        create_date: "26/05/2022",
+        update_date: "26/05/2022",
+    },
+    {
+        adjektive: "Vor",
+        komparativ: "adverb",
+        superlativ: "adverb",
+        meaning: "ago",
+        english_sentence: "He wrote his first book ten years ago.",
+        german_sentence: "Sein erstes Buch hat er vor zehn Jahren geschrieben.",
+        remark: "",
+        chapter: "",
+        create_date: "26/05/2022",
+        update_date: "26/05/2022",
+    },
+]
+
 module.exports = {
     adverb: adverb,
     frequencyAdverb: frequencyAdverb,
+    OthersAdverb: OthersAdverb,
 }

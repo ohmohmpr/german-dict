@@ -56,6 +56,27 @@
       <% }); %>
     </tbody>
   </table>
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2></h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.unbestimmten.forEach(function(unbestimmten) { %>
+        <tr>
+          <th scope="row"><%= unbestimmten.english_sentence %></th>
+          <td>
+            <input id="<%= unbestimmten.german_sentence %>" oninput="checkAnswer(id)"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
   <hr>
   <table class="table caption-top table-bordered border-dark">
     <caption>

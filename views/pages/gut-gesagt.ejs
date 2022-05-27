@@ -21,36 +21,16 @@
     </caption>
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Maskulin</th>
-        <th scope="col">Neutrum</th>
-        <th scope="col">Feminin</th>
-        <th scope="col">Plural</th>
+        <th scope="col">German</th>
+        <th scope="col">English</th>
       </tr>
     </thead>
     <tbody>
       <% words.words.forEach(function(word) { %>
         <tr>
-          <th scope="row"><%= word.title %></th>
+          <th scope="row"><%= word.german_sentence %></th>
           <td>
-            <input id="<%=word.title %>-<%= word.maskulin %>" oninput="checkAnswer(id)"> 
-            <br>
-            <%= word.maskulin_eng %>
-          </td>
-          <td>
-            <input id="<%=word.title %>-<%= word.neutrum %>" oninput="checkAnswer(id)"> 
-            <br>
-            <%= word.neutrum_eng %>
-          </td>
-          <td>
-            <input id="<%=word.title %>-<%= word.feminin %>" oninput="checkAnswer(id)"> 
-            <br>
-            <%= word.feminin_eng %>
-          </td>
-          <td>
-            <input id="<%=word.title %>-<%= word.plural %>" oninput="checkAnswer(id)"> 
-            <br>
-            <%= word.plural_eng %>
+            <%= word.english_sentence %>
           </td>
         </tr>
       <% }); %>

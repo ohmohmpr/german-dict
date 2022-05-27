@@ -13,6 +13,7 @@
   <div class="jumbotron">
     <h1>Adverb</h1>
     <h3>1. Frequency Adverb</h3>
+    <h3>1. Others Adverb</h3>
   </div>
 
   <hr>
@@ -52,6 +53,36 @@
             <input id="<%= frequencyAdverb.question %>" oninput="checkAnswer(id)" onkeydown="showAnswer(id)" size="70"> 
             <br>
             <input id="<%= frequencyAdverb.answer %>" oninput="checkAnswer(id)" size="70"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>2. Others Adverb</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% adverb.OthersAdverb.forEach(function(OthersAdverb) { %>
+        <tr>
+          <th scope="row">
+            <%= OthersAdverb.meaning %>
+          </th>
+          <td>
+            <%= OthersAdverb.adjektive %>
+          </td>
+          <td>
+            <%= OthersAdverb.german_sentence %>
           </td>
         </tr>
       <% }); %>

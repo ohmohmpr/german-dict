@@ -70,8 +70,15 @@ const words2 = [
     }
 ]
 
+const unbestimmten = [
+    { 
+        english_sentence: "a young filmmaker",
+        german_sentence: "ein junger Filmemacher",
+    },
+]
 module.exports = {
     words: words,
     words2: words2,
+    unbestimmten: unbestimmten,
 }
 

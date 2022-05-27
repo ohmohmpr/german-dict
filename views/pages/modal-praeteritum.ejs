@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>German Dictionary</h1>
+    <h3>https://www.germanwithantrim.com/past-tense-of-modal-auxiliaries/</h3>
+  </div>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Modalverben im Präteritum</h2>
+      
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">wollen</th>
+        <th scope="col">können</th>
+        <th scope="col">müssen</th>
+        <th scope="col">dürfen</th>
+        <th scope="col">sollen</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <th scope="row">ich</th>
+          <td>wollte</td>
+          <td>konnte</td>
+          <td>musste</td>
+          <td>durfte</td>
+          <td>sollte</td>
+        </tr>
+        <tr>
+          <th scope="row">du</th>
+          <td>wolltest</td>
+          <td>konntest</td>
+          <td>musstest</td>
+          <td>durftest</td>
+          <td>solltest</td>
+        </tr>
+        <tr>
+          <th scope="row">er/es/sie</th>
+          <td>wollte</td>
+          <td>konnte</td>
+          <td>musste</td>
+          <td>durfte</td>
+          <td>sollte</td>
+        </tr>
+        <tr>
+          <th scope="row">wir</th>
+          <td>wollten</td>
+          <td>konnten</td>
+          <td>mussten</td>
+          <td>durften</td>
+          <td>sollten</td>
+        </tr>
+        <tr>
+          <th scope="row">ihr</th>
+          <td>wolltet</td>
+          <td>konntet</td>
+          <td>musstet</td>
+          <td>durftet</td>
+          <td>solltet</td>
+        </tr>
+        <tr>
+          <th scope="row">sie/Sie</th>
+          <td>wollten</td>
+          <td>konnten</td>
+          <td>mussten</td>
+          <td>durften</td>
+          <td>sollten</td>
+        </tr>
+    </tbody>
+  </table>
+  
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Modalverben im Präteritum</h2>
+      
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">German</th>
+        <th scope="col">English</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.words.forEach(function(word) { %>
+        <tr>
+          <th scope="row"><%= word.german_sentence %></th>
+          <td>
+            <%= word.english_sentence %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('-') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+    
+  }
+</script>
