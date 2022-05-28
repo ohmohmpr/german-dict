@@ -11,12 +11,17 @@
 
 <main>
   <div class="jumbotron">
-    <h1>German Dictionary</h1>
+    <h1>Präpositionen</h1>
+    <h3>1. Lokale Präpositionen</h3>
+    <h3>2. Ohne/ Mit</h3>
+    <h3>3. mit Akkusativ und Dativ</h3>
   </div>
+
+  <hr>
 
   <table class="table caption-top table-bordered border-dark">
     <caption>
-      <h2>Lokale Präpositionen</h2>
+      <h2>1. Lokale Präpositionen</h2>
       mit Dativ    : an ... vorbei, bis zu, gegenüber
       <br>
       mit Akkusativ: durch, ... entlang, um ... herum
@@ -46,7 +51,7 @@
 
   <table class="table caption-top table-bordered border-dark">
     <caption>
-      <h2>Ohne/ Mit</h2>
+      <h2>2. Ohne/ Mit</h2>
       ohne + Akkusativ
       <br>
       mit + Dativ
@@ -71,6 +76,49 @@
       <% }); %>
     </tbody>
   </table>
+
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>3. mit Akkusativ und Dativ</h2>
+      https://resources.german.lsa.umich.edu/grammatik/stehenstellen/
+      <br>
+      Wohin + Akkusativ: stellen, legen, stecken
+      <br>
+      Wo + Dativ: stehen, liegen
+      
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">German</th>
+        <th scope="col">Wohin</th>
+        <th scope="col">German</th>
+        <th scope="col">Wo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.akku_dativ.forEach(function(akku_dativ) { %>
+        <tr>
+          <td>
+            <%= akku_dativ.sentence1 %>
+          </td>
+          <td>
+            <%= akku_dativ.sentence_eng1 %>
+          </td>
+          <td>
+            <%= akku_dativ.sentence2 %>
+          </td>
+          <td>
+            <%= akku_dativ.sentence_eng2 %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+  <hr>
+
 </main>
 
 <footer>

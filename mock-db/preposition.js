@@ -71,8 +71,36 @@ const words2 = [
     },
 ]
 
+const akku_dativ = [
+    {
+        sentence1: "Wohin läuft Peter?",
+        sentence_eng1: "Where is he running to?",
+        sentence2: "Wo läuft Peter?",
+        sentence_eng2: "Where is he running?",
+    },
+    {
+        sentence1: "Wohin hast du mein Wörterbuch gelegt?",
+        sentence_eng1: "Where did you put my dictionary?",
+        sentence2: "",
+        sentence_eng2: "",
+    },
+    {
+        sentence1: "Ins Arbeitszimmer. Es liegt auf deinem Schreibtisch.",
+        sentence_eng1: "It’s on your desk.",
+        sentence2: "",
+        sentence_eng2: "",
+    },
+    {
+        sentence1: "",
+        sentence_eng1: "",
+        sentence2: "In Ihrem Arbeitszimmer liegt ein Geschenk für Sie!",
+        sentence_eng2: "There's a present for you in your working room!",
+    },
+]
+
 module.exports = {
     words: words,
     words2: words2,
+    akku_dativ: akku_dativ,
 }
 

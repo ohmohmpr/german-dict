@@ -21,6 +21,7 @@
     </caption>
     <thead>
       <tr>
+        <th scope="col">Thema</th>
         <th scope="col">German</th>
         <th scope="col">English</th>
       </tr>
@@ -28,7 +29,10 @@
     <tbody>
       <% words.words.forEach(function(word) { %>
         <tr>
-          <th scope="row"><%= word.german_sentence %></th>
+          <th scope="row"><%= word.thema %></th>
+          <td>
+            <%= word.german_sentence %>
+          </td>
           <td>
             <%= word.english_sentence %>
           </td>
