@@ -98,9 +98,17 @@ const akku_dativ = [
     },
 ]
 
+const temporale_prap = [
+    {
+        sentence: "An manchen Tagen habe ich auch Spätschicht.",
+        sentence_eng: "I also have late shifts on some days.",
+    },
+]
+
 module.exports = {
     words: words,
     words2: words2,
     akku_dativ: akku_dativ,
+    temporale_prap: temporale_prap,
 }
 

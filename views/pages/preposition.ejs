@@ -15,6 +15,7 @@
     <h3>1. Lokale Präpositionen</h3>
     <h3>2. Ohne/ Mit</h3>
     <h3>3. mit Akkusativ und Dativ</h3>
+    <h3>4. Temporale Präpositionen</h3>
   </div>
 
   <hr>
@@ -111,6 +112,81 @@
           </td>
           <td>
             <%= akku_dativ.sentence_eng2 %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>4. Temporale Präpositionen</h2>
+      https://expressingmeaning.net/2018/01/30/german-prepositions-time-temporale-prapositionen/
+      <table class="table caption-top table-bordered border-dark">
+        <thead>
+          <tr>
+            <th scope="col">mit Akkusativ</th>
+            <th scope="col">mit Dativ</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td><b>bis</b> ein Uhr</td>
+              <td><b>ab</b> dem ersten Juni</td>
+            </tr>
+            <tr>
+              <td><b>über</b> eine Stunde</td>
+              <td><b>an</b> manchen Tagen</td>
+            </tr>
+            <tr>
+              <td><b>um</b> zehn Uhr</td>
+              <td><b>seit</b> vier Jahren</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td><b>vor</b> einem Jahr</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td><b>nach</b> dem Unterricht</td>
+            </tr>
+        </tbody>
+      </table>
+      <h4>4.2.2  An</h4>
+      <b>Translation</b> : at [Christmas], on [Monday], in [the evening]
+      <br>
+      <b>Answers the question</b>: Wann?
+      <br>
+      <b>Describes</b>: A point in time.
+      <br>
+      <b>Examples</b>:
+      <li>
+        <b>An Weihnachten</b>  besuchen wir unsere Familie. (At Christmas we visit our family.)
+      </li>
+      <li>
+        Wir feiern <b>am</b> (an + dem) <b>25. Dezember</b> die Geburt Jesu. (We celebrate the birth of Jesus on 25 December.)
+      </li>
+      <li>
+        Wir gehen <b>am</b> (an + dem) <b>Abend</b> ins Kino. (We go to the cinema in the evening.)
+      </li>
+      <b>Note</b>: Can be used with a specific date, day of the week, time of the day, or festival.
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.temporale_prap.forEach(function(temporale_prap) { %>
+        <tr>
+          <td>
+            <%= temporale_prap.sentence_eng %>
+          </td>
+          <td>
+            <%= temporale_prap.sentence %>
           </td>
         </tr>
       <% }); %>
