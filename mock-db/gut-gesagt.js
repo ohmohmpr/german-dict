@@ -118,12 +118,12 @@ const words = [
     },
     {
         thema: "",
-        english_sentence: "",
-        german_sentence: "",
-        remark: "",
+        english_sentence: "What's the prize?",
+        german_sentence: "Was kann man gewinnen?",
+        remark: "Future",
         chapter: "",
-        create_date: "28/05/2022",
-        update_date: "28/05/2022",
+        create_date: "29/05/2022",
+        update_date: "29/05/2022",
     },
     {
         thema: "",
