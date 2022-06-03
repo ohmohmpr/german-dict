@@ -11,12 +11,18 @@
 
 <main>
   <div class="jumbotron">
-    <h1>German Dictionary</h1>
+    <h1>Artikel</h1>
+    <h3>1. Adjektive nach dem unbestimmten Artikel</h3>
+    <h3>2. Adjektive nach dem bestimmten Artikel</h3>
+    <h3>3. Interrogativartikel: Welcher? Welches? Welche?</h3>
+    <h3>4. Demonstrativartikel: dieser, dieses, diese</h3>
   </div>
+
+  <hr>
 
   <table class="table caption-top table-bordered border-dark">
     <caption>
-      <h2>Adjektive nach dem unbestimmten Artikel</h2>
+      <h2>1. Adjektive nach dem unbestimmten Artikel</h2>
       ein dein 
     </caption>
     <thead>
@@ -77,10 +83,12 @@
       <% }); %>
     </tbody>
   </table>
+
   <hr>
+
   <table class="table caption-top table-bordered border-dark">
     <caption>
-      <h2>Adjektive nach dem bestimmten Artikel</h2>
+      <h2>2. Adjektive nach dem bestimmten Artikel</h2>
       die das dieses
     </caption>
     <thead>
@@ -94,6 +102,94 @@
     </thead>
     <tbody>
       <% words.words2.forEach(function(word) { %>
+        <tr>
+          <th scope="row"><%= word.title %></th>
+          <td>
+            <input id="<%=word.title %>-<%= word.maskulin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.maskulin_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.neutrum %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.neutrum_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.feminin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.feminin_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.plural %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.plural_eng %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>3. Interrogativartikel: Welcher? Welches? Welche?</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Maskulin</th>
+        <th scope="col">Neutrum</th>
+        <th scope="col">Feminin</th>
+        <th scope="col">Plural</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.interrogativartikel.forEach(function(word) { %>
+        <tr>
+          <th scope="row"><%= word.title %></th>
+          <td>
+            <input id="<%=word.title %>-<%= word.maskulin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.maskulin_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.neutrum %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.neutrum_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.feminin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.feminin_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.plural %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.plural_eng %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>4. Demonstrativartikel: dieser, dieses, diese</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Maskulin</th>
+        <th scope="col">Neutrum</th>
+        <th scope="col">Feminin</th>
+        <th scope="col">Plural</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.demonstrativartikel.forEach(function(word) { %>
         <tr>
           <th scope="row"><%= word.title %></th>
           <td>

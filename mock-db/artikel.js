@@ -76,9 +76,62 @@ const unbestimmten = [
         german_sentence: "ein junger Filmemacher",
     },
 ]
+
+const interrogativartikel = [
+    { 
+        title: "Nominativ", 
+        maskulin: "Welcher Rock?", 
+        maskulin_eng: "Which skirt?", 
+        neutrum: "Welches Kleid?", 
+        neutrum_eng: "Which dress?", 
+        feminin: "Welche Hose?", 
+        feminin_eng: "Which pants?", 
+        plural: "Welche Schuhe?",
+        plural_eng: "Which shoes?"
+    },
+    { 
+        title: "Akkusativ",
+        maskulin: "Welchen Rock?",
+        maskulin_eng: "Which skirt?",
+        neutrum: "Welches Kleid?",
+        neutrum_eng: "Which dress?",
+        feminin: "Welche Hose?",
+        feminin_eng: "Which pants?",
+        plural: "Welche Schuhe?",
+        plural_eng: "Which shoes?",
+    },
+]
+
+const demonstrativartikel = [
+    { 
+        title: "Nominativ", 
+        maskulin: "dieser Rock", 
+        maskulin_eng: "this skirt", 
+        neutrum: "dieses Kleid", 
+        neutrum_eng: "this dress", 
+        feminin: "diese Hose", 
+        feminin_eng: "these pants", 
+        plural: "diese Schuhe",
+        plural_eng: "these shoes"
+    },
+    { 
+        title: "Akkusativ",
+        maskulin: "diesen Rock",
+        maskulin_eng: "this skirt",
+        neutrum: "dieses Kleid",
+        neutrum_eng: "this dress",
+        feminin: "diese Hose",
+        feminin_eng: "these pants",
+        plural: "diese Schuhe",
+        plural_eng: "these shoes",
+    },
+]
+
 module.exports = {
     words: words,
     words2: words2,
     unbestimmten: unbestimmten,
+    interrogativartikel: interrogativartikel,
+    demonstrativartikel: demonstrativartikel,
 }
 
