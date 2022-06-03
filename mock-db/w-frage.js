@@ -104,12 +104,16 @@ const wFmitPrep = [
     },
 ]
 
-const doch = [
+const woh = [
     {
-        
-    }
+        question: "Woher kommen Sie?",
+        question_eng: "Where do you come from?",
+        answer: "Ich komme aus Deutschland.",
+        answer_eng: "I come from Germany.",
+    },
 ]
 module.exports = {
     words: words,
     wFmitPrep: wFmitPrep,
+    woh: woh,
 }

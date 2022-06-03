@@ -1,11 +1,23 @@
 const words = [
+    {
+        wort: "heißen",
+        meaning: "be called",
+        english_sentence: "What's your name?",
+        german_sentence: "Wie heißen Sie?",
+        remark: "",
+        chapter: "a-1",
+        create_date: "02/06/2022",
+        update_date: "02/06/2022",
+    },
     { 
-        artikel: "verb", 
         wort: "reparieren",
-        plural: "",          
-        english_sentence: "They fixed my car very quickly.",                 
+        meaning: "",  
+        english_sentence: "They fixed my car very quickly.",
         german_sentence: "Die haben da mein Auto auch ganz schnell repariert.",
-        chapter: "a2-6",           
+        remark: "",
+        chapter: "a2-6",
+        create_date: "26/05/2022",
+        update_date: "26/05/2022",
     },
     { 
         artikel: "verb", 

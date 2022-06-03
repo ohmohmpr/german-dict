@@ -14,6 +14,7 @@
     <h1>W-Frage</h1>
     <h3>1. W-Frage</h3>
     <h3>2. W-Fragen mit Präposition</h3>
+    <h3>3. Wo, wohin or woher</h3>
   </div>
 
   <hr>
@@ -76,6 +77,39 @@
     </thead>
     <tbody>
       <% words.wFmitPrep.forEach(function(sentence) { %>
+        <tr>
+          <th scope="row">
+            <%= sentence.question_eng %>
+            <br>
+            <%= sentence.answer_eng %>
+          </th>
+          <td>
+            <input id="<%= sentence.question %>" oninput="checkAnswer(id)" onkeydown="showAnswer(id)" size="70"> 
+            <br>
+            <input id="<%= sentence.answer %>" oninput="checkAnswer(id)" size="70"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>3. Wo, wohin or woher</h2>
+      <p>Ref <a href="https://www.gymglish.com/en/wunderbla/german-grammar/wo-wohin-or-woher" target="_blank">
+        Wo, wohin or woher?</a>.</p>
+      
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.woh.forEach(function(sentence) { %>
         <tr>
           <th scope="row">
             <%= sentence.question_eng %>

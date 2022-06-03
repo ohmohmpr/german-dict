@@ -16,6 +16,10 @@
     <h3>2. Ohne/ Mit</h3>
     <h3>3. mit Akkusativ und Dativ</h3>
     <h3>4. Temporale Präpositionen</h3>
+    <h3>5. Präpositionen immer mit Dativ:
+      aus, bei, mit, zu, von, nach,
+    </h3>
+    <h3>6. Wechselpräpositionen: an </h3>
   </div>
 
   <hr>
@@ -187,6 +191,125 @@
           </td>
           <td>
             <%= temporale_prap.sentence %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>5. Präpositionen immer mit Dativ:
+        aus, bei, mit, zu, von, nach</h2> 
+    </caption>
+
+    <table class="table caption-top table-bordered border-dark">
+      <caption>
+        <h4>5.1 zu vs nach</h4>
+        <p>Ref <a href="https://www.thoughtco.com/say-to-in-german-nach-4069659" target="_blank">say-to-in-german-nach</a>.</p>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">English</th>
+          <th scope="col">German</th>
+          <th scope="col">Remark</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.immer_dativ.forEach(function(immer_dativ) { %>
+          <tr>
+            <td>
+              <%= immer_dativ.sentence_eng %>
+            </td>
+            <td>
+              <%= immer_dativ.sentence %>
+            </td>
+            <td>
+              <%= immer_dativ.remark %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    
+    <table class="table caption-top table-bordered border-dark">
+      <caption>
+        <h4>5.2 aus</h4>
+        <p>Ref <a href="https://www.germanveryeasy.com/prepositions-in-german#aus" target="_blank">
+          aus</a>.</p>
+          from (PLACE, origin)
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">English</th>
+          <th scope="col">German</th>
+          <th scope="col">Remark</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.immer_dativ_aus.forEach(function(immer_dativ_aus) { %>
+          <tr>
+            <td>
+              <%= immer_dativ_aus.sentence_eng %>
+            </td>
+            <td>
+              <%= immer_dativ_aus.sentence %>
+            </td>
+            <td>
+              <%= immer_dativ_aus.remark %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    
+  </table>
+  
+  <hr>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>6. Wechselpräpositionen:
+        an</h2>
+        Example
+        <table class="table caption-top table-bordered border-dark">
+        <thead>
+          <tr>
+            <th scope="col">mit Akkusativ</th>
+            <th scope="col">mit Dativ</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td><b>bis</b> ein Uhr</td>
+              <td><b>ab</b> dem ersten Juni</td>
+            </tr>
+        </tbody>
+      </table>
+      <h4>6.1 an</h4>
+      <p>Ref <a href="https://www.germanveryeasy.com/an" target="_blank">an</a>.</p>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+        <th scope="col">Remark</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.wechselpräpositionen.forEach(function(wechselpräpositionen) { %>
+        <tr>
+          <td>
+            <%= wechselpräpositionen.sentence_eng %>
+          </td>
+          <td>
+            <%= wechselpräpositionen.sentence %>
+          </td>
+          <td>
+            <%= wechselpräpositionen.remark %>
           </td>
         </tr>
       <% }); %>
