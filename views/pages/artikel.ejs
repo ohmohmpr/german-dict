@@ -12,15 +12,16 @@
 <main>
   <div class="jumbotron">
     <h1>Artikel</h1>
-    <h3>1. Adjektive nach dem unbestimmten Artikel</h3>
-    <h3>2. Adjektive nach dem bestimmten Artikel</h3>
-    <h3>3. Interrogativartikel: Welcher? Welches? Welche?</h3>
-    <h3>4. Demonstrativartikel: dieser, dieses, diese</h3>
+    <a href="#1"> <h3>1. Adjektive nach dem unbestimmten Artikel</h3> </a>
+    <a href="#2"> <h3>2. Adjektive nach dem bestimmten Artikel</h3> </a>
+    <a href="#3"> <h3>3. Interrogativartikel: Welcher? Welches? Welche?</h3> </a>
+    <a href="#4"> <h3>4. Demonstrativartikel: dieser, dieses, diese</h3> </a>
+    <a href="#5"> <h3>5. Possessivartikel im Nomivativ, Akkusativ, Dativ</h3> </a>
   </div>
 
   <hr>
 
-  <table class="table caption-top table-bordered border-dark">
+  <table id="1" class="table caption-top table-bordered border-dark">
     <caption>
       <h2>1. Adjektive nach dem unbestimmten Artikel</h2>
       ein dein 
@@ -86,7 +87,7 @@
 
   <hr>
 
-  <table class="table caption-top table-bordered border-dark">
+  <table id="2" class="table caption-top table-bordered border-dark">
     <caption>
       <h2>2. Adjektive nach dem bestimmten Artikel</h2>
       die das dieses
@@ -131,7 +132,7 @@
   
   <hr>
 
-  <table class="table caption-top table-bordered border-dark">
+  <table id="3" class="table caption-top table-bordered border-dark">
     <caption>
       <h2>3. Interrogativartikel: Welcher? Welches? Welche?</h2>
     </caption>
@@ -175,7 +176,7 @@
   
   <hr>
 
-  <table class="table caption-top table-bordered border-dark">
+  <table id="4" class="table caption-top table-bordered border-dark">
     <caption>
       <h2>4. Demonstrativartikel: dieser, dieses, diese</h2>
     </caption>
@@ -190,6 +191,50 @@
     </thead>
     <tbody>
       <% words.demonstrativartikel.forEach(function(word) { %>
+        <tr>
+          <th scope="row"><%= word.title %></th>
+          <td>
+            <input id="<%=word.title %>-<%= word.maskulin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.maskulin_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.neutrum %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.neutrum_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.feminin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.feminin_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.plural %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.plural_eng %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table id="5" class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>5. Possessivartikel im Nomivativ, Akkusativ, Dativ</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Maskulin</th>
+        <th scope="col">Neutrum</th>
+        <th scope="col">Feminin</th>
+        <th scope="col">Plural</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.possessivartikel.forEach(function(word) { %>
         <tr>
           <th scope="row"><%= word.title %></th>
           <td>

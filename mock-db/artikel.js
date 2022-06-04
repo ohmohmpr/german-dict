@@ -127,11 +127,48 @@ const demonstrativartikel = [
     },
 ]
 
+const possessivartikel = [
+    {
+        title: "Nominativ", 
+        maskulin: "ein/kein Kurs", 
+        maskulin_eng: "a/no course", 
+        neutrum: "ein/kein Profil", 
+        neutrum_eng: "a/no profile", 
+        feminin: "eine/keine seine Sprache", 
+        feminin_eng: "a/none his language", 
+        plural: "-/keine ihre Kollegen",
+        plural_eng: "-/none of her colleagues"
+    },
+    {
+        title: "Akkusativ",
+        maskulin: "einen/keinen meinen Kurs",
+        maskulin_eng: "a/none my course",
+        neutrum: "ein/kein dein Profil",
+        neutrum_eng: "on/none your profile",
+        feminin: "eine/keine seine Sprache",
+        feminin_eng: "a/none his language",
+        plural: "-/keine ihre Kollegen",
+        plural_eng: "-/none of her colleagues",
+    },
+    {
+        title: "Dativ",
+        maskulin: "einem/keinem meinem Freund",
+        maskulin_eng: "one my friend",
+        neutrum: "einem/keinem deinem Hobby",
+        neutrum_eng: "one/none of your hobby",
+        feminin: "einer/keiner seiner Küche",
+        feminin_eng: "one/none of his kitchen",
+        plural: "-/keinen ihren Büchern",
+        plural_eng: "-/none of her books",
+    },
+]
+
 module.exports = {
     words: words,
     words2: words2,
     unbestimmten: unbestimmten,
     interrogativartikel: interrogativartikel,
     demonstrativartikel: demonstrativartikel,
+    possessivartikel: possessivartikel,
 }
 
