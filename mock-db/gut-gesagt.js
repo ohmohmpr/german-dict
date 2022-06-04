@@ -11,6 +11,15 @@ const words = [
     {
         thema: "-",
         english_sentence: "How are you doing?",
+        german_sentence: "Wie geht es euch?",
+        remark: "",
+        chapter: "a1-1",
+        create_date: "04/06/2022",
+        update_date: "04/06/2022",
+    },
+    {
+        thema: "-",
+        english_sentence: "How are you doing?",
         german_sentence: "Wie geht es dir?",
         remark: "",
         chapter: "a1-1",
