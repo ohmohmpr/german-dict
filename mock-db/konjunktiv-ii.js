@@ -21,6 +21,10 @@ const ratschlag = [
         sentence: "Du könntest deiner Kollegin sagen, dass ihr in der Mittagspause reden könnt.",
         sentence_eng: "You could tell your co-worker that you can talk during your lunch break.",
     },
+    {
+        sentence: "Du solltest am Abend Sport machen.",
+        sentence_eng: "You should exercise in the evening.",
+    },
 ]
 
 module.exports = {
