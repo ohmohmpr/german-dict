@@ -12,19 +12,19 @@
 <main>
   <div class="jumbotron">
     <h1>Präpositionen</h1>
-    <h3>1. Lokale Präpositionen</h3>
-    <h3>2. Ohne/ Mit</h3>
-    <h3>3. mit Akkusativ und Dativ</h3>
-    <h3>4. Temporale Präpositionen</h3>
-    <h3>5. Präpositionen immer mit Dativ:
+    <a href="#1"> <h3>1. Lokale Präpositionen</h3> </a>
+    <a href="#2"> <h3>2. Ohne/ Mit</h3> </a>
+    <a href="#3"> <h3>3. mit Akkusativ und Dativ</h3> </a>
+    <a href="#4"> <h3>4. Temporale Präpositionen</h3> </a>
+    <a href="#5"> <h3>5. Präpositionen immer mit Dativ:
       aus, bei, mit, zu, von, nach,
-    </h3>
-    <h3>6. Wechselpräpositionen: an </h3>
+    </h3> </a>
+    <a href="#6"> <h3>6. Wechselpräpositionen: an </h3> </a>
   </div>
 
   <hr>
 
-  <table class="table caption-top table-bordered border-dark">
+  <table id="1" class="table caption-top table-bordered border-dark">
     <caption>
       <h2>1. Lokale Präpositionen</h2>
       mit Dativ    : an ... vorbei, bis zu, gegenüber
@@ -54,7 +54,7 @@
 
   <hr>
 
-  <table class="table caption-top table-bordered border-dark">
+  <table id="2" class="table caption-top table-bordered border-dark">
     <caption>
       <h2>2. Ohne/ Mit</h2>
       ohne + Akkusativ
@@ -84,7 +84,7 @@
 
   <hr>
 
-  <table class="table caption-top table-bordered border-dark">
+  <table id="3" class="table caption-top table-bordered border-dark">
     <caption>
       <h2>3. mit Akkusativ und Dativ</h2>
       https://resources.german.lsa.umich.edu/grammatik/stehenstellen/
@@ -124,7 +124,7 @@
   
   <hr>
 
-  <table class="table caption-top table-bordered border-dark">
+  <table id="4" class="table caption-top table-bordered border-dark">
     <caption>
       <h2>4. Temporale Präpositionen</h2>
       https://expressingmeaning.net/2018/01/30/german-prepositions-time-temporale-prapositionen/
@@ -199,7 +199,7 @@
   
   <hr>
 
-  <table class="table caption-top table-bordered border-dark">
+  <table id="5" class="table caption-top table-bordered border-dark">
     <caption>
       <h2>5. Präpositionen immer mit Dativ:
         aus, bei, mit, zu, von, nach</h2> 
@@ -209,6 +209,8 @@
       <caption>
         <h4>5.1 zu vs nach</h4>
         <p>Ref <a href="https://www.thoughtco.com/say-to-in-german-nach-4069659" target="_blank">say-to-in-german-nach</a>.</p>
+        <h5>5.1.1 zu Hause </h5>
+        The expression "zu Hause" means to be "at home". Take note that this does not indicate movement as "zu" usually does.
       </caption>
       <thead>
         <tr>
@@ -265,15 +267,46 @@
       </tbody>
     </table>
 
+    <table class="table caption-top table-bordered border-dark">
+      <caption>
+        <h4>5.3 bei</h4>
+        <p>Ref <a href="https://www.germanveryeasy.com/bei" target="_blank">
+          bei</a>.</p>
+          <h5>5.3.1 bei + person (location) </h5> 
+          It is used to say that one is with a person (at their home)
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">English</th>
+          <th scope="col">German</th>
+          <th scope="col">Remark</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.immer_dativ_bei.forEach(function(immer_dativ_bei) { %>
+          <tr>
+            <td>
+              <%= immer_dativ_bei.sentence_eng %>
+            </td>
+            <td>
+              <%= immer_dativ_bei.sentence %>
+            </td>
+            <td>
+              <%= immer_dativ_bei.remark %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
     
   </table>
   
   <hr>
 
-  <table class="table caption-top table-bordered border-dark">
+  <table id="6" class="table caption-top table-bordered border-dark">
     <caption>
-      <h2>6. Wechselpräpositionen:
-        an</h2>
+      <h2>6. Wechselpräpositionen: an</h2>
         Example
         <table class="table caption-top table-bordered border-dark">
         <thead>
@@ -300,16 +333,16 @@
       </tr>
     </thead>
     <tbody>
-      <% words.wechselpräpositionen.forEach(function(wechselpräpositionen) { %>
+      <% words.wechselpräpositionen_an.forEach(function(wechselpräpositionen_an) { %>
         <tr>
           <td>
-            <%= wechselpräpositionen.sentence_eng %>
+            <%= wechselpräpositionen_an.sentence_eng %>
           </td>
           <td>
-            <%= wechselpräpositionen.sentence %>
+            <%= wechselpräpositionen_an.sentence %>
           </td>
           <td>
-            <%= wechselpräpositionen.remark %>
+            <%= wechselpräpositionen_an.remark %>
           </td>
         </tr>
       <% }); %>

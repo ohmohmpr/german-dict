@@ -113,6 +113,16 @@ const temporale_prap = [
 
 const immer_dativ = [
     {
+        sentence: "Wir sind zu Hause.",
+        sentence_eng: "We’re at home.",
+        remark: "Zu Hause",
+    },
+    {
+        sentence: "Zu Hause muss er noch 6 Stunden lernen.",
+        sentence_eng: "He still has 6 hours to study at home.",
+        remark: "Zu Hause",
+    },
+    {
         sentence: "Ich fahre nach Frankreich.",
         sentence_eng: "I'm going to France. (geographic)",
     },
@@ -132,17 +142,29 @@ const immer_dativ = [
 ]
 const immer_dativ_aus = [
     {
-        sentence: "Ich komme aus Deutschland",
+        sentence: "Ich komme aus Deutschland.",
         sentence_eng: "I come from Germany.",
         remark: "",
     },
 ]
+const immer_dativ_bei = [
+    {
+        sentence: "Heute hat er um 10:30 Uhr eine Vorlesung bei Professor Strasser.",
+        sentence_eng: "Today at 10:30 a.m. he has a lecture with Professor Strasser.",
+        remark: "bei + person (location) => is with",
+    },
+]
 
-const wechselpräpositionen = [
+const wechselpräpositionen_an = [
     {
         sentence: "Every summer they were at the Baltic Sea in our holiday home.",
         sentence_eng: "Sie waren jeden Sommer an der Ostsee in unserem Ferienhaus.",
         remark: "next to",
+    },
+    {
+        sentence: "Er studiert an der Universität.",
+        sentence_eng: "He studies at the university.",
+        remark: "With some institutions such as: die Schule (the school) or die Universität (the university), the preposition “an” is used when we refer to the institution and the preposition “in” when we refer to the building",
     },
 ]
 
@@ -153,6 +175,7 @@ module.exports = {
     temporale_prap: temporale_prap,
     immer_dativ: immer_dativ,
     immer_dativ_aus: immer_dativ_aus,
-    wechselpräpositionen: wechselpräpositionen,
+    immer_dativ_bei: immer_dativ_bei,
+    wechselpräpositionen_an: wechselpräpositionen_an,
 }
 
