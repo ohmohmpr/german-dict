@@ -102,6 +102,61 @@ const interrogativartikel = [
     },
 ]
 
+const interrogativartikel_zB = [
+    {
+        english_sentence: "Which suit is better?",
+        german_sentence: "Welcher Anzug ist besser?",
+    },
+    {
+        english_sentence: "Which t-shirt suits me?",
+        german_sentence: "Welches T-Shirt steht mir?",
+    },
+    {
+        english_sentence: "Look, the jacket is great! - Which one?(This one.)",
+        german_sentence: "Sieh mal, die Jacke ist doch toll! - Welche?(Diese hier.)",
+    },
+    {
+        english_sentence: "Which jacket do you like?",
+        german_sentence: "Welche Jacke findest du gut?",
+    },
+    {
+        english_sentence: "Which shirt would you like to try on?",
+        german_sentence: "Welches Hemd möchtest du anprobieren?",
+    },
+    {
+        english_sentence: "Which stockings do you mean?",
+        german_sentence: "Welche Strümpfe meinst du?",
+    },
+    {
+        english_sentence: "What coat are you wearing?",
+        german_sentence: "Welchen Mantel ziehst du an?",
+    },
+    {
+        english_sentence: "Which pants do you not like?",
+        german_sentence: "Welche Hose findest du nicht gut?",
+    },
+    {
+        english_sentence: "I’ll take the boots - which one?(this one.)",
+        german_sentence: "Ich nehme die Stiefel. - Welche?(diese hier.)",
+    },
+    {
+        english_sentence: "Which boots do you like better?",
+        german_sentence: "Welche Stiefel findest du besser?",
+    },
+    {
+        english_sentence: "How do you like the skirt - Which one? (this one.)",
+        german_sentence: "Wie gefällt dir der Rock? - Welcher?(dieser hier.)",
+    },
+    {
+        english_sentence: "The shoes are terrible - Which ones? (These ones.)",
+        german_sentence: "Die Schuhe sind schrecklich - Welche?(diese hier.)",
+    },
+    {
+        english_sentence: "What do you think of the sweater? - Which one?(this one.)",
+        german_sentence: "Wie findest du den Pullover? - Welchen?(diesen hier.)",
+    },
+]
+
 const demonstrativartikel = [
     { 
         title: "Nominativ", 
@@ -168,6 +223,7 @@ module.exports = {
     words2: words2,
     unbestimmten: unbestimmten,
     interrogativartikel: interrogativartikel,
+    interrogativartikel_zB: interrogativartikel_zB,
     demonstrativartikel: demonstrativartikel,
     possessivartikel: possessivartikel,
 }

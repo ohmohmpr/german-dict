@@ -172,6 +172,30 @@
         </tr>
       <% }); %>
     </tbody>
+
+    
+  </table>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2></h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.interrogativartikel_zB.forEach(function(word) { %>
+        <tr>
+          <th scope="row"><%= word.english_sentence %></th>
+          <td>
+            <input id="<%= word.german_sentence %>" oninput="checkAnswer(id)"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
   </table>
   
   <hr>
