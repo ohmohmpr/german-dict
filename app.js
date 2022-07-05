@@ -26,7 +26,9 @@ const konjunktivIIRouter = require('./routes/konjunktiv-ii');
 const gutGesagtRouter = require('./routes/gut-gesagt');
 const relativeClauseRouter = require('./routes/relative-clause');
 const connectorsRouter = require('./routes/connectors');
+
 const modalPräteritumRouter = require('./routes/modal-praeteritum');
+const modalVerbenRouter = require('./routes/modalverben');
 
 const app = express()
 const port = 3000
@@ -63,6 +65,7 @@ app.use('/connectors', connectorsRouter);
 app.use('/gut-gesagt', gutGesagtRouter);
 app.use('/relative-clause', relativeClauseRouter);
 app.use('/modal-praeteritum', modalPräteritumRouter);
+app.use('/modalverben', modalVerbenRouter);
 
 app.use('/quotes', quotesRouter);
 // catch 404 and forward to error handler

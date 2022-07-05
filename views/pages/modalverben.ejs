@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+
+  <body class="container">
+
+    <header>
+      <%- include('../partials/header'); %>
+    </header>
+
+  <main>
+    <div class="jumbotron">
+      <h1>Modalverben</h1>
+      <a href="#0"> <h3>Table</h3> </a>
+      <a href="#4"> <h3>4. Dürfen</h3> </a>
+      <a href="#5"> <h3>5. Sollen</h3> </a>
+    </div>
+
+    <hr>
+
+    <table id="0" class="table caption-top table-bordered border-dark">
+      <caption>
+        <h2>Table</h2>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">wollen</th>
+          <th scope="col">können</th>
+          <th scope="col">müssen</th>
+          <th scope="col">dürfen</th>
+          <th scope="col">sollen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.modalverben.forEach(function(modalverben) { %>
+          <tr>
+            <th scope="row"><%= modalverben.title %></th>
+            <td>
+              <input id="<%=modalverben.title %>-<%= modalverben.wollen %>" oninput="checkAnswer(id)" size="4"> 
+            </td>
+            <td>
+              <input id="<%=modalverben.title %>-<%= modalverben.können %>" oninput="checkAnswer(id)" size="4"> 
+            </td>
+            <td>
+              <input id="<%=modalverben.title %>-<%= modalverben.müssen %>" oninput="checkAnswer(id)" size="4"> 
+            </td>
+            <td>
+              <input id="<%=modalverben.title %>-<%= modalverben.dürfen %>" oninput="checkAnswer(id)" size="4"> 
+            </td>
+            <td>
+              <input id="<%=modalverben.title %>-<%= modalverben.sollen %>" oninput="checkAnswer(id)" size="4"> 
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+
+      <table id="4" class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>4. Dürfen</h4>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">German</th>
+            <th scope="col">English</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.modalverben_duerfen.forEach(function(modalverben_duerfen) { %>
+            <tr>
+              <th scope="row"><%= modalverben_duerfen.german_sentence %></th>
+              <td>
+                <%= modalverben_duerfen.english_sentence %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </table>
+    
+    <hr>
+
+
+  </main>
+
+  <footer>
+    <%- include('../partials/footer'); %>
+  </footer>
+
+  </body>
+</html>
+
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('-') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+    
+  }
+</script>
