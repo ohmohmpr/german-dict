@@ -11,11 +11,114 @@
 
 <main>
   <div class="jumbotron">
+    <img src="/images/konjunktiv-ii/konjunktiv-ii.png" width="500" height="400">
     <h1>Konjunktiv II: Verwendung</h1>
+
+    <a href="#1"> <h3>1. Wünsche</h3> </a>
+    <a href="#3"> <h3>3. Ratschläge: Ich würde mit meinem Chef sprechen.</h3> </a>
+    <a href="#5"> <h3>5. Irreale Konditionalsätze</h3> </a>
     <h3>1. höfliche Bitte: Könntest du mir helfen?</h3>
     <h3>2. Wunsch: Ich wäre gern zu Hause.</h3>
-    <h3>3. Ratschlag: Ich würde mit meinem Chef sprechen.</h3>
   </div>
+
+  <hr>
+
+  <table id="1" class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>1. Wünsche</h2>
+      gern: one option <br>
+      lieber: two option <br>
+      am liebsten: more than two <br>
+
+      <br>
+
+      möchtest du nach Paris or London? <br>
+      Ich würde lieber nach Paris fahren. <br>
+      möchtest du nach Paris, London or New York? <br> 
+      Ich würde am liebsten nach New York fliegen. <br>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.wünsche.forEach(function(sentence) { %>
+        <tr>
+          <th scope="row">
+            <%= sentence.truth %>
+            <br>
+            <%= sentence.wish %>
+          </th>
+          <td>
+            <%= sentence.english_sentence %>
+            <br>
+            <input id="<%=sentence.german_sentence %>" oninput="checkAnswer(id)" size="50"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table id="3" class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>3. Ratschlag</h2>
+      <img src="/images/konjunktiv-ii/Ratschläge.png" width="800" height="500">
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.ratschlag.forEach(function(sentence) { %>
+        <tr>
+          <th scope="row">
+            <%= sentence.english_sentence %>
+          </th>
+          <td>
+            <input id="<%=sentence.german_sentence %>" oninput="checkAnswer(id)" size="50"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table id="5" class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>5. Irreale Konditionalsätze</h2>
+      <h4><a href="https://quizlet.com/554517935/flashcards" target="_blank">Quiz</a></h4>
+      <img src="/images/konjunktiv-ii/irreale_kondina.png" width="600" height="400">
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.irreale_kondina.forEach(function(sentence) { %>
+        <tr>
+          <th scope="row">
+            <%= sentence.truth %>
+            <br>
+            <%= sentence.wish %>
+          </th>
+          <td>
+            <%= sentence.english_sentence %>
+            <br>
+            <input id="<%=sentence.german_sentence %>" oninput="checkAnswer(id)" size="50"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
 
   <hr>
 
@@ -85,33 +188,10 @@
     </tbody>
   </table>
 
-  <hr>
 
-  <table class="table caption-top table-bordered border-dark">
-    <caption>
-      <h2>3. Ratschlag</h2>
-    </caption>
-    <thead>
-      <tr>
-        <th scope="col">English</th>
-        <th scope="col">German</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% words.ratschlag.forEach(function(sentence) { %>
-        <tr>
-          <th scope="row">
-            <%= sentence.sentence_eng %>
-          </th>
-          <td>
-            <input id="<%=sentence.sentence %>" oninput="checkAnswer(id)" size="50"> 
-          </td>
-        </tr>
-      <% }); %>
-    </tbody>
-  </table>
 
   <hr>
+
 
 </main>
 
