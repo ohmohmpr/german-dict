@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>zu + Infinitiv</h1>
+  </div>
+
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>zu + Infinitiv</h2>
+    </caption>
+
+    https://en.easy-deutsch.de/sentence-structure/infinitive-with-zu/#:~:text=Infinitive%20%2B%20zu%20is%20used%20when,lassen%2C%20sehen%2C%20and%20h%C3%B6ren.
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.zu.forEach(function(sentence) { %>
+        <tr>
+          <td>
+            <%= sentence.english_sentence %>
+          </td>
+          <td>
+            <input id="<%= sentence.german_sentence %>" oninput="checkAnswer(id)" size="70"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('-') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+    
+  }
+</script>

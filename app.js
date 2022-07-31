@@ -26,6 +26,7 @@ const konjunktivIIRouter = require('./routes/konjunktiv-ii');
 
 const gutGesagtRouter = require('./routes/gut-gesagt');
 const relativeClauseRouter = require('./routes/relative-clause');
+const infinitivClauseRouter = require('./routes/infinitiv-clause');
 const connectorsRouter = require('./routes/connectors');
 
 const modalPräteritumRouter = require('./routes/modal-praeteritum');
@@ -66,6 +67,7 @@ app.use('/konjunktiv-ii', konjunktivIIRouter);
 app.use('/connectors', connectorsRouter);
 app.use('/gut-gesagt', gutGesagtRouter);
 app.use('/relative-clause', relativeClauseRouter);
+app.use('/infinitiv-clause', infinitivClauseRouter);
 app.use('/modal-praeteritum', modalPräteritumRouter);
 app.use('/modalverben', modalVerbenRouter);
 
