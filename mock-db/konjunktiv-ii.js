@@ -31,6 +31,13 @@ const wünsche = [
     },
 ]
 
+const vorschläge = [
+    {
+        english_sentence: "I think we should plan our summer vacation soon.",
+        german_sentence: "Ich finde, wir sollten bald unseren Sommerurlaub planen.",
+    },
+]
+
 const höfliche_bitte = [
 ]
 
@@ -134,6 +141,7 @@ const ratschlag = [
 
 module.exports = {
     wünsche: wünsche,
+    vorschläge: vorschläge,
     höfliche_bitte: höfliche_bitte,
     ratschlag: ratschlag,
     irreale_kondina: irreale_kondina,
