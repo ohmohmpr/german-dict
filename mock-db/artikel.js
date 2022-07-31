@@ -218,6 +218,42 @@ const possessivartikel = [
     },
 ]
 
+const derselbe = [
+    {
+        title: "Nominativ", 
+        maskulin: "derselbe Ort", 
+        maskulin_eng: "same place", 
+        neutrum: "dasselbe Hotel", 
+        neutrum_eng: "same hotel", 
+        feminin: "dieselbe Insel", 
+        feminin_eng: "same island", 
+        plural: "dieselben Leute",
+        plural_eng: "same people"
+    },
+    {
+        title: "Akkusativ",
+        maskulin: "denselben Ort",
+        maskulin_eng: "same place",
+        neutrum: "dasselbe Hotel",
+        neutrum_eng: "same hotel",
+        feminin: "dieselbe Insel",
+        feminin_eng: "same island",
+        plural: "dieselben Leute",
+        plural_eng: "same people",
+    },
+    {
+        title: "Dativ",
+        maskulin: "demselben Ort",
+        maskulin_eng: "same place",
+        neutrum: "demselben Hotel",
+        neutrum_eng: "same hotel",
+        feminin: "derselben Insel",
+        feminin_eng: "same island",
+        plural: "denselben Leuten",
+        plural_eng: "same people",
+    },
+]
+
 module.exports = {
     words: words,
     words2: words2,
@@ -226,5 +262,6 @@ module.exports = {
     interrogativartikel_zB: interrogativartikel_zB,
     demonstrativartikel: demonstrativartikel,
     possessivartikel: possessivartikel,
+    derselbe: derselbe,
 }
 

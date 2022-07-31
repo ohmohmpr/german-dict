@@ -17,6 +17,7 @@
     <a href="#3"> <h3>3. Interrogativartikel: Welcher? Welches? Welche?</h3> </a>
     <a href="#4"> <h3>4. Demonstrativartikel: dieser, dieses, diese</h3> </a>
     <a href="#5"> <h3>5. Possessivartikel im Nomivativ, Akkusativ, Dativ</h3> </a>
+    <a href="#6"> <h3>6. Derselbe, dasselbe, dieselbe und dieselben</h3> </a>
   </div>
 
   <hr>
@@ -259,6 +260,50 @@
     </thead>
     <tbody>
       <% words.possessivartikel.forEach(function(word) { %>
+        <tr>
+          <th scope="row"><%= word.title %></th>
+          <td>
+            <input id="<%=word.title %>-<%= word.maskulin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.maskulin_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.neutrum %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.neutrum_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.feminin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.feminin_eng %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.plural %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.plural_eng %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table id="6" class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>6. Derselbe, dasselbe, dieselbe und dieselben</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Maskulin</th>
+        <th scope="col">Neutrum</th>
+        <th scope="col">Feminin</th>
+        <th scope="col">Plural</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.derselbe.forEach(function(word) { %>
         <tr>
           <th scope="row"><%= word.title %></th>
           <td>
