@@ -16,6 +16,7 @@
     <h3>1. Denn und Weil</h3>
     <h3>2. Als und Wenn</h3>
     <h3>3. um ... zu + Infinitiv / damit</h3>
+    <a href="#4"> <h3>4. Temporale Nebensätze</h3> </a>
   </div>
 
   <hr>
@@ -126,6 +127,40 @@
           </th>
           <td>
             <input id="<%= damitUmZu.sentence %>" oninput="checkAnswer(id)" size="70"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table id="4" class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>4. Temporale Nebensätze</h2>
+
+      <img src="/images/konnektor/Temporale_Nebensätze.png" width="650" height="500">
+      <br>
+      <a href="https://quizlet.com/589349317/flashcards" target="_blank">Quiz</a>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">English</th>
+        <th scope="col">German</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.Temporale_Nebensätze_exp.forEach(function(sentence) { %>
+        <tr>
+          <th scope="row">
+            <%= sentence.sentence_1 %>
+            <br>
+            <%= sentence.sentence_2 %>
+          </th>
+          <td>
+            <%= sentence.english_sentence %>
+            <br>
+            <input id="<%= sentence.german_sentence %>" oninput="checkAnswer(id)" size="70"> 
           </td>
         </tr>
       <% }); %>

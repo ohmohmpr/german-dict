@@ -83,7 +83,7 @@ const alsUndWenn = [
     },
 ]
 
-damitUmZu = [
+const damitUmZu = [
     {
         sentence: "Ich schlafe viel, damit ich bald wieder gesund werde.",
         sentence_eng: "I sleep a lot so that I can recover soon.",
@@ -110,9 +110,31 @@ damitUmZu = [
     },
 ]
 
+const Temporale_Nebensätze_exp = [
+    {
+        sentence_1: "Zuerst kocht Herr Moran Kaffee.",
+        sentence_2: "Dann frühstücken sie zusammen.",
+        english_sentence: "Before they have breakfast together, Mr. Moran makes coffee.",
+        german_sentence: "Bevor sie zusammen frühstücken, kocht Herr Moran Kaffee.",
+    },
+    {
+        sentence_1: "Sie frühstücken zusammen ",
+        sentence_2: "und sprechen über die Situation bei Matzon.",
+        english_sentence: "While having breakfast together, they talk about the situation at Matzon.",
+        german_sentence: "Während sie zusammen frühstücken, sprechen sie über die Situation bei Matzon.",
+    },
+    {
+        sentence_1: "Sie frühstücken zusammen.",
+        sentence_2: "Danach geht Herr Moran zur Arbeit.",
+        english_sentence: "After they have breakfast together, Mr. Moran goes to work.",
+        german_sentence: "Nachdem sie zusammen gefrühstückt haben, geht Herr Moran zur Arbeit.",
+    },
+]
+
 module.exports = {
     words: words,
     alsUndWenn: alsUndWenn,
     damitUmZu: damitUmZu,
+    Temporale_Nebensätze_exp: Temporale_Nebensätze_exp,
 }
 
