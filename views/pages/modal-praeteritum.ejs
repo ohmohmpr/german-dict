@@ -12,10 +12,216 @@
 <main>
   <div class="jumbotron">
     <h1>Modalverben im Präteritum</h1>
+    <a href="#1"> <h3>1. Starke Verben</h3> </a>
     <h3>https://www.germanwithantrim.com/past-tense-of-modal-auxiliaries/</h3>
   </div>
 
-  <table class="table caption-top table-bordered border-dark">
+  <table id="1" class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Starke Verben</h2>
+    </caption>
+
+    <table class="table caption-top table-bordered border-dark">
+      <caption>
+        <h3>A-B-C</h3>
+        <h4>„Gitarre“ (i-a-e)</h4>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Präteritum</th>
+          <th scope="col">Perfekt</th>
+          <th scope="col">Übersetzung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.starke_verben_gitarre.forEach(function(word) { %>
+          <tr>
+            <th scope="row">
+              <%= word.verben %>
+            </th>
+            <td>
+              <input id="<%= word.präteritum %>" oninput="checkAnswer(id)"> 
+            </td>
+            <td>
+              <input id="<%= word.perfekt %>" oninput="checkAnswer(id)"> 
+            </td>
+            <td>
+              <%= word.übersetzung %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <table class="table caption-top table-bordered border-dark">
+      <caption>
+        <h4>„Picasso“ (i-a-o)</h4>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Präteritum</th>
+          <th scope="col">Perfekt</th>
+          <th scope="col">Übersetzung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.starke_verben_picasso.forEach(function(word) { %>
+          <tr>
+            <th scope="row">
+              <%= word.verben %>
+            </th>
+            <td>
+              <input id="<%= word.präteritum %>" oninput="checkAnswer(id)"> 
+            </td>
+            <td>
+              <input id="<%= word.perfekt %>" oninput="checkAnswer(id)"> 
+            </td>
+            <td>
+              <%= word.übersetzung %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <table class="table caption-top table-bordered border-dark">
+      <caption>
+        <h4>„Elvira“ (e-i-a / ä-i-a)</h4>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Präteritum</th>
+          <th scope="col">Perfekt</th>
+          <th scope="col">Übersetzung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.starke_verben_elvira.forEach(function(word) { %>
+          <tr>
+            <th scope="row">
+              <%= word.verben %>
+            </th>
+            <td>
+              <input id="<%= word.präteritum %>" oninput="checkAnswer(id)"> 
+            </td>
+            <td>
+              <input id="<%= word.perfekt %>" oninput="checkAnswer(id)"> 
+            </td>
+            <td>
+              <%= word.übersetzung %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <table class="table caption-top table-bordered border-dark">
+      <caption>
+        <h4>„Singapur“ (i-a-u)</h4>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Präteritum</th>
+          <th scope="col">Perfekt</th>
+          <th scope="col">Übersetzung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.starke_verben_singapur.forEach(function(word) { %>
+          <tr>
+            <th scope="row">
+              <%= word.verben %>
+            </th>
+            <td>
+              <input id="<%= word.präteritum %>" oninput="checkAnswer(id)"> 
+            </td>
+            <td>
+              <input id="<%= word.perfekt %>" oninput="checkAnswer(id)"> 
+            </td>
+            <td>
+              <%= word.übersetzung %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <table class="table caption-top table-bordered border-dark">
+      <caption>
+        <h4>„Senator“ (e-a-o)</h4>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Präteritum</th>
+          <th scope="col">Perfekt</th>
+          <th scope="col">Übersetzung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.starke_verben_senator.forEach(function(word) { %>
+          <tr>
+            <th scope="row">
+              <%= word.verben %>
+            </th>
+            <td>
+              <input id="<%= word.präteritum %>" oninput="checkAnswer(id)"> 
+            </td>
+            <td>
+              <input id="<%= word.perfekt %>" oninput="checkAnswer(id)"> 
+            </td>
+            <td>
+              <%= word.übersetzung %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <table class="table caption-top table-bordered border-dark">
+      <caption>
+        <h3>A-B-B</h3>
+        <h4>„Kimono“ (i-o-o) / (ie-o-o)</h4>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Präteritum</th>
+          <th scope="col">Perfekt</th>
+          <th scope="col">Übersetzung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.starke_verben_kimono.forEach(function(word) { %>
+          <tr>
+            <th scope="row">
+              <%= word.verben %>
+            </th>
+            <td>
+              <input id="<%= word.präteritum %>" oninput="checkAnswer(id)"> 
+            </td>
+            <td>
+              <input id="<%= word.perfekt %>" oninput="checkAnswer(id)"> 
+            </td>
+            <td>
+              <%= word.übersetzung %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+  </table>
+
+  <hr>
+
+  <table id="2" class="table caption-top table-bordered border-dark">
     <caption>
       <h2>Modalverben im Präteritum</h2>
       

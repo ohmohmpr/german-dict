@@ -131,6 +131,21 @@ const Temporale_Nebensätze_exp = [
     },
 ]
 
+const dass = [
+    {
+        english_sentence: "",
+        german_sentence: "Ich habe gehört, dass es am Chiemsee sehr schöne Campingplätze gibt.",
+    },
+    {
+        english_sentence: "",
+        german_sentence: "Aber du hast doch gerade gesagt, dass du nicht immer an demselben Ort sein willst!",
+    },
+    {
+        english_sentence: "I thought that, for example, we would first visit cities for ten days and then stay a few days longer in one place and rest, e.g. in a nice wellness hotel.",
+        german_sentence: " Ich habe gedacht, dass wir zum Beispiel zuerst zehn Tage Städte besuchen und dann einige Tage an einem Ort länger bleiben und uns ausruhen, z.B. in einem schönen Wellnesshotel.",
+    }
+]
+
 module.exports = {
     words: words,
     alsUndWenn: alsUndWenn,

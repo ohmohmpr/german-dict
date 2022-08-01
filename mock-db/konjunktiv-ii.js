@@ -29,12 +29,26 @@ const wünsche = [
         english_sentence: "He would like to change his life.",
         german_sentence: "Er würde gern sein Leben verändern.",
     },
+    {
+        truth: "",
+        wish: "",
+        english_sentence: "So I would rather do a tour of Germany and visit different cities.",
+        german_sentence: "Also ich würde dann lieber eine Tour durch Deutschland machen und verschiedene Städte besichtigen.",
+    },
 ]
 
 const vorschläge = [
     {
         english_sentence: "I think we should plan our summer vacation soon.",
         german_sentence: "Ich finde, wir sollten bald unseren Sommerurlaub planen.",
+    },
+    {
+        english_sentence: "I would like to do something different.",
+        german_sentence: "Ich möchte gerne mal was anderes machen.",
+    },
+    {
+        english_sentence: "And how would it be if we went to a campsite in Bavaria.",
+        german_sentence: "Und wie wäre es, wenn wir mal nach Bayern auf einen Campingplatz fahren?",
     },
 ]
 
@@ -99,8 +113,8 @@ const irreale_kondina = [
         german_sentence: "Wenn sein Abschluss anerkannt wäre, könnte er als Arzt arbeiten.",
     },
     {
-        english_sentence: "",
-        german_sentence: "",
+        english_sentence: "Wouldn't it be better if we went on a real active holiday, with sports and hiking and stuff like that?",
+        german_sentence: "Wäre es nicht besser, wenn wir mal einen richtigen Aktivurlaub machen würden, mit Sport und Wandern und so?",
     },
     {
         english_sentence: "",
@@ -138,6 +152,14 @@ const ratschlag = [
         german_sentence: "Du solltest am Abend Sport machen.",
     },
 ]
+
+const ob =[
+    {
+        ser: "Ich weiß nicht, ob der Unterschied so groß ist:"
+    }
+]
+// https://dictionary.cambridge.org/grammar/british-grammar/conditionals-if
+// https://english.stackexchange.com/questions/151058/what-if-would
 
 module.exports = {
     wünsche: wünsche,

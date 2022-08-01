@@ -85,10 +85,10 @@ const akku_dativ = [
         sentence_eng2: "",
     },
     {
-        sentence1: "Ins Arbeitszimmer. Es liegt auf deinem Schreibtisch.",
-        sentence_eng1: "It’s on your desk.",
-        sentence2: "",
-        sentence_eng2: "",
+        sentence1: "",
+        sentence_eng1: "",
+        sentence2: "Ins Arbeitszimmer. Es liegt auf deinem Schreibtisch.",
+        sentence_eng2: "It’s on your desk.",
     },
     {
         sentence1: "",
@@ -140,13 +140,28 @@ const immer_dativ = [
         remark: "auf + das Land = Akku (Direction), Open space https://www.germanveryeasy.com/auf",
     },
 ]
+
+const immer_dativ_nach = [
+    {
+        sentence: "Was machst du nach der Arbeit?",
+        sentence_eng: "What do you do after work?",
+        remark: "",
+    },
+]
+
 const immer_dativ_aus = [
     {
         sentence: "Ich komme aus Deutschland.",
         sentence_eng: "I come from Germany.",
         remark: "",
     },
+    {
+        sentence: "Ich komme gerade aus der Stadt.",
+        sentence_eng: "I just got out of town.",
+        remark: "",
+    },
 ]
+
 const immer_dativ_bei = [
     {
         sentence: "Heute hat er um 10:30 Uhr eine Vorlesung bei Professor Strasser.",
@@ -155,16 +170,85 @@ const immer_dativ_bei = [
     },
 ]
 
+const immer_dativ_bei_3 = [
+    {
+        english_sentence: "Differences of opinion can often arise in the process of raising children",
+        german_sentence: "Bei der Erziehung der Kinder kann es oft zu Meinungsverschiedenheiten kommen.",
+        remark: "",
+    },
+]
+
+const immer_dativ_von = [
+    {
+        sentence: "Ich komme gerade von der Arbeit.",
+        sentence_eng: "I just got back from work.",
+        remark: "",
+    },
+]
+
+const wechselpräpositionen = [
+    {
+        sentence_eng: "I go to the hairdresser and to the supermarket.",
+        sentence: "Ich gehe zum Friseur und in den Supermarkt.",
+        remark: "",
+    },
+]
+
 const wechselpräpositionen_an = [
     {
-        sentence: "Every summer they were at the Baltic Sea in our holiday home.",
-        sentence_eng: "Sie waren jeden Sommer an der Ostsee in unserem Ferienhaus.",
+        sentence_eng: "Every summer they were at the Baltic Sea in our holiday home.",
+        sentence: "Sie waren jeden Sommer an der Ostsee in unserem Ferienhaus.",
         remark: "next to",
     },
     {
-        sentence: "Er studiert an der Universität.",
-        sentence_eng: "He studies at the university.",
+        sentence_eng: "Er studiert an der Universität.",
+        sentence: "He studies at the university.",
         remark: "With some institutions such as: die Schule (the school) or die Universität (the university), the preposition “an” is used when we refer to the institution and the preposition “in” when we refer to the building",
+    },
+]
+
+const wechselpräpositionen_auf = [
+    {
+        sentence_eng: "On Amrum we lie on the beach by the sea and there on Lake Chiemsee!",
+        sentence: "Auf Amrum liegen wir am Strand am Meer und dort am Chiemsee!",
+        remark: "with islands",
+    },
+]
+
+const immer_genitiv_während = [
+    {
+        english_sentence: "She didn’t say a word during dinner.",
+        german_sentence: "Während des Essens hat sie kein Wort gesagt.",
+        remark: "",
+    },
+]
+
+const immer_genitiv_außerhalb = [
+    {
+        english_sentence: "You can eat outside school.",
+        german_sentence: "Außerhalb der Schule dürft ihr essen.",
+        remark: "",
+    },
+    {
+        english_sentence: "There is no café here in the park. But you will find many cafes outside the park.",
+        german_sentence: "Hier im Park gibt es kein Café. Aber Sie finden viele Cafès außerhalb des Parks.",
+        remark: "",
+    },
+]
+
+const immer_genitiv_innerhalb = [
+    {
+        english_sentence: "You are not allowed to smoke inside these rooms, only outside.",
+        german_sentence: "Innerhalb dieser Räume darf man nicht rauchen, nur draußen.",
+        remark: "",
+    },
+]
+
+const immer_genitiv_wegen = [
+    {
+        english_sentence: "At the weekend we stayed at home because of the weather.",
+        german_sentence: "Am Wochenende sind wir wegen des Wetters zu Hause geblieben.",
+        remark: "",
     },
 ]
 
@@ -174,8 +258,17 @@ module.exports = {
     akku_dativ: akku_dativ,
     temporale_prap: temporale_prap,
     immer_dativ: immer_dativ,
+    immer_dativ_nach: immer_dativ_nach,
     immer_dativ_aus: immer_dativ_aus,
     immer_dativ_bei: immer_dativ_bei,
+    immer_dativ_bei_3: immer_dativ_bei_3,
+    immer_dativ_von: immer_dativ_von,
+    wechselpräpositionen: wechselpräpositionen,
     wechselpräpositionen_an: wechselpräpositionen_an,
+    wechselpräpositionen_auf: wechselpräpositionen_auf,
+    immer_genitiv_während: immer_genitiv_während,
+    immer_genitiv_außerhalb: immer_genitiv_außerhalb,
+    immer_genitiv_innerhalb: immer_genitiv_innerhalb,
+    immer_genitiv_wegen: immer_genitiv_wegen,
 }
 

@@ -226,8 +226,8 @@ const words = [
     },
     {
         thema: "",
-        english_sentence: "",
-        german_sentence: "",
+        english_sentence: "do nothing!",
+        german_sentence: "nichts tun!",
         remark: "",
         chapter: "b1-7",
         create_date: "31/07/2022",

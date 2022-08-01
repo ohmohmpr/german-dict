@@ -111,6 +111,12 @@ const woh = [
         answer: "Ich komme aus Deutschland.",
         answer_eng: "I come from Germany.",
     },
+    {
+        question: "Woher kommst du?",
+        question_eng: "Where do you come from?",
+        answer: "Ich komme gerade aus der Stadt. Ich war mit Loris im Café und in einem Geschäft. Ich habe ein Geschenk für meinen Bruder gekauft.",
+        answer_eng: "I just got out of town. I was with Loris in a café and in a shop. I bought a present for my brother.",
+    },
 ]
 module.exports = {
     words: words,

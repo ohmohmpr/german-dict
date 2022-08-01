@@ -32,6 +32,12 @@ const frequencyAdverb = [
         answer: "Ich esse meistens in der Kantine.",
         answer_eng: "I usually eat in the canteen.",
     },
+    {
+        question: "",
+        question_eng: "Sometimes the opinions in a family are different, and then there can be arguments.",
+        answer: "",
+        answer_eng: "Manchmal sind die Meinungen in einer Familie verschieden. Dann kann es auch Streit geben.",
+    },
 ]
 
 const OthersAdverb = [

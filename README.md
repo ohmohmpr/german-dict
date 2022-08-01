@@ -15,3 +15,11 @@ https://quizlet.com/ch/662890530/schritte-4-lektion-10-flash-cards/
 https://quizlet.com/662890530/flashcards
 https://www.youtube.com/watch?v=yXEesONd_54
 https://quizlet.com/299758837/flashcards
+
+
+Location:
+Das Foto habe ich während eines Familienfestes im Haus meiner Schwiegereltern gemacht. 
+Sie sitzen vorne in der Mitte.
+Zwischen ihnen sitzt die Tochter meines Bruders und rechts die Tochter meiner Schwester, die oben rechts auf dem Foto ist. 
+Vorne ganz links ist der Bruder meines Schwiegervaters und vorne ganze rechts sitzt seine Frau. 
+Hinten sitzen neben meiner Schwester zwei Geschwister meiner Schwiegermutter.
