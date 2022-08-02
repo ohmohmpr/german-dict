@@ -20,7 +20,7 @@
       <a href="#5"> <h3>5. Präpositionen immer mit Dativ:
         aus, bei, mit, zu, von, nach,
       </h3> </a>
-      <a href="#6"> <h3>6. Wechselpräpositionen: an </h3> </a>
+      <a href="#6"> <h3>6. Wechselpräpositionen: an, auf </h3> </a>
       <a href="#7"> <h3>7. mit Genitiv: außerhalb, innerhalb, während, wegen</h3> </a>
     </div>
 
@@ -44,10 +44,10 @@
         <% words.words.forEach(function(word) { %>
           <tr>
             <th scope="row">
-              <%= word.sentence_eng %>
+              <%= word.english_sentence %>
             </th>
             <td>
-              <input id="<%= word.sentence %>" oninput="checkAnswer(id)" size="70"> 
+              <input id="<%= word.german_sentence %>" oninput="checkAnswer(id)" size="70"> 
             </td>
           </tr>
         <% }); %>
@@ -74,10 +74,10 @@
         <% words.words2.forEach(function(word) { %>
           <tr>
             <th scope="row">
-              <%= word.sentence_eng %>
+              <%= word.english_sentence %>
             </th>
             <td>
-              <input id="<%= word.sentence %>" oninput="checkAnswer(id)" size="70"> 
+              <input id="<%= word.german_sentence %>" oninput="checkAnswer(id)" size="70"> 
             </td>
           </tr>
         <% }); %>
@@ -189,10 +189,10 @@
         <% words.temporale_prap.forEach(function(temporale_prap) { %>
           <tr>
             <td>
-              <%= temporale_prap.sentence_eng %>
+              <%= temporale_prap.english_sentence %>
             </td>
             <td>
-              <%= temporale_prap.sentence %>
+              <%= temporale_prap.german_sentence %>
             </td>
           </tr>
         <% }); %>
@@ -225,10 +225,10 @@
           <% words.immer_dativ_nach.forEach(function(immer_dativ_nach) { %>
             <tr>
               <td>
-                <%= immer_dativ_nach.sentence_eng %>
+                <%= immer_dativ_nach.english_sentence %>
               </td>
               <td>
-                <%= immer_dativ_nach.sentence %>
+                <%= immer_dativ_nach.german_sentence %>
               </td>
               <td>
                 <%= immer_dativ_nach.remark %>
@@ -256,10 +256,10 @@
           <% words.immer_dativ.forEach(function(immer_dativ) { %>
             <tr>
               <td>
-                <%= immer_dativ.sentence_eng %>
+                <%= immer_dativ.english_sentence %>
               </td>
               <td>
-                <%= immer_dativ.sentence %>
+                <%= immer_dativ.german_sentence %>
               </td>
               <td>
                 <%= immer_dativ.remark %>
@@ -287,10 +287,10 @@
           <% words.immer_dativ_aus.forEach(function(immer_dativ_aus) { %>
             <tr>
               <td>
-                <%= immer_dativ_aus.sentence_eng %>
+                <%= immer_dativ_aus.english_sentence %>
               </td>
               <td>
-                <%= immer_dativ_aus.sentence %>
+                <%= immer_dativ_aus.german_sentence %>
               </td>
               <td>
                 <%= immer_dativ_aus.remark %>
@@ -323,10 +323,10 @@
             <% words.immer_dativ_bei.forEach(function(immer_dativ_bei) { %>
               <tr>
                 <td>
-                  <%= immer_dativ_bei.sentence_eng %>
+                  <%= immer_dativ_bei.english_sentence %>
                 </td>
                 <td>
-                  <%= immer_dativ_bei.sentence %>
+                  <%= immer_dativ_bei.german_sentence %>
                 </td>
                 <td>
                   <%= immer_dativ_bei.remark %>
@@ -387,10 +387,10 @@
           <% words.immer_dativ_von.forEach(function(immer_dativ_von) { %>
             <tr>
               <td>
-                <%= immer_dativ_von.sentence_eng %>
+                <%= immer_dativ_von.english_sentence %>
               </td>
               <td>
-                <%= immer_dativ_von.sentence %>
+                <%= immer_dativ_von.german_sentence %>
               </td>
               <td>
                 <%= immer_dativ_von.remark %>
@@ -428,10 +428,10 @@
           <% words.wechselpräpositionen_an.forEach(function(wechselpräpositionen_an) { %>
             <tr>
               <td>
-                <%= wechselpräpositionen_an.sentence_eng %>
+                <%= wechselpräpositionen_an.english_sentence %>
               </td>
               <td>
-                <%= wechselpräpositionen_an.sentence %>
+                <%= wechselpräpositionen_an.german_sentence %>
               </td>
               <td>
                 <%= wechselpräpositionen_an.remark %>
@@ -454,16 +454,16 @@
           </tr>
         </thead>
         <tbody>
-          <% words.wechselpräpositionen_auf.forEach(function(sentence) { %>
+          <% words.wechselpräpositionen_auf.forEach(function(german_sentence) { %>
             <tr>
               <td>
-                <%= sentence.sentence_eng %>
+                <%= german_sentence.english_sentence %>
               </td>
               <td>
-                <%= sentence.sentence %>
+                <%= german_sentence.german_sentence %>
               </td>
               <td>
-                <%= sentence.remark %>
+                <%= german_sentence.remark %>
               </td>
             </tr>
           <% }); %>

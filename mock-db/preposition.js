@@ -1,73 +1,73 @@
 const words = [
     {
-        sentence: "Lara geht an der Brücke vorbei.",
-        sentence_eng: "Lara walks past the bridge.",
+        german_sentence: "Lara geht an der Brücke vorbei.",
+        english_sentence: "Lara walks past the bridge.",
     },
     {
-        sentence: "Sie geht bis zum Fluss.",
-        sentence_eng: "She goes to the river.",
+        german_sentence: "Sie geht bis zum Fluss.",
+        english_sentence: "She goes to the river.",
     },
     {
-        sentence: "Ihre Freundin wohnt gegenüber der Bäckerei.",
-        sentence_eng: "Her friend lives opposite the bakery.",
+        german_sentence: "Ihre Freundin wohnt gegenüber der Bäckerei.",
+        english_sentence: "Her friend lives opposite the bakery.",
     },
     {
-        sentence: "Dann geht sie durch den Park.",
-        sentence_eng: "Then she goes through the park.",
+        german_sentence: "Dann geht sie durch den Park.",
+        english_sentence: "Then she goes through the park.",
     },
     {
-        sentence: "Nach der Brücke geht sie den Fluss entlang.",
-        sentence_eng: "After the bridge, she walks along the river.",
+        german_sentence: "Nach der Brücke geht sie den Fluss entlang.",
+        english_sentence: "After the bridge, she walks along the river.",
     },
     {
-        sentence: "Sie geht noch um die Kirche herum.",
-        sentence_eng: "She still walks around the church.",
+        german_sentence: "Sie geht noch um die Kirche herum.",
+        english_sentence: "She still walks around the church.",
     },
     {
-        sentence: "Gehen Sie hier über die Brücke und dann rechts den Fluss entlang.",
-        sentence_eng: "Walk over the bridge here and then turn right along the river.",
+        german_sentence: "Gehen Sie hier über die Brücke und dann rechts den Fluss entlang.",
+        english_sentence: "Walk over the bridge here and then turn right along the river.",
         create_date: "04/05/2022",
     },
     {
-        sentence: "Gehen Sie bis zur Straße und dann links.",
-        sentence_eng: "Go to the street and then turn left.",
+        german_sentence: "Gehen Sie bis zur Straße und dann links.",
+        english_sentence: "Go to the street and then turn left.",
         create_date: "04/05/2022",
     },
     {
-        sentence: "Gehen Sie an der Tankstelle vorbei.",
-        sentence_eng: "Walk past the gas station.",
+        german_sentence: "Gehen Sie an der Tankstelle vorbei.",
+        english_sentence: "Walk past the gas station.",
         create_date: "04/05/2022",
     },
     {
-        sentence: "Gegenüber der Tankstelle ist ein Park.",
-        sentence_eng: "Opposite the gas station is a park.",
+        german_sentence: "Gegenüber der Tankstelle ist ein Park.",
+        english_sentence: "Opposite the gas station is a park.",
         create_date: "04/05/2022",
     },
     {
-        sentence: "Gehen Sie durch den Park bis zur nächsten Straße.",
-        sentence_eng: "Walk through the park to the next street.",
+        german_sentence: "Gehen Sie durch den Park bis zur nächsten Straße.",
+        english_sentence: "Walk through the park to the next street.",
         create_date: "04/05/2022",
     },
     {
-        sentence: "Gehen Sie über die Straße und dann um die Baustelle herum.",
-        sentence_eng: "Walk across the street and then around the construction site.",
+        german_sentence: "Gehen Sie über die Straße und dann um die Baustelle herum.",
+        english_sentence: "Walk across the street and then around the construction site.",
         create_date: "04/05/2022",
     },
     {
-        sentence: "Dort sehen Sie schon die U-Bahn.",
-        sentence_eng: "There you can already see the subway.",
+        german_sentence: "Dort sehen Sie schon die U-Bahn.",
+        english_sentence: "There you can already see the subway.",
         create_date: "04/05/2022",
     },
 ]
 
 const words2 = [
     {
-        sentence: "Was konnte sie ohne ihre Arbeit tun?",
-        sentence_eng: "What could she do without her work?",
+        german_sentence: "Was konnte sie ohne ihre Arbeit tun?",
+        english_sentence: "What could she do without her work?",
     },
     {
-        sentence: "Mit ihrer Idee will Christina Geld verdienen.",
-        sentence_eng: "Christina wants to earn money with her idea.",
+        german_sentence: "Mit ihrer Idee will Christina Geld verdienen.",
+        english_sentence: "Christina wants to earn money with her idea.",
     },
 ]
 
@@ -102,70 +102,76 @@ const akku_dativ = [
         sentence2: "Das Ferienhaus liegt an der Ostsee",
         sentence_eng2: "The house is located on the Baltic Sea",
     },
+    {
+        sentence1: "Familie Marx gerne ans Meer.",
+        sentence_eng1: "The Marx family likes to go to the sea.",
+        sentence2: "Die Eltern liegen am Strand und die Kinder baden im Meer.",
+        sentence_eng2: "The parents lie on the beach and the children swim in the sea.",
+    },
 ]
 
 const temporale_prap = [
     {
-        sentence: "An manchen Tagen habe ich auch Spätschicht.",
-        sentence_eng: "I also have late shifts on some days.",
+        german_sentence: "An manchen Tagen habe ich auch Spätschicht.",
+        english_sentence: "I also have late shifts on some days.",
     },
 ]
 
 const immer_dativ = [
     {
-        sentence: "Wir sind zu Hause.",
-        sentence_eng: "We’re at home.",
+        german_sentence: "Wir sind zu Hause.",
+        english_sentence: "We’re at home.",
         remark: "Zu Hause",
     },
     {
-        sentence: "Zu Hause muss er noch 6 Stunden lernen.",
-        sentence_eng: "He still has 6 hours to study at home.",
+        german_sentence: "Zu Hause muss er noch 6 Stunden lernen.",
+        english_sentence: "He still has 6 hours to study at home.",
         remark: "Zu Hause",
     },
     {
-        sentence: "Ich fahre nach Frankreich.",
-        sentence_eng: "I'm going to France. (geographic)",
+        german_sentence: "Ich fahre nach Frankreich.",
+        english_sentence: "I'm going to France. (geographic)",
     },
     {
-        sentence: "Gehst du zur Kirche?",
-        sentence_eng: "Are you going to church? (non-geographic)",
+        german_sentence: "Gehst du zur Kirche?",
+        english_sentence: "Are you going to church? (non-geographic)",
     },
     {
-        sentence: "Ich fahre zu meinen Eltern.(Exceptional)",
-        sentence_eng: "I'm going to my parent's house.",
+        german_sentence: "Ich fahre zu meinen Eltern.(Exceptional)",
+        english_sentence: "I'm going to my parent's house.",
     },
     {
-        sentence: "Sie fährt dieses Jahr zu ihrer Schwester aufs Land.(Exceptional)",
-        sentence_eng: "This year, she is going to visit her sister in the country.",
+        german_sentence: "Sie fährt dieses Jahr zu ihrer Schwester aufs Land.(Exceptional)",
+        english_sentence: "This year, she is going to visit her sister in the country.",
         remark: "auf + das Land = Akku (Direction), Open space https://www.germanveryeasy.com/auf",
     },
 ]
 
 const immer_dativ_nach = [
     {
-        sentence: "Was machst du nach der Arbeit?",
-        sentence_eng: "What do you do after work?",
+        german_sentence: "Was machst du nach der Arbeit?",
+        english_sentence: "What do you do after work?",
         remark: "",
     },
 ]
 
 const immer_dativ_aus = [
     {
-        sentence: "Ich komme aus Deutschland.",
-        sentence_eng: "I come from Germany.",
+        german_sentence: "Ich komme aus Deutschland.",
+        english_sentence: "I come from Germany.",
         remark: "",
     },
     {
-        sentence: "Ich komme gerade aus der Stadt.",
-        sentence_eng: "I just got out of town.",
+        german_sentence: "Ich komme gerade aus der Stadt.",
+        english_sentence: "I just got out of town.",
         remark: "",
     },
 ]
 
 const immer_dativ_bei = [
     {
-        sentence: "Heute hat er um 10:30 Uhr eine Vorlesung bei Professor Strasser.",
-        sentence_eng: "Today at 10:30 a.m. he has a lecture with Professor Strasser.",
+        german_sentence: "Heute hat er um 10:30 Uhr eine Vorlesung bei Professor Strasser.",
+        english_sentence: "Today at 10:30 a.m. he has a lecture with Professor Strasser.",
         remark: "bei + person (location) => is with",
     },
 ]
@@ -180,38 +186,48 @@ const immer_dativ_bei_3 = [
 
 const immer_dativ_von = [
     {
-        sentence: "Ich komme gerade von der Arbeit.",
-        sentence_eng: "I just got back from work.",
+        german_sentence: "Ich komme gerade von der Arbeit.",
+        english_sentence: "I just got back from work.",
         remark: "",
     },
 ]
 
 const wechselpräpositionen = [
     {
-        sentence_eng: "I go to the hairdresser and to the supermarket.",
-        sentence: "Ich gehe zum Friseur und in den Supermarkt.",
+        english_sentence: "I go to the hairdresser and to the supermarket.",
+        german_sentence: "Ich gehe zum Friseur und in den Supermarkt.",
         remark: "",
     },
 ]
 
 const wechselpräpositionen_an = [
     {
-        sentence_eng: "Every summer they were at the Baltic Sea in our holiday home.",
-        sentence: "Sie waren jeden Sommer an der Ostsee in unserem Ferienhaus.",
+        english_sentence: "Every summer they were at the Baltic Sea in our holiday home.",
+        german_sentence: "Sie waren jeden Sommer an der Ostsee in unserem Ferienhaus.",
         remark: "next to",
     },
     {
-        sentence_eng: "Er studiert an der Universität.",
-        sentence: "He studies at the university.",
+        english_sentence: "I like to go to the sea.",
+        german_sentence: "Ich fahre gerne ans Meer.",
+        remark: "next to",
+    },
+    {
+        english_sentence: "Er studiert an der Universität.",
+        german_sentence: "He studies at the university.",
         remark: "With some institutions such as: die Schule (the school) or die Universität (the university), the preposition “an” is used when we refer to the institution and the preposition “in” when we refer to the building",
     },
 ]
 
 const wechselpräpositionen_auf = [
     {
-        sentence_eng: "On Amrum we lie on the beach by the sea and there on Lake Chiemsee!",
-        sentence: "Auf Amrum liegen wir am Strand am Meer und dort am Chiemsee!",
+        english_sentence: "On Amrum we lie on the beach by the sea and there on Lake Chiemsee!",
+        german_sentence: "Auf Amrum liegen wir am Strand am Meer und dort am Chiemsee!",
         remark: "with islands",
+    },
+    {
+        english_sentence: "There is a lot of traffic on the freeways.",
+        german_sentence: "Es ist viel Verkehr auf den Autobahnen.",
+        remark: "with open spaces",
     },
 ]
 
