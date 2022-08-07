@@ -16,11 +16,11 @@
       <a href="#1"> <h3>1. Lokale Präpositionen</h3> </a>
       <a href="#2"> <h3>2. Ohne/ Mit</h3> </a>
       <a href="#3"> <h3>3. mit Akkusativ und Dativ</h3> </a>
-      <a href="#4"> <h3>4. Temporale Präpositionen</h3> </a>
+      <a href="#4"> <h3>4. Temporale Präpositionen: zwischen</h3> </a>
       <a href="#5"> <h3>5. Präpositionen immer mit Dativ:
         aus, bei, mit, zu, von, nach,
       </h3> </a>
-      <a href="#6"> <h3>6. Wechselpräpositionen: an, auf </h3> </a>
+      <a href="#6"> <h3>6. Wechselpräpositionen: an, auf, zwischen </h3> </a>
       <a href="#7"> <h3>7. mit Genitiv: außerhalb, innerhalb, während, wegen</h3> </a>
     </div>
 
@@ -128,7 +128,7 @@
 
     <table id="4" class="table caption-top table-bordered border-dark">
       <caption>
-        <h2>4. Temporale Präpositionen</h2>
+        <h2>4. Temporale Präpositionen: zwischen</h2>
         https://expressingmeaning.net/2018/01/30/german-prepositions-time-temporale-prapositionen/
         <table class="table caption-top table-bordered border-dark">
           <thead>
@@ -407,7 +407,7 @@
 
     <table id="6" class="table caption-top table-bordered border-dark">
       <caption>
-        <h2>6. Wechselpräpositionen: an, auf</h2>
+        <h2>6. Wechselpräpositionen: an, auf, zwischen</h2>
 
         
       </caption>
@@ -469,6 +469,36 @@
           <% }); %>
         </tbody>
       </table>
+
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>6.3 zwischen</h4>
+          <p>Ref <a href="https://deutschegrammatik20.de/praepositionen/die-bedeutung-der-prapositionen-ubersicht/die-bedeutung-der-prapositionen-zwischen/#:~:text=Die%20Pr%C3%A4position%20zwischen%20ist%20bei,wird%20zwischen%20mit%20Akkusativ%20verwendet." target="_blank">zwischen</a>.</p>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">English</th>
+            <th scope="col">German</th>
+            <th scope="col">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.wechselpräpositionen_zwischen.forEach(function(sentence) { %>
+            <tr>
+              <td>
+                <%= sentence.english_sentence %>
+              </td>
+              <td>
+                <%= sentence.german_sentence %>
+              </td>
+              <td>
+                <%= sentence.remark %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
 
     </table>
 

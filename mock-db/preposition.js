@@ -112,8 +112,15 @@ const akku_dativ = [
 
 const temporale_prap = [
     {
-        german_sentence: "An manchen Tagen habe ich auch Spätschicht.",
         english_sentence: "I also have late shifts on some days.",
+        german_sentence: "An manchen Tagen habe ich auch Spätschicht.",
+    },
+]
+
+const temporale_prap_von_bis = [
+    {
+        english_sentence: "From Saturday 6:00 a.m. to Monday 6:00 a.m., There are no trains between the Denzlingen and Emmendingen stations due to construction work.",
+        german_sentence: "Von Samstag 6.00 Uhr bis Montag 6.00 Uhr verkehren wegen Bauarbeiten zwischen den Stationen Denzlingen und Emmendingen keine Züge.",
     },
 ]
 
@@ -186,16 +193,21 @@ const immer_dativ_bei_3 = [
 
 const immer_dativ_von = [
     {
-        german_sentence: "Ich komme gerade von der Arbeit.",
         english_sentence: "I just got back from work.",
+        german_sentence: "Ich komme gerade von der Arbeit.",
         remark: "",
+    },
+    {
+        english_sentence: "I wanted to tell you about my great weekend in Salzburg.",
+        german_sentence: "Ich wollte dir von meinem tollen Wochenende in Salzburg erzählen.",
+        remark: "Von(of) --> lived experiences, Über(about) --> abstract facts",
     },
 ]
 
 const wechselpräpositionen = [
     {
-        english_sentence: "I go to the hairdresser and to the supermarket.",
         german_sentence: "Ich gehe zum Friseur und in den Supermarkt.",
+        english_sentence: "I go to the hairdresser and to the supermarket.",
         remark: "",
     },
 ]
@@ -228,6 +240,29 @@ const wechselpräpositionen_auf = [
         english_sentence: "There is a lot of traffic on the freeways.",
         german_sentence: "Es ist viel Verkehr auf den Autobahnen.",
         remark: "with open spaces",
+    },
+]
+
+const wechselpräpositionen_zwischen = [
+    {
+        english_sentence: "There is an armchair between the desk and the shelf.",
+        german_sentence: "Zwischen dem Schreibtisch und dem Regal steht ein Sessel.",
+        remark: "Dativ",
+    },
+    {
+        english_sentence: "I put the chair between the desk and the shelf.",
+        german_sentence: "Ich stelle den Sessel zwischen den Schreibtisch und das Regal.",
+        remark: "Akkusativ",
+    },
+    {
+        english_sentence: "From Saturday 6:00 a.m. to Monday 6:00 a.m., There are no trains between the Denzlingen and Emmendingen stations due to construction work.",
+        german_sentence: "Von Samstag 6.00 Uhr bis Montag 6.00 Uhr verkehren wegen Bauarbeiten zwischen den Stationen Denzlingen und Emmendingen keine Züge.",
+        remark: "Dativ",
+    },
+    {
+        english_sentence: "Between these stations, there will be a replacement bus service during this period.",
+        german_sentence: "Zwischen diesen Stationen gibt es in diesem Zeitraum einen Schienenersatzverkehr mit Bussen.",
+        remark: "Dativ",
     },
 ]
 
@@ -266,6 +301,11 @@ const immer_genitiv_wegen = [
         german_sentence: "Am Wochenende sind wir wegen des Wetters zu Hause geblieben.",
         remark: "",
     },
+    {
+        english_sentence: "The B12 Munich - Passau is closed in both directions near Mühldorf due to construction work.",
+        german_sentence: "Die B12 München - Passau ist bei Mühldorf wegen Bauarbeiten in beiden Richtungen gesperrt.",
+        remark: "",
+    },
 ]
 
 module.exports = {
@@ -273,6 +313,7 @@ module.exports = {
     words2: words2,
     akku_dativ: akku_dativ,
     temporale_prap: temporale_prap,
+    temporale_prap_von_bis: temporale_prap_von_bis,
     immer_dativ: immer_dativ,
     immer_dativ_nach: immer_dativ_nach,
     immer_dativ_aus: immer_dativ_aus,
@@ -282,6 +323,7 @@ module.exports = {
     wechselpräpositionen: wechselpräpositionen,
     wechselpräpositionen_an: wechselpräpositionen_an,
     wechselpräpositionen_auf: wechselpräpositionen_auf,
+    wechselpräpositionen_zwischen: wechselpräpositionen_zwischen,
     immer_genitiv_während: immer_genitiv_während,
     immer_genitiv_außerhalb: immer_genitiv_außerhalb,
     immer_genitiv_innerhalb: immer_genitiv_innerhalb,
