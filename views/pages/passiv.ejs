@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+
+  <body class="container">
+
+    <header>
+      <%- include('../partials/header'); %>
+    </header>
+
+  <main>
+    <div class="jumbotron">
+      <h1>Passiv</h1>
+      <a href="#1"> <h3>1. Präsen Passiv</h3> </a>
+    </div>
+
+    <hr>
+
+    <table id="1" class="table caption-top table-bordered border-dark">
+      <caption>
+        <h2>1. Lokale Präpositionen</h2>
+        mit Dativ    : an ... vorbei, bis zu, gegenüber
+        <br>
+        mit Akkusativ: durch, ... entlang, um ... herum
+        
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">English</th>
+          <th scope="col">German</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.passiv.forEach(function(word) { %>
+          <tr>
+            <th scope="row">
+              <%= word.english_sentence %>
+            </th>
+            <td>
+              <input id="<%= word.german_sentence %>" oninput="checkAnswer(id)" size="70"> 
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <hr>
+
+  </main>
+
+  <footer>
+    <%- include('../partials/footer'); %>
+  </footer>
+
+  </body>
+</html>
+
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('+') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+  }
+</script>
