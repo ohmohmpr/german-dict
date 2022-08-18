@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+
+  <body class="container">
+
+    <header>
+      <%- include('../partials/header'); %>
+    </header>
+
+  <main>
+    <div class="jumbotron">
+      <h1>Präpositionen</h1>
+      <a href="#1"> <h3>1. Lokale Präpositionen</h3> </a>
+      <a href="#2"> <h3>2. Ohne/ Mit</h3> </a>
+      <a href="#3"> <h3>3. mit Akkusativ und Dativ</h3> </a>
+      <a href="#4"> <h3>4. Temporale Präpositionen: zwischen</h3> </a>
+      <a href="#5"> <h3>5. Präpositionen immer mit Dativ:
+        aus, bei, mit, zu, von, nach,
+      </h3> </a>
+      <a href="#6"> <h3>6. Wechselpräpositionen: an, auf, zwischen </h3> </a>
+      <a href="#7"> <h3>7. mit Genitiv: außerhalb, innerhalb, während, wegen</h3> </a>
+      <a href="#8"> <h3>8. Präposition und Konjunktion</h3> </a>
+    </div>
+
+    <hr>
+
+    <table id="1" class="table caption-top table-bordered border-dark">
+      <caption>
+        <h2>1. Lokale Präpositionen</h2>
+        mit Dativ    : an ... vorbei, bis zu, gegenüber
+        <br>
+        mit Akkusativ: durch, ... entlang, um ... herum
+        
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">English</th>
+          <th scope="col">German</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.words.forEach(function(word) { %>
+          <tr>
+            <th scope="row">
+              <%= word.english_sentence %>
+            </th>
+            <td>
+              <input id="<%= word.german_sentence %>" oninput="checkAnswer(id)" size="70"> 
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <table id="2" class="table caption-top table-bordered border-dark">
+      <caption>
+        <h2>2. Ohne/ Mit</h2>
+        ohne + Akkusativ
+        <br>
+        mit + Dativ
+        
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">English</th>
+          <th scope="col">German</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.words2.forEach(function(word) { %>
+          <tr>
+            <th scope="row">
+              <%= word.english_sentence %>
+            </th>
+            <td>
+              <input id="<%= word.german_sentence %>" oninput="checkAnswer(id)" size="70"> 
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <table id="3" class="table caption-top table-bordered border-dark">
+      <caption>
+        <h2>3. mit Akkusativ und Dativ</h2>
+        https://resources.german.lsa.umich.edu/grammatik/stehenstellen/
+        <br>
+        Wohin + Akkusativ: stellen, legen, stecken
+        <br>
+        Wo + Dativ: stehen, liegen
+        
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">German</th>
+          <th scope="col">Wohin</th>
+          <th scope="col">German</th>
+          <th scope="col">Wo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.akku_dativ.forEach(function(akku_dativ) { %>
+          <tr>
+            <td>
+              <%= akku_dativ.sentence1 %>
+            </td>
+            <td>
+              <%= akku_dativ.sentence_eng1 %>
+            </td>
+            <td>
+              <%= akku_dativ.sentence2 %>
+            </td>
+            <td>
+              <%= akku_dativ.sentence_eng2 %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    
+    <hr>
+
+    <table id="4" class="table caption-top table-bordered border-dark">
+      <caption>
+        <h2>4. Temporale Präpositionen: zwischen</h2>
+        https://expressingmeaning.net/2018/01/30/german-prepositions-time-temporale-prapositionen/
+        <table class="table caption-top table-bordered border-dark">
+          <thead>
+            <tr>
+              <th scope="col">mit Akkusativ</th>
+              <th scope="col">mit Dativ</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td><b>bis</b> ein Uhr</td>
+                <td><b>ab</b> dem ersten Juni</td>
+              </tr>
+              <tr>
+                <td><b>über</b> eine Stunde</td>
+                <td><b>an</b> manchen Tagen</td>
+              </tr>
+              <tr>
+                <td><b>um</b> zehn Uhr</td>
+                <td><b>seit</b> vier Jahren</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td><b>vor</b> einem Jahr</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td><b>nach</b> dem Unterricht</td>
+              </tr>
+          </tbody>
+        </table>
+        <h4>4.2.2  An</h4>
+        <b>Translation</b> : at [Christmas], on [Monday], in [the evening]
+        <br>
+        <b>Answers the question</b>: Wann?
+        <br>
+        <b>Describes</b>: A point in time.
+        <br>
+        <b>Examples</b>:
+        <li>
+          <b>An Weihnachten</b>  besuchen wir unsere Familie. (At Christmas we visit our family.)
+        </li>
+        <li>
+          Wir feiern <b>am</b> (an + dem) <b>25. Dezember</b> die Geburt Jesu. (We celebrate the birth of Jesus on 25 December.)
+        </li>
+        <li>
+          Wir gehen <b>am</b> (an + dem) <b>Abend</b> ins Kino. (We go to the cinema in the evening.)
+        </li>
+        <b>Note</b>: Can be used with a specific date, day of the week, time of the day, or festival.
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">English</th>
+          <th scope="col">German</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.temporale_prap.forEach(function(temporale_prap) { %>
+          <tr>
+            <td>
+              <%= temporale_prap.english_sentence %>
+            </td>
+            <td>
+              <%= temporale_prap.german_sentence %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    
+    <hr>
+
+    <table id="5" class="table caption-top table-bordered border-dark">
+      <caption>
+        <h2>5. Präpositionen immer mit Dativ:
+          aus, bei, mit, zu, von, nach</h2> 
+      </caption>
+
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>5.0 Nach</h4>
+          <p>Ref <a href="https://www.germanveryeasy.com/nach" target="_blank">Nach</a>.</p>
+          <h5>5.0 Nach (meaning After) </h5>
+          "nach" as a temporal preposition (meaning after)
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">English</th>
+            <th scope="col">German</th>
+            <th scope="col">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.immer_dativ_nach.forEach(function(immer_dativ_nach) { %>
+            <tr>
+              <td>
+                <%= immer_dativ_nach.english_sentence %>
+              </td>
+              <td>
+                <%= immer_dativ_nach.german_sentence %>
+              </td>
+              <td>
+                <%= immer_dativ_nach.remark %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>5.1 zu vs nach</h4>
+          <p>Ref <a href="https://www.thoughtco.com/say-to-in-german-nach-4069659" target="_blank">say-to-in-german-nach</a>.</p>
+          <h5>5.1.1 zu Hause </h5>
+          The expression "zu Hause" means to be "at home". Take note that this does not indicate movement as "zu" usually does.
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">English</th>
+            <th scope="col">German</th>
+            <th scope="col">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.immer_dativ.forEach(function(immer_dativ) { %>
+            <tr>
+              <td>
+                <%= immer_dativ.english_sentence %>
+              </td>
+              <td>
+                <%= immer_dativ.german_sentence %>
+              </td>
+              <td>
+                <%= immer_dativ.remark %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+      
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>5.2 aus</h4>
+          <p>Ref <a href="https://www.germanveryeasy.com/prepositions-in-german#aus" target="_blank">
+            aus</a>.</p>
+            from (PLACE, origin)
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">English</th>
+            <th scope="col">German</th>
+            <th scope="col">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.immer_dativ_aus.forEach(function(immer_dativ_aus) { %>
+            <tr>
+              <td>
+                <%= immer_dativ_aus.english_sentence %>
+              </td>
+              <td>
+                <%= immer_dativ_aus.german_sentence %>
+              </td>
+              <td>
+                <%= immer_dativ_aus.remark %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>5.3 bei</h4>
+          <p>Ref <a href="https://www.germanveryeasy.com/bei" target="_blank">
+            bei</a>.</p>
+        </caption>
+
+        <table class="table caption-top table-bordered border-dark">
+          <caption>
+            <h5>5.3.1 bei + person (location) </h5> 
+            It is used to say that one is with a person (at their home)
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">English</th>
+              <th scope="col">German</th>
+              <th scope="col">Remark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% words.immer_dativ_bei.forEach(function(immer_dativ_bei) { %>
+              <tr>
+                <td>
+                  <%= immer_dativ_bei.english_sentence %>
+                </td>
+                <td>
+                  <%= immer_dativ_bei.german_sentence %>
+                </td>
+                <td>
+                  <%= immer_dativ_bei.remark %>
+                </td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+
+        <table class="table caption-top table-bordered border-dark">
+          <caption>
+            <h5>5.3.3 bei as a temporal preposition (meaning during/while) </h5> 
+            bei + Noun that indicates a period of time
+            bei means "during" in the sense of time.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">English</th>
+              <th scope="col">German</th>
+              <th scope="col">Remark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% words.immer_dativ_bei_3.forEach(function(immer_dativ_bei_3) { %>
+              <tr>
+                <td>
+                  <%= immer_dativ_bei_3.english_sentence %>
+                </td>
+                <td>
+                  <%= immer_dativ_bei_3.german_sentence %>
+                </td>
+                <td>
+                  <%= immer_dativ_bei_3.remark %>
+                </td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+
+      </table>
+
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>5.4 von</h4>
+          <p>Ref <a href="https://www.germanveryeasy.com/prepositions-in-german#von" target="_blank">
+            von</a>.</p>
+            <h5>5.4.1 from, of (LOCATIVE OR TEMPORAL) </h5> 
+            It is used to say that one is with a person (at their home)
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">English</th>
+            <th scope="col">German</th>
+            <th scope="col">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.immer_dativ_von.forEach(function(immer_dativ_von) { %>
+            <tr>
+              <td>
+                <%= immer_dativ_von.english_sentence %>
+              </td>
+              <td>
+                <%= immer_dativ_von.german_sentence %>
+              </td>
+              <td>
+                <%= immer_dativ_von.remark %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+      
+    </table>
+    
+    <hr>
+
+    <table id="6" class="table caption-top table-bordered border-dark">
+      <caption>
+        <h2>6. Wechselpräpositionen: an, auf, zwischen</h2>
+
+        
+      </caption>
+
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>6.1 an</h4>
+          <p>Ref <a href="https://www.germanveryeasy.com/an" target="_blank">an</a>.</p>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">English</th>
+            <th scope="col">German</th>
+            <th scope="col">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.wechselpräpositionen_an.forEach(function(wechselpräpositionen_an) { %>
+            <tr>
+              <td>
+                <%= wechselpräpositionen_an.english_sentence %>
+              </td>
+              <td>
+                <%= wechselpräpositionen_an.german_sentence %>
+              </td>
+              <td>
+                <%= wechselpräpositionen_an.remark %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>6.2 auf</h4>
+          <p>Ref <a href="https://www.germanveryeasy.com/auf" target="_blank">auf</a>.</p>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">English</th>
+            <th scope="col">German</th>
+            <th scope="col">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.wechselpräpositionen_auf.forEach(function(german_sentence) { %>
+            <tr>
+              <td>
+                <%= german_sentence.english_sentence %>
+              </td>
+              <td>
+                <%= german_sentence.german_sentence %>
+              </td>
+              <td>
+                <%= german_sentence.remark %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>6.3 zwischen</h4>
+          <p>Ref <a href="https://deutschegrammatik20.de/praepositionen/die-bedeutung-der-prapositionen-ubersicht/die-bedeutung-der-prapositionen-zwischen/#:~:text=Die%20Pr%C3%A4position%20zwischen%20ist%20bei,wird%20zwischen%20mit%20Akkusativ%20verwendet." target="_blank">zwischen</a>.</p>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">English</th>
+            <th scope="col">German</th>
+            <th scope="col">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.wechselpräpositionen_zwischen.forEach(function(sentence) { %>
+            <tr>
+              <td>
+                <%= sentence.english_sentence %>
+              </td>
+              <td>
+                <%= sentence.german_sentence %>
+              </td>
+              <td>
+                <%= sentence.remark %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+
+    </table>
+
+    <hr>
+
+    <table id="7" class="table caption-top table-bordered border-dark">
+      <caption>
+        <h2>7. mit Genitiv: außerhalb, innerhalb, während, wegen</h2>
+      </caption>
+    
+
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>7.1 Außerhalb</h4>
+          <p>Ref <a href="https://www.germanveryeasy.com/prepositions-in-german#waehrend" target="_blank">während</a>.</p>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">English</th>
+            <th scope="col">German</th>
+            <th scope="col">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.immer_genitiv_außerhalb.forEach(function(immer_genitiv_außerhalb) { %>
+            <tr>
+              <td>
+                <%= immer_genitiv_außerhalb.english_sentence %>
+              </td>
+              <td>
+                <%= immer_genitiv_außerhalb.german_sentence %>
+              </td>
+              <td>
+                <%= immer_genitiv_außerhalb.remark %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>7.2 innerhalb</h4>
+          <p>Ref <a href="" target="_blank">außerhalb</a>.</p>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">English</th>
+            <th scope="col">German</th>
+            <th scope="col">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.immer_genitiv_innerhalb.forEach(function(immer_genitiv_innerhalb) { %>
+            <tr>
+              <td>
+                <%= immer_genitiv_innerhalb.english_sentence %>
+              </td>
+              <td>
+                <%= immer_genitiv_innerhalb.german_sentence %>
+              </td>
+              <td>
+                <%= immer_genitiv_innerhalb.remark %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>7.3 während</h4>
+          <p>Ref <a href="https://www.germanveryeasy.com/prepositions-in-german#waehrend" target="_blank">während</a>.</p>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">English</th>
+            <th scope="col">German</th>
+            <th scope="col">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.immer_genitiv_während.forEach(function(immer_genitiv_während) { %>
+            <tr>
+              <td>
+                <%= immer_genitiv_während.english_sentence %>
+              </td>
+              <td>
+                <%= immer_genitiv_während.german_sentence %>
+              </td>
+              <td>
+                <%= immer_genitiv_während.remark %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+      <table class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>7.4 Wegen</h4>
+          <p>Ref <a href="" target="_blank">außerhalb</a>.</p>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">English</th>
+            <th scope="col">German</th>
+            <th scope="col">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.immer_genitiv_wegen.forEach(function(immer_genitiv_wegen) { %>
+            <tr>
+              <td>
+                <%= immer_genitiv_wegen.english_sentence %>
+              </td>
+              <td>
+                <%= immer_genitiv_wegen.german_sentence %>
+              </td>
+              <td>
+                <%= immer_genitiv_wegen.remark %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+    </table>
+    
+    <hr>
+
+    <table id="8" class="table caption-top table-bordered border-dark">
+      <caption>
+        <h2>8. Präposition und Konjunktion</h2>
+      </caption>
+    
+      <thead>
+        <tr>
+          <th scope="col">Präposition</th>
+          <th scope="col">Konjunktion</th>
+          <th scope="col">Remark</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.prap_kon.forEach(function(prap_kon) { %>
+          <tr>
+            <td>
+              <%= prap_kon.praposition %>
+            </td>
+            <td>
+              <%= prap_kon.konjunktion %>
+            </td>
+            <td>
+              <%= prap_kon.remark %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+
+
+    </table>
+    
+    <hr>
+
+  </main>
+
+  <footer>
+    <%- include('../partials/footer'); %>
+  </footer>
+
+  </body>
+</html>
+
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('+') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+  }
+</script>

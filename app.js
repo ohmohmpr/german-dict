@@ -23,6 +23,7 @@ const verbPrepositionRouter = require('./routes/verb-preposition');
 const verbGrammarRouter = require('./routes/verb-grammar');
 const reflexiveVerbRouter = require('./routes/reflexive-verb');
 const konjunktivIIRouter = require('./routes/konjunktiv-ii');
+const partizipIRouter = require('./routes/partizip-i');
 
 const gutGesagtRouter = require('./routes/gut-gesagt');
 const relativeClauseRouter = require('./routes/relative-clause');
@@ -64,6 +65,7 @@ app.use('/verb-preposition', verbPrepositionRouter);
 app.use('/verb-grammar', verbGrammarRouter);
 app.use('/reflexive-verb', reflexiveVerbRouter);
 app.use('/konjunktiv-ii', konjunktivIIRouter);
+app.use('/partizip-i', partizipIRouter);
 
 app.use('/connectors', connectorsRouter);
 app.use('/gut-gesagt', gutGesagtRouter);
