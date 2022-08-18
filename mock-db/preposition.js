@@ -308,6 +308,29 @@ const immer_genitiv_wegen = [
     },
 ]
 
+const prap_kon = [
+    {
+        praposition: "Seit ihrer Heirat leben sie nicht mehr bei ihren Eltern.",
+        konjunktion: "Seitdem sie verheiratet sind, leben sie nicht mehr bei ihren Eltern.",
+        remark: "",
+    },
+    {
+        praposition: "Vor seiner Urlaubsreise packt er seinen Koffer.",
+        konjunktion: "Bevor er in den Urlaub fährt, packt er seinen Koffer",
+        remark: "",
+    },
+    {
+        praposition: "Während unseres Gesprächs kaufe ich einen Bubble-Tee.",
+        konjunktion: "Während wir miteinander gesprochen haben, habe ich einen Bubble-Tee gekauft.",
+        remark: "",
+    },
+    {
+        praposition: "Nach dem Essen sollte man nicht laufen.",
+        konjunktion: "Nachdem man gegessen hatte, sollte man nicht laufen.",
+        remark: "",
+    },
+]
+
 module.exports = {
     words: words,
     words2: words2,
@@ -328,5 +351,6 @@ module.exports = {
     immer_genitiv_außerhalb: immer_genitiv_außerhalb,
     immer_genitiv_innerhalb: immer_genitiv_innerhalb,
     immer_genitiv_wegen: immer_genitiv_wegen,
+    prap_kon: prap_kon,
 }
 

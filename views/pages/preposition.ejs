@@ -22,6 +22,7 @@
       </h3> </a>
       <a href="#6"> <h3>6. Wechselpräpositionen: an, auf, zwischen </h3> </a>
       <a href="#7"> <h3>7. mit Genitiv: außerhalb, innerhalb, während, wegen</h3> </a>
+      <a href="#8"> <h3>8. Präposition und Konjunktion</h3> </a>
     </div>
 
     <hr>
@@ -625,6 +626,39 @@
           <% }); %>
         </tbody>
       </table>
+
+    </table>
+    
+    <hr>
+
+    <table id="8" class="table caption-top table-bordered border-dark">
+      <caption>
+        <h2>8. Präposition und Konjunktion</h2>
+      </caption>
+    
+      <thead>
+        <tr>
+          <th scope="col">Präposition</th>
+          <th scope="col">Konjunktion</th>
+          <th scope="col">Remark</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.prap_kon.forEach(function(prap_kon) { %>
+          <tr>
+            <td>
+              <%= prap_kon.praposition %>
+            </td>
+            <td>
+              <%= prap_kon.konjunktion %>
+            </td>
+            <td>
+              <%= prap_kon.remark %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+
 
     </table>
     
