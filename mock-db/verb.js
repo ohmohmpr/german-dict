@@ -587,6 +587,16 @@ const words = [
         update_date: "14/07/2022",
     },
     {
+        wort: "wachsen",
+        meaning: "grow",
+        english_sentence: "Potatoes grow in the field behind the house.",
+        german_sentence: "Auf dem Feld hinter dem Haus wachsen Kartoffeln.",
+        remark: "",
+        chapter: "b1-9",
+        create_date: "11/08/2022",
+        update_date: "11/08/2022",
+    },
+    {
         wort: "umziehen",
         meaning: "move",
         english_sentence: "I would like to relocate/move to Germany in 2024.",

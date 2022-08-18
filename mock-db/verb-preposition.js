@@ -135,6 +135,16 @@ const verbWithFür = [
         create_date: "18/05/2022",
         update_date: "18/05/2022",
     },
+    {
+        verb: "Verantwortung tragen für",
+        meaning: "tragen",
+        english_sentence: "As the owner of a company, you are responsible for your employees.",
+        german_sentence: "Als Inhaber einer Firma trägt man die Verantwortung für seine Mitarbeiter.",
+        remark: "",
+        chapter: "b1-8",
+        create_date: "09/08/2022",
+        update_date: "09/08/2022",
+    },
 ]
 
 const verbWithMit = [
@@ -180,6 +190,16 @@ const verbWithUm = [
         chapter: "a2-11",
         create_date: "18/05/2022",
         update_date: "18/05/2022",
+    },
+    {
+        verb: "sich kümmern um",
+        meaning: "take care of",
+        english_sentence: "As the owner of a company, you have to take care of social security yourself.",
+        german_sentence: "Als Inhaber einer Firma muss man sich selbst um die Sozialversicherungen kümmern.",
+        remark: "",
+        chapter: "b1-8",
+        create_date: "09/08/2022",
+        update_date: "09/08/2022",
     },
 ]
 
