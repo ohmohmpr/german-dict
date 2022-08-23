@@ -146,10 +146,51 @@ const dass = [
     }
 ]
 
+
+const nicht_nur_sondern_auch_exp = [
+    {
+        sentence_1: "Er kauft kein Fleisch.",
+        sentence_2: "Er kauft keine Milchprodukte.",
+        english_sentence: "He doesn't buy meat or dairy products.",
+        german_sentence: "Er kauft weder Fleisch noch Milchprodukte.",
+    },
+]
+
+const weder_noch_exp = [
+    {
+        sentence_1: "Er kauft kein Fleisch.",
+        sentence_2: "Er kauft keine Milchprodukte.",
+        english_sentence: "He doesn't buy meat or dairy products.",
+        german_sentence: "Er kauft weder Fleisch noch Milchprodukte.",
+    },
+    {
+        sentence_1: "Man sollte nicht rauchen.",
+        sentence_2: "Man sollte nicht viel Alkohol trinken.",
+        english_sentence: "You should neither smoke nor drink a lot of alcohol.",
+        german_sentence: "Man sollte weder rauchen noch viel Alkohol trinken.",
+    },
+    {
+        sentence_1: "Er fährt nicht mit dem Fahrrad.",
+        sentence_2: "Er geht nicht zu Fuß.",
+        english_sentence: "He neither rides a bicycle nor walks.",
+        german_sentence: "Er fährt weder mit dem Fahrrad, noch geht er zu Fuß.",
+    },
+]
+
+const weder_noch = [
+    {
+        english_sentence: "You should neither eat too much meat nor too much sausage.",
+        german_sentence: "Man sollte weder zu viel Fleisch noch zu viel Wurst essen.",
+    },
+]
+
 module.exports = {
     words: words,
     alsUndWenn: alsUndWenn,
     damitUmZu: damitUmZu,
     Temporale_Nebensätze_exp: Temporale_Nebensätze_exp,
+    nicht_nur_sondern_auch_exp: nicht_nur_sondern_auch_exp,
+    weder_noch_exp: weder_noch_exp,
+    weder_noch: weder_noch,
 }
 

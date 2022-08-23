@@ -17,6 +17,7 @@
     <h3>2. Als und Wenn</h3>
     <h3>3. um ... zu + Infinitiv / damit</h3>
     <a href="#4"> <h3>4. Temporale Nebensätze</h3> </a>
+    <a href="#5"> <h3>5. Doppelkonjunktionen</h3> </a>
   </div>
 
   <hr>
@@ -165,6 +166,77 @@
         </tr>
       <% }); %>
     </tbody>
+  </table>
+
+  <hr>
+
+  <table id="5" class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>5. Doppelkonjunktionen / Zweiteilige Konnektoren</h2>
+
+      <img src="/images/konnektor/.png" width="650" height="500">
+      <br>
+      <a href="https://quizlet.com/704639495/flashcards" target="_blank">Quiz</a>
+    </caption>
+
+    <table class="table caption-top table-bordered border-dark">
+      <caption>
+        <h4>5.2 nicht nur ..., sondern auch</h4>
+        
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">English</th>
+          <th scope="col">German</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.nicht_nur_sondern_auch_exp.forEach(function(nicht_nur_sondern_auch_exp) { %>
+          <tr>
+            <th scope="row">
+              <%= nicht_nur_sondern_auch_exp.sentence_1 %>
+              <br>
+              <%= nicht_nur_sondern_auch_exp.sentence_2 %>
+            </th>
+            <td>
+              <%= nicht_nur_sondern_auch_exp.english_sentence %>
+              <br>
+              <input id="<%= nicht_nur_sondern_auch_exp.german_sentence %>" oninput="checkAnswer(id)" size="70"> 
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <table class="table caption-top table-bordered border-dark">
+      <caption>
+        <h4>5.4 Weder ... noch</h4>
+        
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">English</th>
+          <th scope="col">German</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.weder_noch_exp.forEach(function(weder_noch_exp) { %>
+          <tr>
+            <th scope="row">
+              <%= weder_noch_exp.sentence_1 %>
+              <br>
+              <%= weder_noch_exp.sentence_2 %>
+            </th>
+            <td>
+              <%= weder_noch_exp.english_sentence %>
+              <br>
+              <input id="<%= weder_noch_exp.german_sentence %>" oninput="checkAnswer(id)" size="70"> 
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
   </table>
 
 </main>
