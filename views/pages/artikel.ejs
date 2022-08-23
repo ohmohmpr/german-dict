@@ -331,6 +331,50 @@
     </tbody>
   </table>
 
+  <hr>
+
+  <table id="7" class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>7. Adjektive im Superlativ vor Nomen</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Maskulin</th>
+        <th scope="col">Neutrum</th>
+        <th scope="col">Feminin</th>
+        <th scope="col">Plural</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.superlativ.forEach(function(word) { %>
+        <tr>
+          <th scope="row"><%= word.title %></th>
+          <td>
+            <input id="<%=word.title %>-<%= word.maskulin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.maskulin %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.neutrum %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.neutrum %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.feminin %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.feminin %>
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.plural %>" oninput="checkAnswer(id)"> 
+            <br>
+            <%= word.plural %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
 </main>
 
 <footer>

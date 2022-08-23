@@ -254,6 +254,30 @@ const derselbe = [
     },
 ]
 
+const superlativ = [
+    {
+        title: "Nominativ", 
+        maskulin: "-e", 
+        neutrum: "-e", 
+        feminin: "-e",  
+        plural: "-en",
+    },
+    {
+        title: "Akkusativ",
+        maskulin: "-en", 
+        neutrum: "-e", 
+        feminin: "-e",  
+        plural: "-en",
+    },
+    {
+        title: "Dativ",
+        maskulin: "-en", 
+        neutrum: "-en", 
+        feminin: "-en",  
+        plural: "-en",
+    },
+]
+
 module.exports = {
     words: words,
     words2: words2,
@@ -263,5 +287,6 @@ module.exports = {
     demonstrativartikel: demonstrativartikel,
     possessivartikel: possessivartikel,
     derselbe: derselbe,
+    superlativ: superlativ,
 }
 
