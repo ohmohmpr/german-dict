@@ -243,6 +243,179 @@ const wechselpräpositionen_auf = [
     },
 ]
 
+const wechselpräpositionen_vor = [
+    {
+        english_sentence: "Thomas stands in front of/before Maria.",
+        german_sentence: "Thomas steht vor Maria.",
+        remark: "1.1. Meaning = In front of/before",
+    },
+    {
+        english_sentence: "Thomas showers before Maria.",
+        german_sentence: "Thomas duscht vor Maria.",
+        remark: "1.2. Meaning = Before",
+    },
+    {
+        english_sentence: "A few days ago (before now) it was still really cold.",
+        german_sentence: "Vor ein paar Tagen war es noch richtig kalt.",
+        remark: "1.3. Meaning = Ago. Vor -> during, Befor -> While",
+    },
+    {
+        english_sentence: "I wait in front of the café.",
+        german_sentence: "Ich warte vor dem Café.",
+        remark: "1. Dative - Location",
+    },
+    {
+        english_sentence: "I go in front of the café.",
+        german_sentence: "Ich gehe vor das Café.",
+        remark: "1. Accusative - Location",
+    },
+    {
+        english_sentence: "Thomas does yoga before the meeting.",
+        german_sentence: "Thomas macht vor dem Meeting Yoga.",
+        remark: "1. Dative - Time",
+    },
+    {
+        english_sentence: "The last time I was at the movies was a month ago.",
+        german_sentence: "Das letzte Mal, dass ich im Kino war, war vor einem Monat. ",
+        remark: "1. Dative - Time",
+    },
+    {
+        english_sentence: "Before an exam, Maria drinks a shot to calm down.",
+        german_sentence: "Vor einer Prüfung trinkt Maria zur Beruhigung einen Shot.",
+        remark: "1. Dative - Time",
+    },
+    {
+        english_sentence: "The man is jumping the line. (lit.: pushing himself to the front)",
+        german_sentence: "Der Mann drängelt sich vor.",
+        remark: "“vor” as a prefix",
+    },
+    {
+        english_sentence: "Maria reads (out) the newspaper article to Thomas.",
+        german_sentence: "Maria liest Thomas den Zeitungsartikel vor.",
+        remark: "vorlesen (reading out)",
+    },
+    {
+        english_sentence: "“Kids copy what they see from how their parents are living (in front of them).”",
+        german_sentence: "Kinder machen das, was ihre Eltern ihnen vorleben.",
+        remark: "vorleben (model)",
+    },
+    {
+        english_sentence: "The fitness coach shows/demonstrates the exercise.",
+        german_sentence: "Der Fitnesstrainer macht die Übung vor.",
+        remark: "vormachen (show/demonstrate)",
+    },
+    {
+        english_sentence: "Maria suggested/proposed at the meeting to buy an office cat.",
+        german_sentence: "Maria hat beim Meeting vorgeschlagen, eine Bürokatze zu kaufen.",
+        remark: "vorschlagen (to purpose)",
+    },
+    {
+        english_sentence: "Maria reproaches/accuses Thomas of secretly using her skin lotions.",
+        german_sentence: "Maria wirft Thomas vor, heimlich ihre Hautcremes zu benutzen.",
+        remark: "vorwerfen (accuse)",
+    },
+    {
+        english_sentence: "I introduce the unicorn to you.",
+        german_sentence: "Ich stelle dir das Einhorn vor.",
+        remark: "vorstellen (introduce)",
+    },
+    {
+        english_sentence: "I visualize/imagine the unicorn.",
+        german_sentence: "Ich stelle mir das Einhorn vor.",
+        remark: "vorstellen (imagine)",
+    },
+    {
+        english_sentence: "Preheat the oven to 200 Celsius.",
+        german_sentence: "Den Backofen auf 200 Grad vorheizen.",
+        remark: "Pre = Vor- can be added to many verbs to give them the idea idea of in advance ",
+    },
+    {
+        english_sentence: "The meat is pre-cooked. You just have to heat it up.",
+        german_sentence: "Das Fleisch ist vorgegart. Sie müssen es nur noch aufwärmen.",
+        remark: "vorgaren - precook",
+    },
+    {
+        english_sentence: "We’ll meet at 7 at my place for “pre-glowing”",
+        german_sentence: "Wir treffen uns um 7 bei mir zum vorglühen.",
+        remark: "vorglühen",
+    },
+    {
+        english_sentence: "I prepare myself for the marathon",
+        german_sentence: "Ich bereite mich auf den Marathon vor.",
+        remark: "vorbereiten",
+    },
+    {
+        english_sentence: "On the third of May, I’ll celebrate my birthday, so don’t make any plans.",
+        german_sentence: "Am 3.5. feiere ich meinen Geburtstag, also nimm dir nichts vor.",
+        remark: "sich vornehmen",
+    },
+    {
+        english_sentence: "Thomas has decided/is resolved to go to step aerobics more regularly.",
+        german_sentence: "Thomas hat sich vorgenommen, regelmäßiger zum Step Aerobic zu gehen.",
+        remark: "sich vornehmen",
+    },
+    {
+        english_sentence: "Do you have plans for tonight?",
+        german_sentence: "Hast du heute schon was vor?",
+        remark: "sich vorhaben",
+    },
+    {
+        english_sentence: "I don’t have plans yet. /I‘m free.",
+        german_sentence: "Ich hab noch nichts vor.",
+        remark: "sich vorhaben",
+    },
+    {
+        english_sentence: "Should we go?",
+        german_sentence: "Wollen wir gehen?",
+        remark: "sich vorhaben",
+    },
+    {
+        english_sentence: "Yeah, I wasn’t planning on staying here for long anyway.",
+        german_sentence: "Ja, ich hatte eh nicht vor, lange hierzubleiben.",
+        remark: "sich vorhaben",
+    },
+    {
+        english_sentence: "The lion is frightened by everything.",
+        german_sentence: "Der Löwe fürchtet sich vor allem.",
+        remark: "3. combos with verbs - fürchten sich vor",
+    },
+    {
+        english_sentence: "Many kids are scared of the dentist.",
+        german_sentence: "Viele Kinder haben Angst vor dem Zahnarzt.",
+        remark: "3. combos with verbs - haben Angst vor",
+    },
+    {
+        english_sentence: "I don’t like the musician but I respect him/have respect for him.",
+        german_sentence: "Ich mag den Musiker nicht, aber ich habe Respekt vor ihm.",
+        remark: "3. combos with verbs - haben Respekt vor",
+    },
+    {
+        english_sentence: "The expert warns of a new financial crisis.",
+        german_sentence: "Der Experte warnt vor einer neuen Finanzkrise.",
+        remark: "3. combos with verbs - warnen vor",
+    },
+    {
+        english_sentence: "Sun screen protects the skin from the UV-radiation of the sun.",
+        german_sentence: "Sonnencreme schützt die Haut vor der UV-Strahlung der Sonne.",
+        remark: "3. combos with verbs - schützen vor",
+    },
+    {
+        english_sentence: "Ignorance is no excuse in law.",
+        german_sentence: "Unwissenheit schützt vor Strafe nicht.",
+        remark: "3. combos with verbs - schützen vor",
+    },
+    {
+        english_sentence: "The  gazelles are fleeing before the pride (pack) of lions.",
+        german_sentence: "Die Gazellen fliehen vor dem Löwenrudel.",
+        remark: "3. combos with verbs - fliehen vor",
+    },
+    {
+        english_sentence: "Maria can’t run away from her problems.",
+        german_sentence: "Maria kann vor ihren Problemen nicht weglaufen.",
+        remark: "3. combos with verbs - weglaufen vor",
+    },
+]
+
 const wechselpräpositionen_zwischen = [
     {
         english_sentence: "There is an armchair between the desk and the shelf.",
@@ -346,6 +519,7 @@ module.exports = {
     wechselpräpositionen: wechselpräpositionen,
     wechselpräpositionen_an: wechselpräpositionen_an,
     wechselpräpositionen_auf: wechselpräpositionen_auf,
+    wechselpräpositionen_vor: wechselpräpositionen_vor,
     wechselpräpositionen_zwischen: wechselpräpositionen_zwischen,
     immer_genitiv_während: immer_genitiv_während,
     immer_genitiv_außerhalb: immer_genitiv_außerhalb,
