@@ -1,59 +1,51 @@
 const modalverben = [
     {
         title: "ich",
-        wollen: "kann",
-        können: "",
+        wollen: "",
+        können: "kann",
         müssen: "",
         dürfen: "",
-        sollen: "",
+        sollen: "soll",
     },
     {
         title: "du",
-        wollen: "kann",
-        können: "",
+        wollen: "",
+        können: "kannst",
         müssen: "",
         dürfen: "",
-        sollen: "",
+        sollen: "sollst",
     },
     {
         title: "er/es/sie",
-        wollen: "kann",
-        können: "",
+        wollen: "",
+        können: "kann",
         müssen: "",
         dürfen: "",
-        sollen: "",
+        sollen: "soll",
     },
     {
         title: "wir",
-        wollen: "kann",
-        können: "",
+        wollen: "",
+        können: "können",
         müssen: "",
         dürfen: "",
-        sollen: "",
+        sollen: "sollen",
     },
     {
         title: "ihr",
-        wollen: "kann",
-        können: "",
+        wollen: "",
+        können: "könnt",
         müssen: "",
         dürfen: "",
-        sollen: "",
-    },
-    {
-        title: "sie",
-        wollen: "kann",
-        können: "",
-        müssen: "",
-        dürfen: "",
-        sollen: "",
+        sollen: "sollt",
     },
     {
         title: "Sie",
-        wollen: "kann",
-        können: "",
+        wollen: "",
+        können: "können",
         müssen: "",
         dürfen: "",
-        sollen: "",
+        sollen: "sollen",
     },
 ]
 
@@ -64,8 +56,16 @@ const modalverben_duerfen = [
     },
 ]
 
+const modalverben_sollen = [
+    {
+        english_sentence: "In Germany, every child should be able to swim by the end of elementary school.",
+        german_sentence: "In Deutschland soll jedes Kind am Ende der Grundschulzeit schwimmen können.",
+    },
+]
+
 module.exports = {
     modalverben: modalverben,
     modalverben_duerfen: modalverben_duerfen,
+    modalverben_sollen: modalverben_sollen,
 }
 

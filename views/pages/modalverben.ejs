@@ -31,7 +31,7 @@
           <th scope="col">können</th>
           <th scope="col">müssen</th>
           <th scope="col">dürfen</th>
-          <th scope="col">sollen</th>
+          <th scope="col">sollen(ซอยล)</th>
         </tr>
       </thead>
       <tbody>
@@ -73,6 +73,30 @@
               <th scope="row"><%= modalverben_duerfen.german_sentence %></th>
               <td>
                 <%= modalverben_duerfen.english_sentence %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+      <hr>
+
+      <table id="5" class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>5. Sollen</h4>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">German</th>
+            <th scope="col">English</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.modalverben_sollen.forEach(function(modalverben_sollen) { %>
+            <tr>
+              <th scope="row"><%= modalverben_sollen.german_sentence %></th>
+              <td>
+                <%= modalverben_sollen.english_sentence %>
               </td>
             </tr>
           <% }); %>

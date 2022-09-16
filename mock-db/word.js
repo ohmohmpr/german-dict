@@ -2221,6 +2221,18 @@ const words = [
         update_date: "02/07/2022",
     },
     {
+        artikel: "die",
+        wort: "Grundschulzeit",
+        plural: "-",
+        meaning: "Elementary school time",
+        english_sentence: "In Germany, every child should be able to swim by the end of elementary school.",
+        german_sentence: "In Deutschland soll jedes Kind am Ende der Grundschulzeit schwimmen können.",
+        remark: "6 Jahre + 4 Jahre",
+        chapter: "a2-2",
+        create_date: "16/09/2022",
+        update_date: "16/09/2022",
+    },
+    {
         artikel: "das",
         wort: "Mutterschutzgesetz",
         plural: "Mutterschutzgesetze",
@@ -4487,6 +4499,18 @@ const words = [
         chapter: "a2-7",
         create_date: "14/09/2022",
         update_date: "14/09/2022",
+    },
+    {
+        artikel: "die",
+        wort: "Fähigkeit",
+        plural: "Fähigkeiten",
+        meaning: "skill, ability",
+        english_sentence: "Swimming - a vital skill.",
+        german_sentence: "Schwimmen - eine lebenswichtige Fähigkeit.",
+        remark: "",
+        chapter: "a2-8",
+        create_date: "16/09/2022",
+        update_date: "16/09/2022",
     },
 ]
 
