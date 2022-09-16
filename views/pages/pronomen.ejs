@@ -13,6 +13,7 @@
   <div class="jumbotron">
     <h1>Pronomen</h1>
     <a href="#1"> <h3>1. Personalpronomen</h3> </a>
+    <a href="#2"> <h3>2. Personalpronomen: Jeder</h3> </a>
   </div>
 
   <hr>
@@ -65,6 +66,43 @@
           </td>
           <td>
             <input id="<%=word.title %>-<%= word.Sie %>" oninput="checkAnswer(id)" size="4"> 
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <table id="2" class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>2. Personalpronomen: Jeder</h2>
+      <p> Jede + Singular. = Each</p>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Maskulin</th>
+        <th scope="col">Neutrum</th>
+        <th scope="col">Feminin</th>
+        <th scope="col">Plural</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% words.jeder.forEach(function(word) { %>
+        <tr>
+          <th scope="row"><%= word.title %></th>
+          <td>
+            <input id="<%=word.title %>-<%= word.maskulin %>" oninput="checkAnswer(id)"> 
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.neutrum %>" oninput="checkAnswer(id)"> 
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.feminin %>" oninput="checkAnswer(id)"> 
+          </td>
+          <td>
+            <input id="<%=word.title %>-<%= word.plural %>" oninput="checkAnswer(id)"> 
           </td>
         </tr>
       <% }); %>

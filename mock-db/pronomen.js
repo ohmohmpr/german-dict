@@ -37,7 +37,32 @@ const possessivartikel = [
     },
 ]
 
+const jeder = [
+    {
+        title: "Nominativ", 
+        maskulin: "jeder", 
+        neutrum: "jedes", 
+        feminin: "jede",  
+        plural: "-",
+    },
+    {
+        title: "Akkusativ",
+        maskulin: "jeden", 
+        neutrum: "jedes", 
+        feminin: "jede",  
+        plural: "-",
+    },
+    {
+        title: "Dativ",
+        maskulin: "jedem", 
+        neutrum: "jedem", 
+        feminin: "jeder",  
+        plural: "-",
+    },
+]
+
 module.exports = {
     possessivartikel: possessivartikel,
+    jeder: jeder,
 }
 
