@@ -77,6 +77,18 @@ const OthersAdverb = [
         create_date: "26/05/2022",
         update_date: "26/05/2022",
     },
+    {
+        adjektive: "anders",
+        komparativ: "adverb",
+        superlativ: "adverb",
+        meaning: "differently",
+        english_sentence: "but reality looks different",
+        german_sentence: "Doch die Realität sieht anders aus",
+        remark: "",
+        chapter: "",
+        create_date: "16/09/2022",
+        update_date: "16/09/2022",
+    },
 ]
 
 module.exports = {

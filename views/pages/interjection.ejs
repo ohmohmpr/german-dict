@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+
+  <body class="container">
+
+    <header>
+      <%- include('../partials/header'); %>
+    </header>
+
+  <main>
+    <div class="jumbotron">
+      <h1>Präpositionen</h1>
+      <a href="#1"> <h3>1. Doch</h3> </a>
+    </div>
+
+    <hr>
+
+    <table id="1" class="table caption-top table-bordered border-dark">
+      <caption>
+        <h2>1. Doch</h2>
+        <p>Explanation <a href="https://yourdailygerman.com/meaning-of-doch/#:~:text=Doch%20is%20the%20proper%20answer,BY%20YOU." target="_blank">Doch</a>.</p>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">English</th>
+          <th scope="col">German</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% words.doch.forEach(function(word) { %>
+          <tr>
+            <th scope="row">
+              <%= word.english_sentence %>
+            </th>
+            <td>
+              <%= word.german_sentence %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+  </main>
+
+  <footer>
+    <%- include('../partials/footer'); %>
+  </footer>
+
+  </body>
+</html>
+
+<script>
+  function checkAnswer(id, test) {
+    let new_id = id.substring(id.indexOf('+') + 1);
+    let elm = document.getElementById(id);
+
+    if (elm.value == new_id) {
+      elm.style.color = "green";
+    } else {
+      elm.style.color = "black";
+    }
+  }
+</script>

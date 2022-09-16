@@ -33,6 +33,7 @@ const connectorsRouter = require('./routes/connectors');
 const modalPräteritumRouter = require('./routes/modal-praeteritum');
 const modalVerbenRouter = require('./routes/modalverben');
 const passivRouter = require('./routes/passiv');
+const interjectionRouter = require('./routes/interjection');
 
 const app = express()
 const port = 3000
@@ -74,6 +75,7 @@ app.use('/infinitiv-clause', infinitivClauseRouter);
 app.use('/modal-praeteritum', modalPräteritumRouter);
 app.use('/modalverben', modalVerbenRouter);
 app.use('/passiv', passivRouter);
+app.use('/interjection', interjectionRouter);
 
 app.use('/quotes', quotesRouter);
 // catch 404 and forward to error handler
