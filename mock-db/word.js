@@ -4512,6 +4512,30 @@ const words = [
         create_date: "16/09/2022",
         update_date: "16/09/2022",
     },
+    {
+        artikel: "der",
+        wort: "Abgabetermin",
+        plural: "Abgabetermine",
+        meaning: "deadline",
+        english_sentence: "",
+        german_sentence: "",
+        remark: "",
+        chapter: "a2-8",
+        create_date: "18/09/2022",
+        update_date: "18/09/2022",
+    },
+    {
+        artikel: "",
+        wort: "",
+        plural: "",
+        meaning: "",
+        english_sentence: "",
+        german_sentence: "",
+        remark: "",
+        chapter: "a2-8",
+        create_date: "18/09/2022",
+        update_date: "18/09/2022",
+    },
 ]
 
 
