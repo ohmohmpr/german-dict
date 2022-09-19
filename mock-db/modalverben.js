@@ -3,7 +3,7 @@ const modalverben = [
         title: "ich",
         wollen: "",
         können: "kann",
-        müssen: "",
+        müssen: "muss",
         dürfen: "",
         sollen: "soll",
     },
@@ -11,7 +11,7 @@ const modalverben = [
         title: "du",
         wollen: "",
         können: "kannst",
-        müssen: "",
+        müssen: "musst",
         dürfen: "",
         sollen: "sollst",
     },
@@ -19,7 +19,7 @@ const modalverben = [
         title: "er/es/sie",
         wollen: "",
         können: "kann",
-        müssen: "",
+        müssen: "muss",
         dürfen: "",
         sollen: "soll",
     },
@@ -27,7 +27,7 @@ const modalverben = [
         title: "wir",
         wollen: "",
         können: "können",
-        müssen: "",
+        müssen: "müssen",
         dürfen: "",
         sollen: "sollen",
     },
@@ -35,7 +35,7 @@ const modalverben = [
         title: "ihr",
         wollen: "",
         können: "könnt",
-        müssen: "",
+        müssen: "müsst",
         dürfen: "",
         sollen: "sollt",
     },
@@ -43,9 +43,16 @@ const modalverben = [
         title: "Sie",
         wollen: "",
         können: "können",
-        müssen: "",
+        müssen: "müssen",
         dürfen: "",
         sollen: "sollen",
+    },
+]
+
+const modalverben_muessen = [
+    {
+        english_sentence: "It doesn't always have to be the Alps.",
+        german_sentence: "Es müssen nicht immer die Alpen sein.",
     },
 ]
 
@@ -65,6 +72,7 @@ const modalverben_sollen = [
 
 module.exports = {
     modalverben: modalverben,
+    modalverben_muessen: modalverben_muessen,
     modalverben_duerfen: modalverben_duerfen,
     modalverben_sollen: modalverben_sollen,
 }

@@ -57,6 +57,30 @@
         <% }); %>
       </tbody>
 
+      <hr>
+
+      <table id="3" class="table caption-top table-bordered border-dark">
+        <caption>
+          <h4>3. Müssen</h4>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">German</th>
+            <th scope="col">English</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% words.modalverben_muessen.forEach(function(modalverben_muessen) { %>
+            <tr>
+              <th scope="row"><%= modalverben_muessen.german_sentence %></th>
+              <td>
+                <%= modalverben_muessen.english_sentence %>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
       <table id="4" class="table caption-top table-bordered border-dark">
         <caption>
           <h4>4. Dürfen</h4>
