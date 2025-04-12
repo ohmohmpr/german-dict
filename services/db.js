@@ -45,8 +45,8 @@ async function post(query, params) {
       + "'); "
 
     const res = await client.query(queryText)
-    return res;
     await client.query('COMMIT')
+    return res;
   } catch (e) {
     await client.query('ROLLBACK')
     throw e
