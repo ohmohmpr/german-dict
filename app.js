@@ -35,6 +35,8 @@ const modalVerbenRouter = require('./routes/modalverben');
 const passivRouter = require('./routes/passiv');
 const interjectionRouter = require('./routes/interjection');
 
+const postRouter = require('./routes/post');
+
 const app = express()
 const port = 3000
 
@@ -44,7 +46,7 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -77,6 +79,7 @@ app.use('/modalverben', modalVerbenRouter);
 app.use('/passiv', passivRouter);
 app.use('/interjection', interjectionRouter);
 
+app.use('/post', postRouter);
 app.use('/quotes', quotesRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
