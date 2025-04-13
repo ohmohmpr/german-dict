@@ -27,3 +27,5 @@ set default_text_search_config='german';
 
 select * from sentence_german where to_tsvector('german', sentence_german) @@ plainto_tsquery('sehe');
 SELECT version();
+ALTER TABLE sätze ADD COLUMN remark character varying(255);
+select * from sätze ORDER BY update_time DESC;

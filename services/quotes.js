@@ -6,7 +6,7 @@ async function getMultiple(page = 1) {
   const offset = helper.getOffset(page, config.listPerPage);
   const rows = await db.query(
     // "select * from sentence_german where to_tsvector('german', sentence_german) @@ plainto_tsquery('sehe') OFFSET $1 LIMIT $2",
-    "select * from sätze",
+    "select satz, bedeutung, remark from sätze ORDER BY update_time DESC;",
     // [offset, config.listPerPage]
   );
   const data = helper.emptyOrRows(rows);

@@ -1,5 +1,6 @@
 const { Pool } = require('pg');
 const config = require('../config');
+const { text } = require('express');
 const pool = new Pool(config.db);
 
 /**
@@ -30,19 +31,18 @@ async function post(query, params) {
     //   VALUES \
     //   ('Die weißen Räume sind hell and schön.', 'The white rooms are bright and beautiful.', true); \
     // "
-
-    // console.log(query.satz)
-    // console.log(query.bedeutung)
-    // console.log(query.has_bestimmter_artikel)
-    queryText = "\
-      INSERT INTO sätze (satz, bedeutung, has_bestimmter_artikel) VALUES \
-      ('"
-      + query.satz
-      +"', '"
-      + query.bedeutung
-      + "', '"
-      + query.has_bestimmter_artikel
-      + "'); "
+    let queryText = "INSERT INTO sätze (";
+    for (let col in query) {
+      queryText += col + ", ";
+    }
+    queryText = queryText.slice(0, -2); // delete last two characters.
+    queryText += ") VALUES ('"
+    for (let col in query) {
+      queryText += query[col] + "', '";
+    }
+    queryText = queryText.slice(0, -4); // delete last four characters.
+    queryText += "'); "
+    // console.log(queryText)
 
     const res = await client.query(queryText)
     await client.query('COMMIT')

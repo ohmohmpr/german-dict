@@ -23,3 +23,11 @@ Sie sitzen vorne in der Mitte.
 Zwischen ihnen sitzt die Tochter meines Bruders und rechts die Tochter meiner Schwester, die oben rechts auf dem Foto ist. 
 Vorne ganz links ist der Bruder meines Schwiegervaters und vorne ganze rechts sitzt seine Frau. 
 Hinten sitzen neben meiner Schwester zwei Geschwister meiner Schwiegermutter.
+
+page of wort mit artikel.
+BUG: doesn't = does not, o'clock = o clock.
+Sinn
+steckdose
+besonders
+erfunden
+next -> query word
