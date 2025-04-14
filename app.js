@@ -36,6 +36,7 @@ const passivRouter = require('./routes/passiv');
 const interjectionRouter = require('./routes/interjection');
 
 const postRouter = require('./routes/post');
+const getVerbRouter = require('./routes/getVerb');
 
 const app = express()
 const port = 3000
@@ -80,6 +81,7 @@ app.use('/passiv', passivRouter);
 app.use('/interjection', interjectionRouter);
 
 app.use('/post', postRouter);
+app.use('/getVerb', getVerbRouter);
 app.use('/quotes', quotesRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

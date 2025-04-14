@@ -16,6 +16,20 @@ async function query(query, params) {
     return rows;
 }
 
+async function queryVerb(query, params) {
+  
+  const client = await pool.connect()
+  const q = {
+    text: "SELECT verb, bedeutung FROM verben WHERE to_tsvector('german', verb) @@ plainto_tsquery($1);",
+    values: [query.query.w],
+  }
+  
+  const res = await client.query(q)
+  console.log("res", res.rows)
+
+  return res.rows;
+}
+
 /**
  * @param {*} query 
  * @param {*} params 
@@ -60,5 +74,6 @@ async function post(query, params) {
 
 module.exports = {
   query,
+  queryVerb,
   post
 }
