@@ -25,7 +25,50 @@ async function queryVerb(query, params) {
   }
   
   const res = await client.query(q)
-  console.log("res", res.rows)
+  await client.release()
+
+  return res.rows;
+}
+
+async function quizSatz(query, params) {
+
+  const client = await pool.connect()
+  const q = {
+    text: "SELECT * FROM sätze ORDER BY RANDOM() LIMIT 1;",
+    values: [],
+  }
+
+  const res = await client.query(q)
+  await client.release()
+
+  return res.rows;
+}
+
+async function addPoint(query, params) {
+
+  const client = await pool.connect()
+  console.log("query", query)
+  const q = {
+    text: "UPDATE sätze SET correct_point = correct_point + 1 WHERE id = ($1);",
+    values: [query.id],
+  }
+
+  const res = await client.query(q)
+  await client.release()
+
+  return res.rows;
+}
+
+async function minusPoint(query, params) {
+
+  const client = await pool.connect()
+  const q = {
+    text: "UPDATE sätze SET correct_point = correct_point - 1 WHERE id = ($1);",
+    values: [query.id],
+  }
+
+  const res = await client.query(q)
+  await client.release()
 
   return res.rows;
 }
@@ -75,5 +118,8 @@ async function post(query, params) {
 module.exports = {
   query,
   queryVerb,
+  quizSatz,
+  addPoint,
+  minusPoint,
   post
 }

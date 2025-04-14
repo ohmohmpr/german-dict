@@ -5,8 +5,11 @@ const db = require('../services/db');
 /* GET quotes listing. */
 router.get('/', async function(request, response, next) {
   try {
-    response.json(await db.queryVerb(request));
-  } 
+    quizSatz = await db.quizSatz(request);
+    response.render('pages/quizSatz.ejs', { 
+      quizSatz: quizSatz
+    })
+  }
   catch (err) {
     console.error(`Error`, err.message);
     next(err);
