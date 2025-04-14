@@ -57,7 +57,7 @@ SELECT * FROM sätze WHERE to_tsvector('german', satz) @@ plainto_tsquery('geben
 UPDATE sätze SET correct_point = correct_point + 1 WHERE id = 9;
 UPDATE sätze SET wrong_point = wrong_point - 1 WHERE id = 9;
 
-UPDATE sätze SET satz = 'Ruf mich an, wenn es Probleme gibt.' WHERE id = 10;
+UPDATE sätze SET satz = 'Ich bin auf der Website, um die Preise zu sehen.' WHERE id = 28;
 
 SELECT version();
 ALTER TABLE sätze ADD COLUMN correct_point integer wrong_point integer total_point integer;
