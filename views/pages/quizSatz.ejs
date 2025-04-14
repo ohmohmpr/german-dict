@@ -31,7 +31,7 @@
         <tr>
           <td>
             <input id="<%= quizSatz[0].id %>" 
-            oninput="checkAnswer(id)" size="40" autocomplete="off"> 
+            oninput="checkAnswer(id)" size="40" autocomplete="off" autofocus> 
             <!-- <button>send</button> -->
           </td>
         </tr>
@@ -101,7 +101,6 @@
             arr.splice(i, 1);
             i = i-1;
             tets_t = i;
-            console.log(i)
           }
         }
 
@@ -109,7 +108,8 @@
         elm.disabled = true;
         answer.style.display = "block"
         pos_false = document.getElementById("pos_false");
-        document.getElementById("pos_false").innerHTML = tets_t
+        document.getElementById("pos_false").innerHTML = satz.substring(tets_t);
+        pos_false.style.color = "green";
         pos_false.style.display = "block"
         console.log(false, row_id)
       } else {
