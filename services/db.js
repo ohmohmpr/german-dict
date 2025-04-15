@@ -16,6 +16,27 @@ async function query(query, params) {
     return rows;
 }
 
+async function querySätzeFields(query, params) {
+  
+  const client = await pool.connect()
+  const q = {text: "SELECT alias.column_name\
+                      FROM (SELECT column_name, data_type\
+                              FROM information_schema.columns\
+                              WHERE table_schema = 'public'\
+                              AND table_name   = 'sätze') \
+                            alias \
+                      WHERE  alias.data_type = 'boolean'",
+    values: [],
+  }
+  
+  
+
+  const res = await client.query(q)
+  await client.release()
+
+  return res.rows;
+}
+
 async function queryVerb(query, params) {
   
   const client = await pool.connect()
@@ -95,7 +116,11 @@ async function post(query, params) {
     queryText = queryText.slice(0, -2); // delete last two characters.
     queryText += ") VALUES ('"
     for (let col in query) {
-      queryText += query[col] + "', '";
+      if (query[col].includes("'")) {
+        queryText += query[col].replace("'", "''") + "', '";
+      } else {
+        queryText += query[col] + "', '";
+      }
     }
     queryText = queryText.slice(0, -4); // delete last four characters.
     queryText += "'); "
@@ -117,6 +142,7 @@ async function post(query, params) {
 
 module.exports = {
   query,
+  querySätzeFields,
   queryVerb,
   quizSatz,
   addPoint,

@@ -46,8 +46,7 @@ CREATE TABLE präpositionen (
 INSERT INTO präpositionen (präposition, bedeutung, immer_mit_dativ) VALUES ('an', 'an', 'no'), 
 ('auf', 'auf', 'no'), ('vor', 'vor', 'no'), ('zwischen', 'zwischen', 'no');
 
-INSERT INTO sätze (satz, bedeutung, has_bestimmter_artikel) VALUES 
-('Der kleine Raum mit den Pflanzen ist jetzt perfekt.', 'The small room with the plants is now perfect', true);
+INSERT INTO sätze (satz, bedeutung) VALUES ('Der' kleine Raum mit den Pflanzen ist jetzt perfekt.', 'T'he small room with the plants is now perfect');
 
 SHOW default_text_search_config;
 set default_text_search_config='german';
@@ -63,3 +62,7 @@ SELECT version();
 ALTER TABLE sätze ADD COLUMN correct_point integer wrong_point integer total_point integer;
 SELECT * FROM sätze ORDER BY update_time DESC;
 SELECT * FROM sätze ORDER BY RANDOM() LIMIT 1;
+
+psql -U postgres
+
+select * from sätze where false;

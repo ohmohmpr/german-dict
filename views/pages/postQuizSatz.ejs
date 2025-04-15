@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Post Quiz Satz</h2>
+    </caption>
+    <tbody>
+      <form action="/post" method="POST">
+        <tr>
+          <th scope="row">
+            <label for="satz"> Satz: </label>
+            <input id="satz" style='width:100%' name="satz" autocomplete="off" autofocus required> 
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <label for="bedeutung"> Bedeutung: </label>
+            <input id="bedeutung" style='width:100%' name="bedeutung" autocomplete="off" autofocus required> 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="remark"> Remark: </label>
+            <input id="remark" style='width:100%' name="remark" autocomplete="off" autofocus> 
+          </td>
+        </tr>
+        <tr> 
+          <td>
+            <input type="submit" value="Submit">
+          </td>
+        </tr>
+        <tr> 
+          <td>
+              <% querySätzeFields.forEach(function(column) { %>
+              <input type="checkbox" id=<%= column.column_name %> name=<%= column.column_name %> >
+              <label for=<%= column.column_name %>> <%= column.column_name %> </label>
+              <% }); %>
+          </td>
+        </tr>
+      </form>
+    </tbody>
+  </table>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  
+</script>

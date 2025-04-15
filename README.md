@@ -25,9 +25,10 @@ Vorne ganz links ist der Bruder meines Schwiegervaters und vorne ganze rechts si
 Hinten sitzen neben meiner Schwester zwei Geschwister meiner Schwiegermutter.
 
 page of wort mit artikel.
-BUG: doesn't = does not, o'clock = o clock.
 Sinn
 steckdose
 besonders
 erfunden
 next -> query word
+
+Land ohne artikel page 36.
