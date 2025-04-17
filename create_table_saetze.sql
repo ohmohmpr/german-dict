@@ -142,6 +142,13 @@ INSERT INTO wörter (wort)
         FROM sätze
     );
 
+ALTER TABLE wörter ADD COLUMN nicht_wort boolean;
+-- ALTER TABLE wörter ALTER COLUMN nicht_wort SET DEFAULT yes;
+ALTER TABLE wörter ALTER COLUMN nicht_wort SET DEFAULT false;
+ALTER TABLE wörter ALTER COLUMN point SET 0;
+
+update public.wörter set nicht_wort  = false;
+
 -- https://www.postgresql.org/docs/9.1/functions-string.html
 -- https://stackoverflow.com/questions/15625629/regex-expressions-in-java-s-vs-s
 -- https://www.postgresql.org/docs/current/functions-matching.html

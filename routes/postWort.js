@@ -3,12 +3,11 @@ const router = express.Router();
 const db = require('../services/db');
 
 /* POST quotes listing. */
-router.get('/', async function(request, response, next) {
+router.post('/', async function(request, response, next) {
   try {
-    querySätzeFields = await db.queryFields("", "sätze")
-    response.render('pages/postQuizSatz.ejs', { 
-      querySätzeFields: querySätzeFields
-    })
+    response.json(await db.postWort(request.body));
+    // console.log(request.body)
+    // response.json(request.body)
   } 
   catch (err) {
     console.error(`Error`, err.message);

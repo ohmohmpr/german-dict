@@ -16,20 +16,27 @@ async function query(query, params) {
     return rows;
 }
 
-async function querySätzeFields(query, params) {
-  
+async function queryFields(query, params) {
   const client = await pool.connect()
-  const q = {text: "SELECT alias.column_name\
+  if (params == 'sätze') {
+    condition = "SELECT alias.column_name\
                       FROM (SELECT column_name, data_type\
                               FROM information_schema.columns\
                               WHERE table_schema = 'public'\
-                              AND table_name   = 'sätze') \
+                              AND table_name   = $1) \
                             alias \
-                      WHERE  alias.data_type = 'boolean'",
-    values: [],
+                      WHERE  alias.data_type = 'boolean'"
+  } else {
+    condition = "SELECT alias.column_name\
+                      FROM (SELECT column_name, data_type\
+                              FROM information_schema.columns\
+                              WHERE table_schema = 'public'\
+                              AND table_name   = $1) \
+                            alias"
   }
-  
-  
+  const q = {text: condition,
+    values: [params],
+  }
 
   const res = await client.query(q)
   await client.release()
@@ -56,6 +63,20 @@ async function quizSatz(query, params) {
   const client = await pool.connect()
   const q = {
     text: "SELECT * FROM sätze ORDER BY RANDOM() LIMIT 1;",
+    values: [],
+  }
+
+  const res = await client.query(q)
+  await client.release()
+
+  return res.rows;
+}
+
+async function quizWort(query, params) {
+
+  const client = await pool.connect()
+  const q = {
+    text: "SELECT * FROM wörter ORDER BY RANDOM() LIMIT 1;",
     values: [],
   }
 
@@ -117,7 +138,7 @@ async function post(query, params) {
     queryText += ") VALUES ('"
     for (let col in query) {
       if (query[col].includes("'")) {
-        queryText += query[col].replace("'", "''") + "', '";
+        queryText += query[col].replace(/'/g, "''") + "', '";
       } else {
         queryText += query[col] + "', '";
       }
@@ -140,12 +161,44 @@ async function post(query, params) {
 }
 
 
+/**
+ * @param {*} query 
+ * @param {*} params 
+ * 
+ * @see https://node-postgres.com/features/transactions
+ */
+async function postWort(query, params) {
+  const client = await pool.connect()
+
+  try {
+    await client.query('BEGIN')
+
+    let queryText =  `UPDATE wörter SET (bedeutung, artikel, singular_nominativ, plural_nominativ, nicht_wort)
+                     = ('${query.bedeutung}', '${query.artikel}'
+                     , '${query.singular_nominativ}', '${query.plural_nominativ}', '${query.nicht_wort}')
+                    WHERE id = ${query.id};`;
+    console.log(queryText)
+    const res = await client.query(queryText)
+    await client.query('COMMIT')
+    return res;
+  } catch (e) {
+    await client.query('ROLLBACK')
+    throw e
+  } finally {
+    client.release()
+  }
+
+  return;
+}
+
 module.exports = {
   query,
-  querySätzeFields,
+  queryFields,
   queryVerb,
+  quizWort,
   quizSatz,
   addPoint,
   minusPoint,
-  post
+  post,
+  postWort
 }

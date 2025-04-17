@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>POST Quiz Wort</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">Wort</th>
+        <th scope="col">Bedeutung</th>
+        <th scope="col">Artikel</th>
+        <th scope="col">Singular</th>
+        <th scope="col">Plural</th>
+        <th scope="col">Not Word</th>
+      </tr>
+    </thead>
+    <tbody>
+      <form action="/postWort" method="POST">
+        <tr>
+          <th scope="col">
+            <%= quizWort[0].wort %>
+            <input id="id" style='width:60%' name="id"value="<%= quizWort[0].id %>" type="hidden"> 
+          </th>
+          <th scope="col">
+            <input id="bedeutung" style='width:60%' name="bedeutung" autocomplete="off" value="<%= quizWort[0].bedeutung %>" autofocus required> 
+          </th>
+          <th scope="col">
+            <input id="artikel" style='width:60%' name="artikel" autocomplete="off" value="<%= quizWort[0].artikel %>" autofocus required> 
+          </th>
+          <th scope="col">
+            <input id="singular_nominativ" style='width:60%' name="singular_nominativ" value="<%= quizWort[0].singular_nominativ %>" autocomplete="off" autofocus required> 
+          </th>
+          <th scope="col">
+            <input id="plural_nominativ" style='width:60%' name="plural_nominativ" value="<%= quizWort[0].plural_nominativ %>" autocomplete="off" autofocus required> 
+          </th>
+          <th scope="col">
+            <input id="nicht_wort" style='width:60%' name="nicht_wort" value="<%= quizWort[0].nicht_wort %>" autocomplete="off" autofocus required> 
+            <input type="submit" value="Submit">
+          </th>
+        </tr>
+      </form>
+    </tbody>
+  </table>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  
+</script>

@@ -2,12 +2,15 @@ const express = require('express');
 const router = express.Router();
 const db = require('../services/db');
 
-/* POST quotes listing. */
+/* GET quotes listing. */
 router.get('/', async function(request, response, next) {
   try {
-    querySätzeFields = await db.queryFields("", "sätze")
-    response.render('pages/postQuizSatz.ejs', { 
-      querySätzeFields: querySätzeFields
+    queryFields = await db.queryFields("", "wörter")
+    quizWort = await db.quizWort("", "wörter");
+    console.log(quizWort)
+    response.render('pages/getQuizWort.ejs', { 
+      queryFields: queryFields,
+      quizWort: quizWort
     })
   } 
   catch (err) {
