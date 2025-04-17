@@ -72,11 +72,18 @@ async function quizSatz(query, params) {
   return res.rows;
 }
 
-async function quizWort(query, params) {
+async function quizWort(query=true, params) {
 
   const client = await pool.connect()
+  if (query == false) {
+    nicht_wort = `WHERE nicht_wort = false`
+    condition = `SELECT * FROM wörter ${nicht_wort} and artikel is not null ORDER BY RANDOM() LIMIT 1;`
+  } else {
+    condition = `SELECT * FROM wörter WHERE artikel = null ORDER BY RANDOM() LIMIT 1;`
+  }
+  
   const q = {
-    text: "SELECT * FROM wörter ORDER BY RANDOM() LIMIT 1;",
+    text: condition,
     values: [],
   }
 
@@ -89,9 +96,9 @@ async function quizWort(query, params) {
 async function addPoint(query, params) {
 
   const client = await pool.connect()
-  console.log("query", query)
+  // console.log(`UPDATE ${query.table} SET correct_point = correct_point + 1 WHERE id = ($1);`)
   const q = {
-    text: "UPDATE sätze SET correct_point = correct_point + 1 WHERE id = ($1);",
+    text: `UPDATE ${query.table} SET correct_point = correct_point + 1 WHERE id = ($1);`,
     values: [query.id],
   }
 

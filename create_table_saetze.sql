@@ -144,6 +144,13 @@ INSERT INTO wörter (wort)
 
 ALTER TABLE wörter ADD COLUMN nicht_wort boolean;
 -- ALTER TABLE wörter ALTER COLUMN nicht_wort SET DEFAULT yes;
+ALTER TABLE wörter 
+    ADD COLUMN correct_point integer default 0,
+    ADD COLUMN wrong_point integer default 0,
+    ADD COLUMN total_point integer default 0;
+
+ALTER TABLE wörter DROP COLUMN point;
+
 ALTER TABLE wörter ALTER COLUMN nicht_wort SET DEFAULT false;
 ALTER TABLE wörter ALTER COLUMN point SET 0;
 

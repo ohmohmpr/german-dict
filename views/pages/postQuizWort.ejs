@@ -44,7 +44,9 @@
             <input id="plural_nominativ" style='width:60%' name="plural_nominativ" value="<%= quizWort[0].plural_nominativ %>" autocomplete="off" autofocus required> 
           </th>
           <th scope="col">
-            <input id="nicht_wort" style='width:60%' name="nicht_wort" value="<%= quizWort[0].nicht_wort %>" autocomplete="off" autofocus required> 
+            <input id="nicht_wort" style='width:60%' name="nicht_wort"
+                    value="<%= quizWort[0].nicht_wort %>" oninput="disableIfTrue(value)"
+                    autocomplete="off" autofocus required>
             <input type="submit" value="Submit">
           </th>
         </tr>
@@ -61,5 +63,15 @@
 </body>
 </html>
 <script>
-  
+  function disableIfTrue(value) {
+    let bedeutung = document.getElementById("bedeutung");
+    let artikel = document.getElementById("artikel");
+    let singular_nominativ = document.getElementById("singular_nominativ");
+    let plural_nominativ = document.getElementById("plural_nominativ");
+
+    bedeutung.disabled = true;
+    artikel.disabled = true;
+    singular_nominativ.disabled = true;
+    plural_nominativ.disabled = true;
+  }
 </script>

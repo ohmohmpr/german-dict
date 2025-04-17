@@ -16,7 +16,7 @@
     </caption>
     <thead>
       <tr>
-        <th scope="col">Wort</th>
+        <!-- <th scope="col">Wort</th> -->
         <th scope="col">Bedeutung</th>
         <th scope="col">Artikel</th>
         <th scope="col">Singular</th>
@@ -25,28 +25,30 @@
       </tr>
     </thead>
     <tbody>
-      <form action="/post" method="POST">
         <tr>
-          <th scope="col">
+          <!-- <th scope="col">
             <%= quizWort[0].wort %>
-          </th>
+          </th> -->
           <th scope="col">
             <%= quizWort[0].bedeutung %>
           </th>
           <th scope="col">
-            <input id="artikel" style='width:60%' name="artikel" autocomplete="off" value="<%= quizWort[0].artikel %>" autofocus required> 
+            <input id="artikel" style='width:60%' name="artikel" 
+            oninput="check()" autocomplete="off" autofocus required> 
           </th>
           <th scope="col">
-            <input id="singular_nominativ" style='width:60%' name="singular_nominativ" value="<%= quizWort[0].singular_nominativ %>" autocomplete="off" autofocus required> 
+            <input id="singular_nominativ" style='width:60%' name="singular_nominativ" 
+            oninput="check()" autocomplete="off" autofocus required> 
           </th>
           <th scope="col">
-            <input id="plural_nominativ" style='width:60%' name="plural_nominativ" value="<%= quizWort[0].plural_nominativ %>" autocomplete="off" autofocus required> 
+            <input id="plural_nominativ" style='width:60%' name="plural_nominativ" 
+            oninput="check()" autocomplete="off" autofocus required> 
           </th>
           <th scope="col">
-            <%= quizWort[0].point %>
+            <%= quizWort[0].correct_point %>
+            <!-- <input type="submit" value="Submit"> -->
           </th>
         </tr>
-      </form>
     </tbody>
   </table>
 
@@ -59,5 +61,27 @@
 </body>
 </html>
 <script>
-  
+  var parsed_data =  <%- JSON.stringify(quizWort[0]) %>;
+
+  let artikel = document.getElementById("artikel");
+  let singular_nominativ = document.getElementById("singular_nominativ");
+  let plural_nominativ = document.getElementById("plural_nominativ");
+
+  function check() {
+    if (artikel.value == parsed_data.artikel &&
+              singular_nominativ.value == parsed_data.singular_nominativ &&
+              plural_nominativ.value == parsed_data.plural_nominativ) {
+
+      artikel.style.color = "green";
+      singular_nominativ.style.color = "green";
+      plural_nominativ.style.color = "green";
+
+      test = fetch("/postAddPoint", {method:'post', body: new URLSearchParams({
+                  'id': parsed_data.id,
+                  'table': "wörter",
+      })});
+      console.log(test)
+
+    }
+  }
 </script>

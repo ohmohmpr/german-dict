@@ -6,7 +6,7 @@ const db = require('../services/db');
 router.get('/', async function(request, response, next) {
   try {
     queryFields = await db.queryFields("", "wörter")
-    quizWort = await db.quizWort("", "wörter");
+    quizWort = await db.quizWort(false);
     console.log(quizWort)
     response.render('pages/getQuizWort.ejs', { 
       queryFields: queryFields,
