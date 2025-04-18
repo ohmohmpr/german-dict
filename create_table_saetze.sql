@@ -140,7 +140,9 @@ INSERT INTO wörter (wort)
                 ''
             )
         FROM sätze
-    );
+        
+    )
+ON CONFLICT (wort) DO NOTHING;
 
 ALTER TABLE wörter ADD COLUMN nicht_wort boolean;
 -- ALTER TABLE wörter ALTER COLUMN nicht_wort SET DEFAULT yes;
@@ -155,6 +157,9 @@ ALTER TABLE wörter ALTER COLUMN nicht_wort SET DEFAULT false;
 ALTER TABLE wörter ALTER COLUMN point SET 0;
 
 update public.wörter set nicht_wort  = false;
+
+SELECT * FROM sätze WHERE to_tsvector('german', satz) @@ plainto_tsquery('Gold');
+UPDATE sätze SET bedeutung = 'The piglet was small and it was cute.' WHERE id = 131;
 
 -- https://www.postgresql.org/docs/9.1/functions-string.html
 -- https://stackoverflow.com/questions/15625629/regex-expressions-in-java-s-vs-s

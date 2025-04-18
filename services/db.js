@@ -75,13 +75,15 @@ async function quizSatz(query, params) {
 async function quizWort(query=true, params) {
 
   const client = await pool.connect()
+
   if (query == false) {
     nicht_wort = `WHERE nicht_wort = false`
     condition = `SELECT * FROM wörter ${nicht_wort} and artikel is not null ORDER BY RANDOM() LIMIT 1;`
   } else {
-    condition = `SELECT * FROM wörter WHERE artikel = null ORDER BY RANDOM() LIMIT 1;`
+    condition = `SELECT * FROM wörter WHERE artikel IS NULL ORDER BY RANDOM() LIMIT 1;`
   }
-  
+
+
   const q = {
     text: condition,
     values: [],
@@ -112,7 +114,7 @@ async function minusPoint(query, params) {
 
   const client = await pool.connect()
   const q = {
-    text: "UPDATE sätze SET correct_point = correct_point - 1 WHERE id = ($1);",
+    text: `UPDATE ${query.table} SET correct_point = correct_point - 1 WHERE id = ($1);`,
     values: [query.id],
   }
 

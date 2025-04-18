@@ -25,6 +25,8 @@
       </tr>
     </thead>
     <tbody>
+      <form action="/getQuizWort" onsubmit="showAnswer(event); return false;"
+      >
         <tr>
           <!-- <th scope="col">
             <%= quizWort[0].wort %>
@@ -34,21 +36,34 @@
           </th>
           <th scope="col">
             <input id="artikel" style='width:60%' name="artikel" 
-            oninput="check()" autocomplete="off" autofocus required> 
+            oninput="check()" autocomplete="off" autofocus required>
+            <br> 
+            <p id="answer_artikel" style="display: none;">
+              <%= quizWort[0].artikel %>
+            </p>
           </th>
           <th scope="col">
             <input id="singular_nominativ" style='width:60%' name="singular_nominativ" 
             oninput="check()" autocomplete="off" autofocus required> 
+            <br> 
+            <p id="answer_singular_nominativ" style="display: none;">
+              <%= quizWort[0].singular_nominativ %>
+            </p>
           </th>
           <th scope="col">
             <input id="plural_nominativ" style='width:60%' name="plural_nominativ" 
             oninput="check()" autocomplete="off" autofocus required> 
+            <br> 
+            <p id="answer_plural_nominativ" style="display: none;">
+              <%= quizWort[0].plural_nominativ %>
+            </p>
           </th>
           <th scope="col">
             <%= quizWort[0].correct_point %>
-            <!-- <input type="submit" value="Submit"> -->
+            <input type="submit" value="Submit" >
           </th>
         </tr>
+      </form>
     </tbody>
   </table>
 
@@ -76,12 +91,31 @@
       singular_nominativ.style.color = "green";
       plural_nominativ.style.color = "green";
 
-      test = fetch("/postAddPoint", {method:'post', body: new URLSearchParams({
+      postAddPoint = fetch("/postAddPoint", {method:'post', body: new URLSearchParams({
                   'id': parsed_data.id,
                   'table': "wörter",
       })});
-      console.log(test)
+    }
+  }
 
+  function showAnswer(event) {
+
+    event.preventDefault();
+    if (!(artikel.value == parsed_data.artikel &&
+              singular_nominativ.value == parsed_data.singular_nominativ &&
+              plural_nominativ.value == parsed_data.plural_nominativ)) {
+
+      let answer_artikel = document.getElementById("answer_artikel");
+      let answer_singular_nominativ = document.getElementById("answer_singular_nominativ");
+      let answer_plural_nominativ = document.getElementById("answer_plural_nominativ");
+      answer_artikel.style.display = "block"
+      answer_singular_nominativ.style.display = "block"
+      answer_plural_nominativ.style.display = "block"
+
+      postMinusPoint = fetch("/postMinusPoint", {method:'post', body: new URLSearchParams({
+                  'id': parsed_data.id,
+                  'table': "wörter",
+      })});
     }
   }
 </script>
