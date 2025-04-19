@@ -58,6 +58,26 @@ async function queryVerb(query, params) {
   return res.rows;
 }
 
+async function quizSätzeverbinden(query, params) {
+
+  const client = await pool.connect()
+
+  const months = ["und", "sondern", "aber", "denn", 
+    "oder", "trotzdem", "deshalb", "weil", "da", "wenn",
+    "obwohl", "ob", "dass", "als"];
+  const random = Math.floor(Math.random() * months.length);
+  const q = {
+    text: "SELECT * FROM sätze WHERE to_tsvector('german_nostop', satz) @@ plainto_tsquery('german_nostop', 'dass') ORDER BY RANDOM() LIMIT 1;",
+    values: [],
+  }
+
+  const res = await client.query(q)
+  await client.release()
+
+  return res.rows;
+}
+
+
 async function quizSatz(query, params) {
 
   const client = await pool.connect()
@@ -206,6 +226,7 @@ module.exports = {
   queryVerb,
   quizWort,
   quizSatz,
+  quizSätzeverbinden,
   addPoint,
   minusPoint,
   post,

@@ -158,9 +158,28 @@ ALTER TABLE wörter ALTER COLUMN point SET 0;
 
 update public.wörter set nicht_wort  = false;
 
-SELECT * FROM sätze WHERE to_tsvector('german', satz) @@ plainto_tsquery('Gold');
 UPDATE sätze SET bedeutung = 'The piglet was small and it was cute.' WHERE id = 131;
 
 -- https://www.postgresql.org/docs/9.1/functions-string.html
 -- https://stackoverflow.com/questions/15625629/regex-expressions-in-java-s-vs-s
 -- https://www.postgresql.org/docs/current/functions-matching.html
+
+
+-- https://stackoverflow.com/questions/1497895/can-i-configure-postgresql-programmatically-to-not-eliminate-stop-words-in-full
+-- https://stackoverflow.com/questions/47873990/postgresql-create-a-search-configuration-with-custom-stop-word-list
+-- https://stackoverflow.com/questions/1497895/can-i-configure-postgresql-programmatically-to-not-eliminate-stop-words-in-full?rq=3
+-- https://stackoverflow.com/questions/34198634/postgresql-missing-text-search-configuration
+-- https://www.postgresql.org/docs/current/textsearch-debugging.html
+
+-- CREATE TEXT SEARCH CONFIGURATION german_nostop ( COPY = german );
+
+-- ALTER TEXT SEARCH CONFIGURATION public.german_nostop
+--    ALTER MAPPING
+--       FOR asciiword, asciihword, hword_asciipart, hword, hword_part, word
+--       WITH german_nostop;
+
+-- CREATE TEXT SEARCH DICTIONARY public.german_nostop (
+--    TEMPLATE = pg_catalog.simple
+-- );
+
+-- SELECT * FROM sätze WHERE to_tsvector('german_nostop', satz) @@ plainto_tsquery('german_nostop', 'und');

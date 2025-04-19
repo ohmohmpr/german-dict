@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <img src="/images/konnektor/konnektoren.jpeg" width="500" height="400">
+  </div>
+  <table id="1" class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Quiz Sätzeverbinden</h2>
+    </caption>
+    <!-- <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Answer</th>
+      </tr>
+    </thead> -->
+    <tbody>
+        <tr>
+          <th scope="row">
+            <%= quizSatz[0].bedeutung %> (Point: <%= quizSatz[0].correct_point %>) (id: <%= quizSatz[0].id %>)
+            <p id="pos_false" style="display: none;"> sdfds </p>
+        
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <input id="<%= quizSatz[0].id %>" 
+            oninput="checkAnswer(id)" size="40" autocomplete="off" autofocus> 
+            <!-- <button>send</button> -->
+          </td>
+        </tr>
+        <tr>  
+          <td>
+            <p id="answer" style="display: none;">
+              <%= quizSatz[0].satz %>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  // https://stackoverflow.com/questions/11289793/accessing-ejs-variable-in-javascript-logic
+  var parsed_data =  <%- JSON.stringify(quizSatz) %>;
+  row_id = parsed_data[0].id;
+  satz = parsed_data[0].satz;
+
+  function send(bool) {
+
+    if (bool){
+      fetch("/postAddPoint", {method:'post', body: new URLSearchParams({
+                  'id':row_id,
+                  'table': "sätze",
+      })});
+    }
+    else {
+      fetch("/postMinusPoint", {method:'post', body: new URLSearchParams({
+                  'id':row_id,    
+      })});
+    }
+  }
+
+  function checkAnswer(id) {
+
+    // https://stackoverflow.com/questions/46640024/how-do-i-post-form-data-with-fetch-api
+    let elm = document.getElementById(id);
+
+    if (elm.value == satz) {
+      elm.style.color = "green";
+      elm.value = satz
+      elm.disabled = true;
+      send(true)
+      setTimeout(function(){
+        location.reload();
+      }, 2000); // milliseconds
+    } else {
+      elm.style.color = "black";
+      let answer = document.getElementById("answer");
+      if (elm.value.includes(".") || elm.value.includes("?") || elm.value.includes("!")) {
+
+        const missingChars = [];
+        let arr = satz.split('');
+
+        let tets_t = 0;
+        for(let i = 0; i < arr.length; i++) {
+          if(arr[i] !== elm.value[i]) {
+            missingChars.push(Object.assign({}, {"char": arr[i]}));
+            arr.splice(i, 1);
+            i = i-1;
+            tets_t = i;
+          }
+        }
+
+        send(false)
+        elm.disabled = true;
+        answer.style.display = "block"
+        pos_false = document.getElementById("pos_false");
+        document.getElementById("pos_false").innerHTML = satz.substring(tets_t);
+        pos_false.style.color = "green";
+        pos_false.style.display = "block"
+        console.log(false, row_id)
+      } else {
+        answer.style.display = "none"
+      }
+    }
+
+  }
+</script>

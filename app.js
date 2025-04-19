@@ -41,6 +41,8 @@ const postAddPointRouter = require('./routes/postAddPoint');
 const postMinusPointRouter = require('./routes/postMinusPoint');
 const getVerbRouter = require('./routes/getVerb');
 const quizSatzRouter = require('./routes/getQuizSatz');
+const getQuizSätzeverbindenRouter = require('./routes/getQuizSätzeverbinden');
+
 const postQuizSatzRouter = require('./routes/postQuizSatz');
 const getQuizWortRouter = require('./routes/getQuizWort');
 const postQuizWortRouter = require('./routes/postQuizWort');
@@ -93,6 +95,7 @@ app.use('/postAddPoint', postAddPointRouter);
 app.use('/postMinusPoint', postMinusPointRouter);
 app.use('/getVerb', getVerbRouter);
 app.use('/quizSatz', quizSatzRouter);
+app.use('/getQuizSaetzeverbinden', getQuizSätzeverbindenRouter);
 app.use('/postQuizSatz', postQuizSatzRouter);
 app.use('/getQuizWort', getQuizWortRouter);
 app.use('/postQuizWort', postQuizWortRouter);
