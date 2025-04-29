@@ -158,7 +158,6 @@ ALTER TABLE wörter ALTER COLUMN point SET 0;
 
 update public.wörter set nicht_wort  = false;
 
-UPDATE sätze SET bedeutung = 'The piglet was small and it was cute.' WHERE id = 131;
 
 -- https://www.postgresql.org/docs/9.1/functions-string.html
 -- https://stackoverflow.com/questions/15625629/regex-expressions-in-java-s-vs-s
@@ -182,4 +181,25 @@ UPDATE sätze SET bedeutung = 'The piglet was small and it was cute.' WHERE id =
 --    TEMPLATE = pg_catalog.simple
 -- );
 
--- SELECT * FROM sätze WHERE to_tsvector('german_nostop', satz) @@ plainto_tsquery('german_nostop', 'und');
+SELECT * FROM sätze WHERE to_tsvector('german_nostop', satz) @@ to_tsquery('german_nostop', 'gebe | über');
+
+UPDATE sätze SET satz = 'Leg den Schlüsse auf den Tisch, OK?' WHERE id = 329;
+
+EXPLAIN SELECT * FROM sätze;
+
+CREATE SEQUENCE verben_mit_präposition_id_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE TABLE verben_mit_präposition (
+    id bigint DEFAULT nextval('verben_mit_präposition_id_seq'::regclass) NOT NULL PRIMARY KEY,
+    verben_mit_präposition character varying(255) NOT NULL UNIQUE,
+    verb character varying(255),
+    präposition character varying(255),
+    bedeutung character varying(255),
+    create_time timestamp with time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    update_time timestamp with time zone DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+ALTER TABLE verben_mit_präposition 
+    ADD COLUMN akkdat character varying(255);
+
+SELECT * FROM verben_mit_präposition;
+DELETE FROM verben_mit_präposition WHERE id  = 2;

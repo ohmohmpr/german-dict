@@ -11,39 +11,8 @@
 
 <main>
   <div class="jumbotron">
-    <h1>German Dictionary</h1>
+    <h1>German Dictionary(terminating)</h1>
   </div>
-
-  <table class="table caption-top table-bordered border-dark">
-    <caption>
-      <h2>An</h2>
-    An + Akkusativ
-    </caption>
-    <thead>
-      <tr>
-        <th scope="col">Verb</th>
-        <th scope="col">English sentence</th>
-        <th scope="col">German sentence</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% for(var i=0; i < verb.verbWithAn.length; i++) { %>
-        <tr>
-          <td>
-            <%= verb.verbWithAn[i].verb %>
-          </td>
-          <td>
-            <%= verb.verbWithAn[i].english_sentence %>
-          </td>
-          <td>
-            <input id="<%= verb.verbWithAn[i].german_sentence %>"  oninput="checkAnswer(id)" size="70"> 
-          </td>
-        </tr>
-      <% } %>
-    </tbody>
-  </table>
-
-  <hr>
 
   <table class="table caption-top table-bordered border-dark">
     <caption>
@@ -54,7 +23,6 @@
       <tr>
         <th scope="col">Verb</th>
         <th scope="col">English sentence</th>
-        <th scope="col">German sentence</th>
       </tr>
     </thead>
     <tbody>
@@ -65,9 +33,6 @@
           </td>
           <td>
             <%= verb.verbWithAuf[i].english_sentence %>
-          </td>
-          <td>
-            <input id="<%= verb.verbWithAuf[i].german_sentence %>"  oninput="checkAnswer(id)" size="70"> 
           </td>
         </tr>
       <% } %>
@@ -85,7 +50,6 @@
       <tr>
         <th scope="col">Verb</th>
         <th scope="col">English sentence</th>
-        <th scope="col">German sentence</th>
       </tr>
     </thead>
     <tbody>
@@ -100,9 +64,6 @@
             <%= verb.verbWithFür[i].english_sentence %>
           </td>
 
-          <td>
-            <input id="<%= verb.verbWithFür[i].german_sentence %>"  oninput="checkAnswer(id)" size="70"> 
-          </td>
 
         </tr>
       <% } %>
@@ -121,7 +82,6 @@
       <tr>
         <th scope="col">Verb</th>
         <th scope="col">English sentence</th>
-        <th scope="col">German sentence</th>
       </tr>
     </thead>
     <tbody>
@@ -136,9 +96,6 @@
             <%= verb.verbWithMit[i].english_sentence %>
           </td>
 
-          <td>
-            <input id="<%= verb.verbWithMit[i].german_sentence %>"  oninput="checkAnswer(id)" size="70"> 
-          </td>
 
         </tr>
       <% } %>
@@ -157,7 +114,6 @@
       <tr>
         <th scope="col">Verb</th>
         <th scope="col">English sentence</th>
-        <th scope="col">German sentence</th>
       </tr>
     </thead>
     <tbody>
@@ -170,10 +126,6 @@
           
           <td>
             <%= verb.verbWithUm[i].english_sentence %>
-          </td>
-
-          <td>
-            <input id="<%= verb.verbWithUm[i].german_sentence %>"  oninput="checkAnswer(id)" size="70"> 
           </td>
 
         </tr>
@@ -193,7 +145,6 @@
       <tr>
         <th scope="col">Verb</th>
         <th scope="col">English sentence</th>
-        <th scope="col">German sentence</th>
       </tr>
     </thead>
     <tbody>
@@ -207,11 +158,6 @@
           <td>
             <%= verb.verbWithÜber[i].english_sentence %>
           </td>
-
-          <td>
-            <input id="<%= verb.verbWithÜber[i].german_sentence %>"  oninput="checkAnswer(id)" size="70"> 
-          </td>
-
         </tr>
       <% } %>
 
@@ -226,14 +172,4 @@
 </body>
 </html>
 <script>
-  function checkAnswer(id, test) {
-    let new_id = id.substring(id.indexOf('+') + 1);
-    let elm = document.getElementById(id);
-
-    if (elm.value == new_id) {
-      elm.style.color = "green";
-    } else {
-      elm.style.color = "black";
-    }
-  }
 </script>

@@ -220,6 +220,36 @@ async function postWort(query, params) {
   return;
 }
 
+
+/**
+ * @param {*} query 
+ * @param {*} params 
+ * 
+ * @see https://node-postgres.com/features/transactions
+ */
+async function postVerbenMitPräposition(query, params) {
+  const client = await pool.connect()
+
+  try {
+    await client.query('BEGIN')
+
+    let queryText =  `INSERT INTO verben_mit_präposition (verben_mit_präposition, verb, präposition, akkdat, bedeutung)
+                     VALUES ('${query.verb} ${query.präposition}', '${query.verb}'
+                     , '${query.präposition}', '${query.akkdat}', '${query.bedeutung}');`;
+    console.log(queryText)
+    const res = await client.query(queryText)
+    await client.query('COMMIT')
+    return res;
+  } catch (e) {
+    await client.query('ROLLBACK')
+    throw e
+  } finally {
+    client.release()
+  }
+
+  return;
+}
+
 module.exports = {
   query,
   queryFields,
@@ -230,5 +260,6 @@ module.exports = {
   addPoint,
   minusPoint,
   post,
-  postWort
+  postWort,
+  postVerbenMitPräposition
 }

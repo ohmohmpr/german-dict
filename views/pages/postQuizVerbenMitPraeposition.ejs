@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>POST Quiz Wort</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">verb</th>
+        <th scope="col">präposition</th>
+        <th scope="col">Akkusativ / Dativ</th>
+        <th scope="col">bedeutung</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <form action="/postVerbenMitPraeposition" method="POST">
+        <tr>
+          <th scope="col">
+            <input id="verb" style='width:60%' name="verb" autocomplete="off" autofocus required> 
+          </th>
+          <th scope="col">
+            <input id="präposition" style='width:60%' name="präposition" autocomplete="off" autofocus required> 
+          </th>
+          <th scope="col">
+            <input id="akkdat" style='width:60%' name="akkdat" autocomplete="off" autofocus required> 
+          </th>
+          <th scope="col">
+            <input id="bedeutung" style='width:60%' name="bedeutung" autocomplete="off" autofocus required> 
+          </th>
+          <th scope="col">
+            <input type="submit" value="Submit">
+          </th>
+        </tr>
+      </form>
+    </tbody>
+  </table>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  function disableIfTrue(value) {
+    let bedeutung = document.getElementById("bedeutung");
+    let artikel = document.getElementById("artikel");
+    let singular_nominativ = document.getElementById("singular_nominativ");
+    let plural_nominativ = document.getElementById("plural_nominativ");
+
+    bedeutung.disabled = true;
+    artikel.disabled = true;
+    singular_nominativ.disabled = true;
+    plural_nominativ.disabled = true;
+  }
+</script>
