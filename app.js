@@ -19,7 +19,6 @@ const wFrageRouter = require('./routes/w-frage');
 const interrogativePronounsRouter = require('./routes/interrogative-pronouns');
 
 const verbRouter = require('./routes/verb');
-const verbPrepositionRouter = require('./routes/verb-preposition');
 const verbGrammarRouter = require('./routes/verb-grammar');
 const reflexiveVerbRouter = require('./routes/reflexive-verb');
 const konjunktivIIRouter = require('./routes/konjunktiv-ii');
@@ -42,6 +41,7 @@ const postAddPointRouter = require('./routes/postAddPoint');
 const postMinusPointRouter = require('./routes/postMinusPoint');
 const getVerbRouter = require('./routes/getVerb');
 const quizSatzRouter = require('./routes/getQuizSatz');
+
 const getQuizSätzeverbindenRouter = require('./routes/getQuizSätzeverbinden');
 
 const postQuizSatzRouter = require('./routes/postQuizSatz');
@@ -77,7 +77,6 @@ app.use('/w-frage', wFrageRouter);
 app.use('/interrogative-pronouns', interrogativePronounsRouter);
 
 app.use('/verb', verbRouter);
-app.use('/verb-preposition', verbPrepositionRouter);
 app.use('/verb-grammar', verbGrammarRouter);
 app.use('/reflexive-verb', reflexiveVerbRouter);
 app.use('/konjunktiv-ii', konjunktivIIRouter);
