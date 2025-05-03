@@ -6,7 +6,6 @@ var logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const wordRouter = require('./routes/word');
-const adjektivRouter = require('./routes/adjektiv');
 const adverbRouter = require('./routes/adverb');
 const quotesRouter = require('./routes/quotes');
 const artikelRouter = require('./routes/artikel');
@@ -66,7 +65,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/word', wordRouter);
-app.use('/adjektiv', adjektivRouter);
 app.use('/adverb', adverbRouter);
 app.use('/artikel', artikelRouter);
 app.use('/pronomen', pronomenRouter);

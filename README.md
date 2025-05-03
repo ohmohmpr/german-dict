@@ -32,3 +32,4 @@ erfunden
 next -> query word
 
 Land ohne artikel page 36.
+https://quizlet.com/695528147/flashcards
