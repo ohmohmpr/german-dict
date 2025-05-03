@@ -13,7 +13,6 @@ const artikelRouter = require('./routes/artikel');
 const pronomenRouter = require('./routes/pronomen');
 const sentenceRouter = require('./routes/sentence');
 const prepositionRouter = require('./routes/preposition');
-const comparativeADJRouter = require('./routes/comparative-adj');
 
 const wFrageRouter = require('./routes/w-frage');
 const interrogativePronounsRouter = require('./routes/interrogative-pronouns');
@@ -36,6 +35,7 @@ const interjectionRouter = require('./routes/interjection');
 
 const postRouter = require('./routes/post');
 const postWortRouter = require('./routes/postWort');
+const postAdjektivRouter = require('./routes/postAdjektiv');
 const postVerbenMitPraepositionRouter = require('./routes/postVerbenMitPraeposition');
 const postAddPointRouter = require('./routes/postAddPoint');
 const postMinusPointRouter = require('./routes/postMinusPoint');
@@ -47,6 +47,7 @@ const getQuizSätzeverbindenRouter = require('./routes/getQuizSätzeverbinden');
 const postQuizSatzRouter = require('./routes/postQuizSatz');
 const getQuizWortRouter = require('./routes/getQuizWort');
 const postQuizWortRouter = require('./routes/postQuizWort');
+const postQuizAdjektivRouter = require('./routes/postQuizAdjektiv');
 
 const postQuizVerbenMitPraepositionRouter = require('./routes/postQuizVerbenMitPraeposition');
 
@@ -71,7 +72,6 @@ app.use('/artikel', artikelRouter);
 app.use('/pronomen', pronomenRouter);
 app.use('/sentence', sentenceRouter);
 app.use('/preposition', prepositionRouter);
-app.use('/comparative-adj', comparativeADJRouter);
 
 app.use('/w-frage', wFrageRouter);
 app.use('/interrogative-pronouns', interrogativePronounsRouter);
@@ -93,6 +93,7 @@ app.use('/interjection', interjectionRouter);
 
 app.use('/post', postRouter);
 app.use('/postWort', postWortRouter);
+app.use('/postAdjektiv', postAdjektivRouter);
 app.use('/postVerbenMitPraeposition', postVerbenMitPraepositionRouter);
 app.use('/postAddPoint', postAddPointRouter);
 app.use('/postMinusPoint', postMinusPointRouter);
@@ -102,6 +103,8 @@ app.use('/getQuizSaetzeverbinden', getQuizSätzeverbindenRouter);
 app.use('/postQuizSatz', postQuizSatzRouter);
 app.use('/getQuizWort', getQuizWortRouter);
 app.use('/postQuizWort', postQuizWortRouter);
+app.use('/postQuizAdjektiv', postQuizAdjektivRouter);
+
 app.use('/postQuizVerbenMitPraeposition', postQuizVerbenMitPraepositionRouter);
 app.use('/quotes', quotesRouter);
 // catch 404 and forward to error handler

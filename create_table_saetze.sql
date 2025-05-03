@@ -181,9 +181,10 @@ update public.wörter set nicht_wort  = false;
 --    TEMPLATE = pg_catalog.simple
 -- );
 
-SELECT * FROM sätze WHERE to_tsvector('german_nostop', satz) @@ to_tsquery('german_nostop', 'gebe | über');
+SELECT * FROM sätze WHERE to_tsvector('german_nostop', satz) @@ to_tsquery('german_nostop', 'gebe |ju über');
+SELECT * FROM sätze WHERE to_tsvector('german_nostop', satz) @@ to_tsquery('german_nostop', 'markentaschen');
 
-UPDATE sätze SET satz = 'Leg den Schlüsse auf den Tisch, OK?' WHERE id = 329;
+UPDATE sätze SET satz = 'Schenkt Tom seiner Frau eine Markentasche?' WHERE id = 265;
 
 EXPLAIN SELECT * FROM sätze;
 
@@ -203,3 +204,19 @@ ALTER TABLE verben_mit_präposition
 
 SELECT * FROM verben_mit_präposition;
 DELETE FROM verben_mit_präposition WHERE id  = 2;
+
+CREATE SEQUENCE adjektiv_id_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE TABLE adjektiv (
+    id bigint DEFAULT nextval('adjektiv_id_seq'::regclass) NOT NULL PRIMARY KEY,
+    adjektiv character varying(255) NOT NULL UNIQUE,
+    komparativ character varying(255),
+    superlativ character varying(255),
+    bedeutung character varying(255),
+    create_time timestamp with time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    update_time timestamp with time zone DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+ALTER TABLE adjektiv 
+    ADD COLUMN regelmäßig boolean;
+
+UPDATE adjektiv SET superlativ = 'am ältesten' WHERE id = 1;

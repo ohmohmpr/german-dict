@@ -220,13 +220,6 @@ async function postWort(query, params) {
   return;
 }
 
-
-/**
- * @param {*} query 
- * @param {*} params 
- * 
- * @see https://node-postgres.com/features/transactions
- */
 async function postVerbenMitPräposition(query, params) {
   const client = await pool.connect()
 
@@ -250,6 +243,27 @@ async function postVerbenMitPräposition(query, params) {
   return;
 }
 
+async function postAdjektiv(query, params) {
+  const client = await pool.connect()
+
+  try {
+    await client.query('BEGIN')
+
+    let queryText =  `INSERT INTO adjektiv (adjektiv, komparativ, superlativ, regelmäßig, bedeutung)
+                     VALUES ('${query.adjektiv}', '${query.komparativ}', '${query.superlativ}', '${query.regelmäßig}', '${query.bedeutung}');`;
+    console.log(queryText)
+    const res = await client.query(queryText)
+    await client.query('COMMIT')
+    return res;
+  } catch (e) {
+    await client.query('ROLLBACK')
+    throw e
+  } finally {
+    client.release()
+  }
+
+}
+
 module.exports = {
   query,
   queryFields,
@@ -261,5 +275,6 @@ module.exports = {
   minusPoint,
   post,
   postWort,
+  postAdjektiv,
   postVerbenMitPräposition
 }

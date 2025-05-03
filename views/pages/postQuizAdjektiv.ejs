@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>POST Quiz Adjektiv</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">Adjektiv</th>
+        <th scope="col">Komparativ</th>
+        <th scope="col">Superlativ</th>
+        <th scope="col">regelmäßig</th>
+        <th scope="col">Bedeutung</th>
+        <th scope="col">Submit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <form action="/postAdjektiv" method="POST">
+        <tr>
+          <th scope="col">
+            <input id="adjektiv" style='width:80%' name="adjektiv" autocomplete="off" autofocus required> 
+          </th>
+          <th scope="col">
+            <input id="komparativ" style='width:80%' name="komparativ" autocomplete="off" autofocus required> 
+          </th>
+          <th scope="col">
+            <input id="superlativ" style='width:100%' name="superlativ" autocomplete="off" autofocus required> 
+          </th>
+          <th scope="col">
+            <input id="regelmäßig" style='width:60%' name="regelmäßig" autocomplete="off" value="true" autofocus required> 
+          </th>
+          <th scope="col">
+            <input id="bedeutung" style='width:60%' name="bedeutung" autocomplete="off" autofocus required> 
+          </th>
+          <th scope="col">
+            <input type="submit" value="Submit">
+          </th>
+        </tr>
+      </form>
+    </tbody>
+  </table>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+</script>
