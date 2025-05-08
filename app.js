@@ -54,6 +54,9 @@ const postQuizAdjektivRouter = require('./routes/postQuizAdjektiv');
 
 const postQuizVerbenMitPraepositionRouter = require('./routes/postQuizVerbenMitPraeposition');
 
+// front
+const frontPronomenRouter = require('./routes/front_pronomen');
+
 const app = express()
 const port = 3000
 
@@ -109,6 +112,8 @@ app.use('/postQuizWort', postQuizWortRouter);
 // Pronomen
 app.use('/getPersonalPronomen', getPersonalPronomenRouter);
 app.use('/getJederAlle', getJederAlleRouter);
+// front
+app.use('/pronomen', frontPronomenRouter);
 
 app.use('/postQuizAdjektiv', postQuizAdjektivRouter);
 
