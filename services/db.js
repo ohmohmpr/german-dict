@@ -86,6 +86,21 @@ async function getJederAlle(query, params) {
   return res.rows;
 }
 
+
+async function getJemandNiemand(query, params) {
+  
+  const client = await pool.connect()
+  const q = {
+    text: "SELECT * FROM jemand_und_niemand ORDER BY RANDOM() LIMIT 1;",
+    values: [],
+  }
+
+  const res = await client.query(q)
+  await client.release()
+
+  return res.rows;
+}
+
 async function quizSätzeverbinden(query, params) {
 
   const client = await pool.connect()
@@ -299,6 +314,7 @@ module.exports = {
   quizWort,
   queryPersonalPronomen,
   getJederAlle,
+  getJemandNiemand,
   quizSatz,
   quizSätzeverbinden,
   addPoint,

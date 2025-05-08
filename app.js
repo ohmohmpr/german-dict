@@ -47,15 +47,16 @@ const getQuizWortRouter = require('./routes/getQuizWort');
 const postQuizWortRouter = require('./routes/postQuizWort');
 
 // Pronomen
-const getPersonalPronomenRouter = require('./routes/getPersonalPronomen');
-const getJederAlleRouter = require('./routes/getJederAlle');
+const getPersonalPronomenRouter = require('./routes/pronomen/getPersonalPronomen');
+const getJederAlleRouter = require('./routes/pronomen/getJederAlle');
+const getJemandNiemandRouter = require('./routes/pronomen/getJemandNiemand');
+// front
+const frontPronomenRouter = require('./routes/pronomen/front_pronomen');
 
 const postQuizAdjektivRouter = require('./routes/postQuizAdjektiv');
 
 const postQuizVerbenMitPraepositionRouter = require('./routes/postQuizVerbenMitPraeposition');
 
-// front
-const frontPronomenRouter = require('./routes/front_pronomen');
 
 const app = express()
 const port = 3000
@@ -110,10 +111,11 @@ app.use('/getQuizWort', getQuizWortRouter);
 app.use('/postQuizWort', postQuizWortRouter);
 
 // Pronomen
-app.use('/getPersonalPronomen', getPersonalPronomenRouter);
-app.use('/getJederAlle', getJederAlleRouter);
+app.use('/pronomen/getPersonalPronomen', getPersonalPronomenRouter);
+app.use('/pronomen/getJederAlle', getJederAlleRouter);
+app.use('/pronomen/getJemandNiemand', getJemandNiemandRouter);
 // front
-app.use('/pronomen', frontPronomenRouter);
+app.use('/pronomen/pronomen', frontPronomenRouter);
 
 app.use('/postQuizAdjektiv', postQuizAdjektivRouter);
 

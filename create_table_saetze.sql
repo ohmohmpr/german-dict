@@ -310,3 +310,33 @@ VALUES
 SELECT * FROM jeder_und_alle ORDER BY correct_point ASC;
 SELECT * FROM jeder_und_alle WHERE function_n != 'nominativ' ORDER BY RANDOM() LIMIT 1;
 -------------------------------------------- jeder_und_alle --------------------------------------------
+
+-------------------------------------------- jemand_und_niemand --------------------------------------------
+CREATE SEQUENCE jemand_und_niemand_id_seq START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+CREATE TABLE jemand_und_niemand (
+    id bigint DEFAULT nextval('jemand_und_niemand_id_seq'::regclass) NOT NULL PRIMARY KEY,
+    personal_function_n character varying(255) NOT NULL UNIQUE,
+    personal character varying(255),
+    function_n character varying(255),
+    jemand_und_niemand character varying(255),
+    correct_point integer default 0,
+    wrong_point integer default 0,
+    total_point integer default 0,
+    create_time timestamp with time zone DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    update_time timestamp with time zone DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+INSERT INTO jemand_und_niemand 
+    (personal_function_n, personal, function_n, jemand_und_niemand) 
+VALUES 
+    ('jemand_nominativ', 'jemand', 'nominativ', 'jemand'),
+    ('jemand_akkusativ', 'jemand', 'akkusativ', 'jemand(en)'),
+    ('jemand_dativ', 'jemand', 'dativ', 'jemandem'),
+    ('jemand_genitiv', 'jemand', 'genitiv', 'jemandes'),
+    ('niemand_nominativ', 'niemand', 'nominativ', 'niemand'),
+    ('niemand_akkusativ', 'niemand', 'akkusativ', 'niemand(en)'),
+    ('niemand_dativ', 'niemand', 'dativ', 'niemandem'),
+    ('niemand_genitiv', 'niemand', 'genitiv', 'niemandes');
+
+SELECT * FROM jemand_und_niemand ORDER BY correct_point ASC;
+-------------------------------------------- jeder_und_alle --------------------------------------------

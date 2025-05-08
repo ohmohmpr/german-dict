@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../services/db');
+const db = require('../../services/db');
 
 /* GET quotes listing. */
 router.get('/', async function(request, response, next) {
   try {
-    quizPersonalPronomen = await db.queryPersonalPronomen();
-    response.render('pages/getPersonalPronomen.ejs', { 
-      quizPersonalPronomen: quizPersonalPronomen
+    quitJemandNiemand = await db.getJemandNiemand();
+    response.render('pronomen/getJemandNiemand.ejs', { 
+      quitJemandNiemand: quitJemandNiemand
     })
   } 
   catch (err) {

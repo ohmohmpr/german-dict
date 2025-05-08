@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Jemand und Niemand</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">Personal and Function</th>
+        <th scope="col">Jemand und Niemand</th>
+        <th scope="col">Point</th>
+      </tr>
+    </thead>
+    <tbody>
+      <form onsubmit="showAnswer(event); return false;"
+      >
+        <tr>
+          <th scope="col">
+            <%= quitJemandNiemand[0].personal_function_n %>
+          </th>
+          <th scope="col">
+            <input id="jemand_und_niemand" style='width:60%' name="jemand_und_niemand" 
+            oninput="check()" autocomplete="off" autofocus required>
+            <br> 
+            <p id="answer_jemand_und_niemand" style="display: none;">
+              <%= quitJemandNiemand[0].jemand_und_niemand %>
+            </p>
+          </th>
+          <th scope="col">
+            <%= quitJemandNiemand[0].correct_point %>
+            <input type="submit" value="Submit" >
+          </th>
+        </tr>
+      </form>
+
+    </tbody>
+  </table>
+  Indefinitpronomen benutzt man, wenn es nicht wichtig oder nicht bekannt ist, welche Personen oder Sachen gemeint sind.
+  <br>
+  <b>jemand</b> und <b>niemand</b> kommen nur im Singular vor. Sie sind <b>MASKULIN</b>. Sie können mit dem Adjektiv <b>ander-/anders</b> kombiniert werden.
+  <br>
+  <b>Jemand</b> hat seine Tasche vergessen. <b>Niemand</b> von uns hat etwas gesehen. Hier ist <b>niemand ander(e)s</b>. Nein, das ist das Auto <b>eines anderen</b>.
+  <br>
+  Ich habe heute in der Stadt <b>jemand(en)</b> getroffen. Dieser Hund gehört <b>niemandem</b>. Gehört der Mantel dir? - Nein, er gehört <b>jemand anderem/anders</b>.
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  var parsed_data =  <%- JSON.stringify(quitJemandNiemand[0]) %>;
+
+  let jemand_und_niemand = document.getElementById("jemand_und_niemand");
+
+  function check() {
+    if (jemand_und_niemand.value == parsed_data.jemand_und_niemand) {
+
+      jemand_und_niemand.style.color = "green";
+
+      postAddPoint = fetch("/postAddPoint", {method:'post', body: new URLSearchParams({
+                  'id': parsed_data.id,
+                  'table': "jemand_und_niemand",
+      })});
+    }
+  }
+
+  function showAnswer(event) {
+
+    event.preventDefault();
+    if (!(answer_jemand_und_niemand.value == parsed_data.jemand_und_niemand)) {
+
+      let answer_jemand_und_niemand = document.getElementById("answer_jemand_und_niemand");
+      answer_jemand_und_niemand.style.display = "block"
+
+      postMinusPoint = fetch("/postMinusPoint", {method:'post', body: new URLSearchParams({
+                  'id': parsed_data.id,
+                  'table': "jemand_und_niemand",
+      })});
+    }
+  }
+</script>
