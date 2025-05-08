@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>Jeder und Alle</h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">Personal and Function</th>
+        <th scope="col">Jeder und Alle</th>
+        <th scope="col">Point</th>
+      </tr>
+    </thead>
+    <tbody>
+      <form onsubmit="showAnswer(event); return false;"
+      >
+        <tr>
+          <th scope="col">
+            <%= quitJederAlle[0].personal_function_n %>
+          </th>
+          <th scope="col">
+            <input id="jeder_und_alle" style='width:60%' name="jeder_und_alle" 
+            oninput="check()" autocomplete="off" autofocus required>
+            <br> 
+            <p id="answer_jeder_und_alle" style="display: none;">
+              <%= quitJederAlle[0].jeder_und_alle %>
+            </p>
+          </th>
+          <th scope="col">
+            <%= quitJederAlle[0].correct_point %>
+            <input type="submit" value="Submit" >
+          </th>
+        </tr>
+      </form>
+
+    </tbody>
+  </table>
+  <b>jeder</b> kommt in allen drei Genera vor und wird <b>wie der bestimmte Artikel</b> dekliniert, aber dieses Wort kommt nur im Singular vor.
+  <br>
+  Als Artikel word: ich kenne jede Straße in dieser Stadt. Sie mussten jedes Mal eine Stunde warten.
+  <br>
+  Als Pronomen: Jeder muss zuvor einen Test machen. Sie will sich bei jedem für die Hilfe bedanken.
+  <br>
+  <br>
+  <b>alle</b> ist die Pluralform von jeder und wird <b>wie der bestimmte Artikel</b> dekliniert.
+  <br>
+  Als Artikelwort: Ich habe allen Pflanzen Wasser gegeben. 
+  <br>
+  Als Pronomen: Wir müssen allen Bescheid geben.
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  var parsed_data =  <%- JSON.stringify(quitJederAlle[0]) %>;
+
+  let jeder_und_alle = document.getElementById("jeder_und_alle");
+
+  function check() {
+    if (jeder_und_alle.value == parsed_data.jeder_und_alle) {
+
+      jeder_und_alle.style.color = "green";
+
+      postAddPoint = fetch("/postAddPoint", {method:'post', body: new URLSearchParams({
+                  'id': parsed_data.id,
+                  'table': "jeder_und_alle",
+      })});
+    }
+  }
+
+  function showAnswer(event) {
+
+    event.preventDefault();
+    if (!(answer_jeder_und_alle.value == parsed_data.jeder_und_alle)) {
+
+      let answer_jeder_und_alle = document.getElementById("answer_jeder_und_alle");
+      answer_jeder_und_alle.style.display = "block"
+
+      postMinusPoint = fetch("/postMinusPoint", {method:'post', body: new URLSearchParams({
+                  'id': parsed_data.id,
+                  'table': "jeder_und_alle",
+      })});
+    }
+  }
+</script>

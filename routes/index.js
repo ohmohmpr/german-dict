@@ -4,7 +4,6 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {  
   var mascots = [
-    { name: 'Sammy', organization: "DigitalOcean", birth_year: 2012},
     { name: 'Tux', organization: "Linux", birth_year: 1996},
     { name: 'Moby Dock', organization: "Docker", birth_year: 2013}
   ];

@@ -9,7 +9,6 @@ const wordRouter = require('./routes/word');
 const adverbRouter = require('./routes/adverb');
 const quotesRouter = require('./routes/quotes');
 const artikelRouter = require('./routes/artikel');
-const pronomenRouter = require('./routes/pronomen');
 const sentenceRouter = require('./routes/sentence');
 const prepositionRouter = require('./routes/preposition');
 
@@ -46,6 +45,11 @@ const getQuizSätzeverbindenRouter = require('./routes/getQuizSätzeverbinden');
 const postQuizSatzRouter = require('./routes/postQuizSatz');
 const getQuizWortRouter = require('./routes/getQuizWort');
 const postQuizWortRouter = require('./routes/postQuizWort');
+
+// Pronomen
+const getPersonalPronomenRouter = require('./routes/getPersonalPronomen');
+const getJederAlleRouter = require('./routes/getJederAlle');
+
 const postQuizAdjektivRouter = require('./routes/postQuizAdjektiv');
 
 const postQuizVerbenMitPraepositionRouter = require('./routes/postQuizVerbenMitPraeposition');
@@ -67,7 +71,7 @@ app.use('/', indexRouter);
 app.use('/word', wordRouter);
 app.use('/adverb', adverbRouter);
 app.use('/artikel', artikelRouter);
-app.use('/pronomen', pronomenRouter);
+
 app.use('/sentence', sentenceRouter);
 app.use('/preposition', prepositionRouter);
 
@@ -101,6 +105,11 @@ app.use('/getQuizSaetzeverbinden', getQuizSätzeverbindenRouter);
 app.use('/postQuizSatz', postQuizSatzRouter);
 app.use('/getQuizWort', getQuizWortRouter);
 app.use('/postQuizWort', postQuizWortRouter);
+
+// Pronomen
+app.use('/getPersonalPronomen', getPersonalPronomenRouter);
+app.use('/getJederAlle', getJederAlleRouter);
+
 app.use('/postQuizAdjektiv', postQuizAdjektivRouter);
 
 app.use('/postQuizVerbenMitPraeposition', postQuizVerbenMitPraepositionRouter);

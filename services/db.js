@@ -58,6 +58,34 @@ async function queryVerb(query, params) {
   return res.rows;
 }
 
+async function queryPersonalPronomen(query, params) {
+  
+  const client = await pool.connect()
+  const q = {
+    text: "SELECT * FROM personal_pronomen WHERE function_n != 'nominativ' ORDER BY RANDOM() LIMIT 1;",
+    values: [],
+  }
+
+  const res = await client.query(q)
+  await client.release()
+
+  return res.rows;
+}
+
+async function getJederAlle(query, params) {
+  
+  const client = await pool.connect()
+  const q = {
+    text: "SELECT * FROM jeder_und_alle ORDER BY RANDOM() LIMIT 1;",
+    values: [],
+  }
+
+  const res = await client.query(q)
+  await client.release()
+
+  return res.rows;
+}
+
 async function quizSätzeverbinden(query, params) {
 
   const client = await pool.connect()
@@ -269,6 +297,8 @@ module.exports = {
   queryFields,
   queryVerb,
   quizWort,
+  queryPersonalPronomen,
+  getJederAlle,
   quizSatz,
   quizSätzeverbinden,
   addPoint,

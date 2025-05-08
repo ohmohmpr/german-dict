@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+  <table class="table caption-top table-bordered border-dark">
+    <caption>
+      <h2>GET Quiz Personal Pronomen</h2>
+      <h2> <a href="getJederAlle">jeder und alle</a> </h2>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">personal_pronomen</th>
+        <th scope="col">pronomen</th>
+        <th scope="col">Point</th>
+      </tr>
+    </thead>
+    <tbody>
+      <form onsubmit="showAnswer(event); return false;"
+      >
+        <tr>
+          <th scope="col">
+            <%= quizPersonalPronomen[0].personal_pronomen %>
+          </th>
+          <th scope="col">
+            <input id="pronomen" style='width:60%' name="pronomen" 
+            oninput="check()" autocomplete="off" autofocus required>
+            <br> 
+            <p id="answer_pronomen" style="display: none;">
+              <%= quizPersonalPronomen[0].pronomen %>
+            </p>
+          </th>
+          <th scope="col">
+            <%= quizPersonalPronomen[0].correct_point %>
+            <input type="submit" value="Submit" >
+          </th>
+        </tr>
+      </form>
+    </tbody>
+  </table>
+
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+<script>
+  var parsed_data =  <%- JSON.stringify(quizPersonalPronomen[0]) %>;
+
+  let pronomen = document.getElementById("pronomen");
+
+  function check() {
+    if (pronomen.value == parsed_data.pronomen) {
+
+      pronomen.style.color = "green";
+
+      postAddPoint = fetch("/postAddPoint", {method:'post', body: new URLSearchParams({
+                  'id': parsed_data.id,
+                  'table': "personal_pronomen",
+      })});
+    }
+  }
+
+  function showAnswer(event) {
+
+    event.preventDefault();
+    if (!(answer_pronomen.value == parsed_data.pronomen)) {
+
+      let answer_pronomen = document.getElementById("answer_pronomen");
+      answer_pronomen.style.display = "block"
+
+      postMinusPoint = fetch("/postMinusPoint", {method:'post', body: new URLSearchParams({
+                  'id': parsed_data.id,
+                  'table': "personal_pronomen",
+      })});
+    }
+  }
+</script>
