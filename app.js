@@ -15,7 +15,6 @@ const prepositionRouter = require('./routes/preposition');
 const wFrageRouter = require('./routes/w-frage');
 const interrogativePronounsRouter = require('./routes/interrogative-pronouns');
 
-const verbRouter = require('./routes/verb');
 const verbGrammarRouter = require('./routes/verb-grammar');
 const reflexiveVerbRouter = require('./routes/reflexive-verb');
 const konjunktivIIRouter = require('./routes/konjunktiv-ii');
@@ -46,10 +45,17 @@ const postQuizSatzRouter = require('./routes/postQuizSatz');
 const getQuizWortRouter = require('./routes/getQuizWort');
 const postQuizWortRouter = require('./routes/postQuizWort');
 
+// Verb
+
+// front
+const frontVerbRouter = require('./routes/verb/front_verb');
+
+
 // Pronomen
 const getPersonalPronomenRouter = require('./routes/pronomen/getPersonalPronomen');
 const getJederAlleRouter = require('./routes/pronomen/getJederAlle');
 const getJemandNiemandRouter = require('./routes/pronomen/getJemandNiemand');
+const getReflexivPronomenRouter = require('./routes/pronomen/getReflexivPronomen');
 // front
 const frontPronomenRouter = require('./routes/pronomen/front_pronomen');
 
@@ -82,7 +88,6 @@ app.use('/preposition', prepositionRouter);
 app.use('/w-frage', wFrageRouter);
 app.use('/interrogative-pronouns', interrogativePronounsRouter);
 
-app.use('/verb', verbRouter);
 app.use('/verb-grammar', verbGrammarRouter);
 app.use('/reflexive-verb', reflexiveVerbRouter);
 app.use('/konjunktiv-ii', konjunktivIIRouter);
@@ -110,10 +115,17 @@ app.use('/postQuizSatz', postQuizSatzRouter);
 app.use('/getQuizWort', getQuizWortRouter);
 app.use('/postQuizWort', postQuizWortRouter);
 
+
+// Verb
+
+// front
+app.use('/verb/verb', frontVerbRouter);
+
 // Pronomen
 app.use('/pronomen/getPersonalPronomen', getPersonalPronomenRouter);
 app.use('/pronomen/getJederAlle', getJederAlleRouter);
 app.use('/pronomen/getJemandNiemand', getJemandNiemandRouter);
+app.use('/pronomen/getReflexivPronomen', getReflexivPronomenRouter);
 // front
 app.use('/pronomen/pronomen', frontPronomenRouter);
 

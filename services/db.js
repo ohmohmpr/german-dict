@@ -72,6 +72,21 @@ async function queryPersonalPronomen(query, params) {
   return res.rows;
 }
 
+
+async function queryReflexivPronomen(query, params) {
+  
+  const client = await pool.connect()
+  const q = {
+    text: "SELECT * FROM reflexiv_pronomen ORDER BY RANDOM() LIMIT 1;",
+    values: [],
+  }
+
+  const res = await client.query(q)
+  await client.release()
+
+  return res.rows;
+}
+
 async function getJederAlle(query, params) {
   
   const client = await pool.connect()
@@ -313,6 +328,7 @@ module.exports = {
   queryVerb,
   quizWort,
   queryPersonalPronomen,
+  queryReflexivPronomen,
   getJederAlle,
   getJemandNiemand,
   quizSatz,
